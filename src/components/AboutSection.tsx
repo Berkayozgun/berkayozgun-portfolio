@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-import React from "react";
-import Image from "next/image";
 import Loader from "./Loader";
 
 const skills = [
@@ -95,7 +92,7 @@ const AboutSection = () => {
                 );
               })}
             </div>
-           <Loader />
+            <Loader />
           </div>
         </div>
       </div>

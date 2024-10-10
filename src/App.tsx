@@ -1,20 +1,11 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import ProjectsSection from "./components/ProjectsSection";
-import AboutSection from "./components/AboutSection";
 
-const App: React.FC = () => {
-  return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <Footer />
-    </div>
-  );
+interface AppProps {
+  children: React.ReactNode;
+}
+
+const App: React.FC<AppProps> = ({ children }) => {
+  return <div>{children}</div>;
 };
 
 export default App;

@@ -1,4 +1,3 @@
-import React from "react";
 import SlideUp from "./SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
@@ -75,13 +74,21 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                     <div className='flex flex-row align-bottom space-x-4'>
-                      <a href={project.github} target='_blank' rel='noopener noreferrer'>
+                      <a
+                        href={project.github}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
                         <BsGithub
                           size={30}
                           className='hover:-translate-y-1 transition-transform cursor-pointer'
                         />
                       </a>
-                      <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                      <a
+                        href={project.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
                         <BsArrowUpRightSquare
                           size={30}
                           className='hover:-translate-y-1 transition-transform cursor-pointer'
