@@ -1,7 +1,8 @@
-import React from "react";
+// src/App.tsx
+import React, { ReactNode } from 'react';
 
 interface AppProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const App: React.FC<AppProps> = ({ children }) => {
