@@ -1,12 +1,12 @@
 import { useEffect, useRef, ReactNode } from "react";
+
 interface Props {
   offset?: string;
   children?: ReactNode;
-  // any props that come into the component
 }
 
 export default function SlideUp({ children, offset = "0px" }: Props) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -14,7 +14,7 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("opacity-0");
-            entry.target.classList.add("animate-slideUpCubiBezier");
+            entry.target.classList.add("animate-slideUpCubicBezier");
           }
         });
       },
@@ -24,7 +24,13 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
     if (ref.current) {
       observer.observe(ref.current);
     }
-  }, [ref]);
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [offset]);
 
   return (
     <div ref={ref} className='relative opacity-0'>

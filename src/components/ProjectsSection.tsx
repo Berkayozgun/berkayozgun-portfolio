@@ -1,58 +1,17 @@
 import SlideUp from "./SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
-
-const projects = [
-  {
-    name: "Notification Center Management Tool",
-    description:
-      "Internal software tool for monitoring ,creating, specifying and pushing notifications to Jotform users.",
-    image: "/dashboard.png",
-    github: "#",
-    link: "#",
-  },
-  {
-    name: "E-commerce Website Admin Panel",
-    description:
-      "Admin panel for e-commerce website. Developed with Next.js, TailwindCSS.",
-    image: "/e-commerce-dashboard.png",
-    github: "#",
-    link: "#",
-  },
-  {
-    name: "Parentwiser Commercial Website Project",
-    description: "Company's website redesigned and developed with React.js.",
-    image: "/parentwiser-landing-page.png",
-    github: "#",
-    link: "#",
-  },
-  {
-    name: "Bus/Plane Ticket Booking System",
-    description:
-      "A ticket booking system for buses and planes. Developed with React.js, Node.js, Express.js, MongoDB.",
-    image: "/flight-search-app.png",
-    github: "#",
-    link: "#",
-  },
-  {
-    name: "Campfire Microblogging Platform",
-    description:
-      "Twitter-like social network web app. Developed with Vue.js, Flask and MongoDB.",
-    image: "/campfire.png",
-    github: "#",
-    link: "#",
-  },
-];
+import { PROJECTS } from "../data/data.js"; 
 
 const ProjectsSection = () => {
   return (
-    <section id='projects'>
+    <section id='projects' className="py-20 px-4 md:px-20">
       <h1 className='my-10 text-center font-bold text-4xl'>
         Projects
         <hr className='w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded'></hr>
       </h1>
 
       <div className='flex flex-col space-y-28'>
-        {projects.map((project, idx) => {
+        {PROJECTS.map((project, idx) => {
           return (
             <div key={idx}>
               <SlideUp offset='-300px 0px -300px 0px'>
@@ -86,7 +45,7 @@ const ProjectsSection = () => {
                       </a>
                       <a
                         href={project.link}
-                        target='_blank'
+                        target='_'
                         rel='noopener noreferrer'
                       >
                         <BsArrowUpRightSquare
