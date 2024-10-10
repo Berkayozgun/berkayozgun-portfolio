@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import { NAV_ITEMS } from "../data/data.js"; // data.js dosyasını ithal edin
+import { NAV_ITEMS } from "../data/data.ts";
 
 export default function Navbar() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className='flex items-center space-x-4'>
           <div className='text-2xl font-bold text-gray-900 dark:text-gray-100'>Berkay Özgün</div>
           <div className='hidden md:flex space-x-4'>
-            {NAV_ITEMS.map((item, idx) => (
+            {NAV_ITEMS.map((item: { page: string; label: string }, idx: number) => (
               <Link
                 key={idx}
                 to={item.page}
@@ -56,7 +56,7 @@ export default function Navbar() {
       </div>
       {isOpen && (
         <div className='md:hidden'>
-          {NAV_ITEMS.map((item, idx) => (
+          {NAV_ITEMS.map((item: { page: string; label: string }, idx: number) => (
             <Link
               key={idx}
               to={item.page}

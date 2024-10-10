@@ -1,5 +1,4 @@
-import Loader from "./Loader";
-import { SKILLS } from "../data/data.js"; 
+import { SKILLS } from "../data/data.ts"; // data.ts dosyasını ithal edin
 
 const AboutSection = () => {
   return (
@@ -36,7 +35,7 @@ const AboutSection = () => {
               My Skills
             </h1>
             <div className='flex flex-wrap justify-center md:justify-start'>
-              {SKILLS.map((skill, idx) => (
+              {SKILLS.map((skill: string, idx: number) => (
                 <p
                   key={idx}
                   className='bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-4 py-2 mr-2 mt-2 rounded font-semibold'

@@ -1,6 +1,6 @@
 import SlideUp from "./SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
-import { PROJECTS } from "../data/data.js"; 
+import { PROJECTS } from "../data/data.ts";
 
 const ProjectsSection = () => {
   return (
@@ -11,7 +11,7 @@ const ProjectsSection = () => {
       </h1>
 
       <div className='flex flex-col space-y-28'>
-        {PROJECTS.map((project, idx) => {
+        {PROJECTS.map((project: { name: string; description: string; image: string; github: string; link: string }, idx: number) => {
           return (
             <div key={idx}>
               <SlideUp offset='-300px 0px -300px 0px'>
