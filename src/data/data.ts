@@ -54,12 +54,12 @@ export const PROJECTS = [
     link: "#",
   },
   {
-    name: "Weather App",
+    name: "IWeather App",
     description:
       "Weather app that shows the current weather of the user's location. Developed with React.js.",
     image: "/weather-app.png",
-    github: "#",
-    link: "#",
+    github: "https://github.com/Berkayozgun/iweather",
+    link: "https://iweather-pearl.vercel.app/",
   },
   {
     name: "Portfolio Website",
@@ -77,6 +77,15 @@ export const PROJECTS = [
     github: "https://github.com/Berkayozgun/paradise-nursery",
     link: "https://paradise-nursery-one.vercel.app/",
   },
+  {
+    name: "Flavor Fusion",
+    description:
+      "Recipe sharing platform. Developed with React.js, TailwindCSS, Redux-Toolkit.",
+    image: "/flavor-fusion.png",
+    github: "https://github.com/Berkayozgun/flavor-fusion",
+    link: "https://flavor-fusion-pi.vercel.app/",
+  },
+  
 ];
 
 export const SKILLS = [
