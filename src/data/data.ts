@@ -15,6 +15,14 @@ export const NAV_ITEMS = [
 
 export const PROJECTS = [
   {
+    name: "Career Recommendation System",
+    description:
+      "Graduation Project: Developed a machine learning project for analyzing CVs and recommending job postings based on qualifications and skills. Utilized natural language processing (NLP) techniques to match job requirements with candidate profiles.",
+    image: "/career-recommendation-system.png",
+    github: "#",
+    link: "#",
+  },
+  {
     name: "Notification Center Management Tool",
     description:
       "Internal software tool for monitoring ,creating, specifying and pushing notifications to company's customers.",
@@ -38,12 +46,20 @@ export const PROJECTS = [
     link: "#",
   },
   {
-    name: "Bus/Plane Ticket Booking System",
+    name: "Bus Ticket Booking System",
     description:
-      "A ticket booking system for buses and planes. Developed with React.js, Node.js, Express.js, MongoDB.",
+      "A ticket booking system for buses. Developed with React.js, Node.js, Express.js, MongoDB, Redux-Toolkit, Bcrypt.",
+    image: "/bus-ticket-booking-system.png",
+    github: "https://github.com/Berkayozgun/ticket-app",
+    link: "https://ticket-app-brown.vercel.app/",
+  },
+  {
+    name: "Plane Ticket Booking System",
+    description:
+      "A ticket booking system for planes. Developed with React.js, Node.js, Express.js, MongoDB, Schiphol API.",
     image: "/flight-search-app.png",
-    github: "#",
-    link: "#",
+    github: "https://github.com/Berkayozgun/flight-search-application",
+    link: "https://flight-search-application-alpha.vercel.app/",
   },
   {
     name: "Campfire Microblogging Platform",
