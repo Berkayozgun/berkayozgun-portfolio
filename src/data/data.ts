@@ -35,8 +35,8 @@ export const PROJECTS = [
     description:
       "Admin panel for e-commerce website. Developed with Next.js, TailwindCSS.",
     image: "/e-commerce-dashboard.png",
-    github: "#",
-    link: "#",
+    github: "https://github.com/Berkayozgun/ecommerce-dashboard-v2",
+    link: "https://ecommerce-dashboard-v2.vercel.app/",
   },
   {
     name: "Parentwiser Commercial Website Project",
