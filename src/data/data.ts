@@ -1,3 +1,4 @@
+import { Skill, Certification } from "../types";
 import {
   FaReact,
   FaNodeJs,
@@ -29,13 +30,6 @@ import {
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { BiData } from "react-icons/bi";
-import { IconType } from "react-icons";
-
-interface Skill {
-  name: string;
-  icon: IconType;
-  category: string;
-}
 
 export const NAV_ITEMS = [
   {
@@ -159,30 +153,22 @@ export const PROJECTS = [
 ];
 
 export const SKILLS: Skill[] = [
-  // Programming Languages
-  { name: "Python", icon: FaPython, category: "Languages" },
-  { name: "JavaScript", icon: SiJavascript, category: "Languages" },
-  { name: "TypeScript", icon: SiTypescript, category: "Languages" },
-  { name: "C#", icon: SiCsharp, category: "Languages" },
-  { name: "Java", icon: FaJava, category: "Languages" },
-
   // Frontend
   { name: "React", icon: FaReact, category: "Frontend" },
   { name: "Next.js", icon: SiNextdotjs, category: "Frontend" },
   { name: "Vue.js", icon: FaVuejs, category: "Frontend" },
   { name: "TailwindCSS", icon: SiTailwindcss, category: "Frontend" },
   { name: "Redux", icon: SiRedux, category: "Frontend" },
-  { name: "HTML", icon: FaHtml5, category: "Frontend" },
-  { name: "CSS", icon: FaCss3Alt, category: "Frontend" },
+  { name: "HTML5", icon: FaHtml5, category: "Frontend" },
+  { name: "CSS3", icon: FaCss3Alt, category: "Frontend" },
   { name: "Material UI", icon: SiMui, category: "Frontend" },
 
   // Mobile
-  { name: "React Native", icon: FaReact, category: "Mobile" },
   { name: "Ionic", icon: SiIonic, category: "Mobile" },
 
   // Backend
-  { name: "Flask", icon: SiFlask, category: "Backend" },
   { name: "Node.js", icon: FaNodeJs, category: "Backend" },
+  { name: "Flask", icon: SiFlask, category: "Backend" },
   { name: "Express.js", icon: SiExpress, category: "Backend" },
   { name: "RESTful APIs", icon: TbApi, category: "Backend" },
 
@@ -191,36 +177,37 @@ export const SKILLS: Skill[] = [
   { name: "SQL", icon: BiData, category: "Database" },
   { name: "DBMS", icon: BiData, category: "Database" },
 
-  // Tools & Technologies
+  // Tools
   { name: "Git", icon: FaGit, category: "Tools" },
-  { name: "GitHub", icon: FaGithub, category: "Tools" },
   { name: "Docker", icon: FaDocker, category: "Tools" },
   { name: "Postman", icon: SiPostman, category: "Tools" },
-  { name: "Figma", icon: FaFigma, category: "Tools" },
+  { name: "GitHub", icon: FaGithub, category: "Tools" },
   { name: "Vite", icon: SiVite, category: "Tools" },
+  { name: "Figma", icon: FaFigma, category: "Tools" },
   { name: "Linux", icon: FaLinux, category: "Tools" },
 
-  // Soft Skills kategorisini icon'suz bırakabiliriz ya da genel bir icon kullanabiliriz
-  { name: "Problem Solving", icon: FaReact, category: "Soft Skills" },
-  { name: "Team Collaboration", icon: FaReact, category: "Soft Skills" },
-  { name: "Communication", icon: FaReact, category: "Soft Skills" },
-  { name: "Adaptability", icon: FaReact, category: "Soft Skills" },
-  { name: "Time Management", icon: FaReact, category: "Soft Skills" },
-  { name: "Critical Thinking", icon: FaReact, category: "Soft Skills" },
-  { name: "Creativity", icon: FaReact, category: "Soft Skills" },
-  { name: "Attention to Detail", icon: FaReact, category: "Soft Skills" },
-
-  // Additional Skills
-  { name: "NLP", icon: FaPython, category: "Specialized" },
-  {
-    name: "Authentication & Authorization",
-    icon: FaReact,
-    category: "Specialized",
-  },
-  { name: "Cybersecurity Basics", icon: FaReact, category: "Specialized" },
-];
+  // Languages
+  { name: "JavaScript", icon: SiJavascript, category: "Languages" },
+  { name: "TypeScript", icon: SiTypescript, category: "Languages" },
+  { name: "Python", icon: FaPython, category: "Languages" },
+  { name: "Java", icon: FaJava, category: "Languages" },
+  { name: "C#", icon: SiCsharp, category: "Languages" },
+] as const;
 
 export const CERTIFICATIONS: Certification[] = [
+  {
+    name: "Modern Web Development",
+    issuer: "Udemy",
+    date: "2024",
+    credentialUrl: "#",
+    image: "https://eu-central.storage.cloudconvert.com/tasks/eb704f6f-b54b-499b-8996-3de806f9ba44/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_8-1-2025_194713_www.freecodecamp.org.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-",
+    details: [
+      "Frontend Development",
+      "Backend Integration",
+      "Database Management",
+      "API Development"
+    ]
+  },
   {
     name: "Cloud Computing Engineer",
     issuer: "Alibaba Cloud Academy",

@@ -1,7 +1,12 @@
+import { Certification } from "../types";
 import { CERTIFICATIONS } from "../data/data";
 import Image from "./Image";
 
-const CertificationCard = ({ certification }) => {
+interface CertificationCardProps {
+  certification: Certification;
+}
+
+const CertificationCard = ({ certification }: CertificationCardProps) => {
   return (
     <div className='bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1'>
       <div className='relative aspect-video'>

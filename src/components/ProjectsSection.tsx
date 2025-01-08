@@ -1,24 +1,21 @@
 import { useState, useEffect } from "react";
-import SlideUp from "./SlideUp";
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
-import { PROJECTS } from "../data/data.ts";
-import ProjectsSkeleton from "./skeletons/ProjectSkeleton";
+import { PROJECTS } from "../data/data";
+import ProjectsSkeleton from "./skeletons/ProjectsSkeleton";
+import { Project } from "../types";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className='group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300'>
-      <div className='aspect-video overflow-hidden'>
-        <img
-          src={project.image}
-          alt={project.name}
-          className='w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300'
-        />
-      </div>
+    <div className='bg-white rounded-lg shadow-lg overflow-hidden hover:-translate-y-1 transition-all duration-300 dark:bg-gray-800'>
+      <img
+        src={project.image}
+        alt={project.name}
+        className='w-full h-48 object-cover'
+      />
       <div className='p-6'>
-        <h3 className='text-2xl font-bold mb-2 text-gray-800 dark:text-white'>
+        <h3 className='text-xl font-bold mb-2 text-gray-800 dark:text-white'>
           {project.name}
         </h3>
-        <p className='text-gray-600 dark:text-gray-300 mb-4'>
+        <p className='text-gray-600 mb-4 dark:text-gray-400'>
           {project.description}
         </p>
         <div className='flex space-x-4'>
@@ -26,19 +23,17 @@ const ProjectCard = ({ project }) => {
             href={project.github}
             target='_blank'
             rel='noopener noreferrer'
-            className='flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400'
+            className='text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'
           >
-            <BsGithub size={20} />
-            <span>Code</span>
+            GitHub
           </a>
           <a
             href={project.link}
             target='_blank'
             rel='noopener noreferrer'
-            className='flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400'
+            className='text-teal-500 hover:text-teal-600'
           >
-            <BsArrowUpRightSquare size={20} />
-            <span>Live Demo</span>
+            Live Demo
           </a>
         </div>
       </div>
@@ -48,34 +43,15 @@ const ProjectCard = ({ project }) => {
 
 const ProjectsSection = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [projects, setProjects] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        // API çağrısı simülasyonu
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        setProjects(PROJECTS);
-        setIsLoading(false);
-      } catch (err) {
-        setError(err);
-        setIsLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 800); // Daha kısa süre
+    }, 800);
 
     return () => clearTimeout(timer);
   }, []);
 
-  if (error) return <div>Bir hata oluştu...</div>;
   if (isLoading) return <ProjectsSkeleton />;
 
   return (
