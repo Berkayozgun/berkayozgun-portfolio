@@ -28,7 +28,10 @@ const AboutSection = () => {
               since.
             </p>
             <br />
-            <p>I've gained experience in frontend and full-stack development</p>
+            <p>
+              I've gained experience in frontend and full-stack development
+              through various projects and collaborations.
+            </p>
           </div>
           <div className='md:w-1/2'>
             <h1 className='text-center text-2xl font-bold mb-6 md:text-left'>
