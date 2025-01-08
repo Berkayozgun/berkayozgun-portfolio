@@ -54,6 +54,10 @@ export const NAV_ITEMS = [
     label: "Certifications",
     page: "certifications",
   },
+  {
+    label: "Contact",
+    page: "contact",
+  },
 ];
 
 export const PROJECTS = [
