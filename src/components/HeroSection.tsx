@@ -1,47 +1,50 @@
 const HeroSection = () => {
   return (
-    <section id='home' className='bg-gray-100 dark:bg-gray-900 min-h-fit p-20'>
-      <div className='container mx-auto flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 md:flex-row md:space-x-4 md:text-left'>
-        <div className='md:mt-2 md:w-1/2'>
-          <img
-            src='/headshot.jpg'
-            alt='Berkay Özgün'
-            width={325}
-            height={325}
-            className='rounded-full shadow-2xl'
-          />
-        </div>
-        <div className='md:mt-2 md:w-3/5'>
-          <h1 className='text-4xl font-bold mt-6 md:mt-0 md:text-7xl text-gray-900 dark:text-gray-100'>
-            Hi, I'm Berkay!
-          </h1>
-          <p className='text-lg mt-4 mb-6 md:text-2xl text-gray-700 dark:text-gray-300'>
-            I'm a{" "}
-            <span className='font-semibold text-teal-500'>
-              Software Developer{" "}
-            </span>
-            based in Edirne, TR. Working towards creating software that makes
-            life easier and more meaningful.
-          </p>
-          <div className='flex flex-col md:flex-row md:space-x-4'>
-            <a
-              href='#projects'
-              className='text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50 mb-4 md:mb-0'
-              aria-label='See My Projects'
-            >
-              See My Projects
-            </a>
+    <section
+      className='min-h-[calc(100vh-4rem)] flex items-center justify-center py-10 md:py-20 
+    bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800'
+    >
+      <div className='container mx-auto px-6'>
+        <div className='flex flex-col md:flex-row items-center justify-between'>
+          <div className='md:w-1/2 md:pr-10'>
+            <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-teal-500 to-blue-500 bg-clip-text text-transparent'>
+              Hi, I'm Berkay!
+            </h1>
+            <p className='text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed'>
+              A passionate{" "}
+              <span className='text-teal-500 font-semibold'>
+                Software Developer&nbsp;
+              </span>
+              crafting elegant solutions to complex problems.
+            </p>
+            <div className='flex space-x-4'>
+              <a
+                href='#projects'
+                className='px-8 py-4 bg-teal-500 hover:bg-teal-600 
+                text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300'
+              >
+                View Projects
+              </a>
+              <a
+                href='#contact'
+                className='px-8 py-4 border-2 border-teal-500 text-teal-500 
+                hover:bg-teal-500 hover:text-white rounded-lg transition-all duration-300'
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+          <div className='md:w-1/2 mt-10 md:mt-0'>
+            <div className='relative'>
+              <div className='absolute inset-0 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full blur-3xl opacity-20'></div>
+              <img
+                src='/headshot.jpg'
+                alt='Berkay Özgün'
+                className='relative rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl'
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div className='flex flex-row items-center text-center justify-center mt-10'>
-        <a
-          href='#about'
-          className='text-teal-500 hover:text-teal-700 text-2xl'
-          aria-label='Scroll to About'
-        >
-          ↓
-        </a>
       </div>
     </section>
   );
