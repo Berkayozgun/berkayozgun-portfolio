@@ -10,23 +10,35 @@ export interface Certification {
 export interface Project {
   name: string;
   description: string;
-  image: string;
-  github: string;
+  technologies: string[];
+  link: string;
+  demo?: string;
+}
+
+export interface Experience {
+  company: string;
+  position: string;
+  period: string;
+  description: string[];
+}
+
+export interface Education {
+  school: string;
+  degree: string;
+  period: string;
+  description: string;
+}
+
+export interface BlogPost {
+  title: string;
+  date: string;
   link: string;
 }
 
-import { IconType } from "react-icons";
-
-export interface Skill {
-  name: string;
-  icon: IconType;
-  category:
-    | "Frontend"
-    | "Backend"
-    | "Database"
-    | "Tools"
-    | "Soft Skills"
-    | "Languages"
-    | "Mobile"
-    | "Specialized";
+export interface Theme {
+  background: string;
+  text: string;
+  prompt: string;
+  command: string;
+  error: string;
 }
