@@ -1,12 +1,11 @@
-// src/App.tsx
-import React, { ReactNode } from 'react';
+import Terminal from './components/Terminal';
 
-interface AppProps {
-  children: ReactNode;
+function App() {
+  return (
+    <div className='h-screen w-screen'>
+      <Terminal />
+    </div>
+  );
 }
-
-const App: React.FC<AppProps> = ({ children }) => {
-  return <div>{children}</div>;
-};
 
 export default App;

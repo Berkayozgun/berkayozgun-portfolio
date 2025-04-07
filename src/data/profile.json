@@ -1,0 +1,332 @@
+{
+    "tr": {
+        "welcome": "Merhaba! Ben Berkay Özgün. Terminal arayüzüme hoş geldiniz.",
+        "helpPrompt": "Yardım için \"help\" yazabilirsiniz.",
+        "invalidCommand": "Geçersiz komut. Yardım için \"help\" yazabilirsiniz.",
+        "about": {
+            "title": "Berkay Özgün - Yazılım Geliştirici",
+            "skills": {
+                "frontend": [
+                    "React.js",
+                    "Next.js",
+                    "Vue.js",
+                    "TailwindCSS",
+                    "Redux",
+                    "MaterialUI",
+                    "React Native"
+                ],
+                "backend": [
+                    "Node.js",
+                    "Flask",
+                    "Express.js",
+                    "RESTful API'ler",
+                    "Java"
+                ],
+                "database": [
+                    "PostgreSQL",
+                    "MongoDB",
+                    "SQL"
+                ],
+                "devops": [
+                    "Docker",
+                    "Git",
+                    "GitHub",
+                    "Postman",
+                    "Figma",
+                    "Vite"
+                ],
+                "other": [
+                    "Kimlik Doğrulama & Yetkilendirme",
+                    "Siber Güvenlik",
+                    "NLP",
+                    "Linux",
+                    "Bulut Teknolojileri"
+                ]
+            },
+            "description": [
+                "Bilgisayar Mühendisliği mezunu (Trakya Üniversitesi, 2019-2024).",
+                "Backend ve frontend alanlarında çeşitli staj ve projelerde yer aldı.",
+                "Modern web teknolojileri ve yazılım mimarilerine hâkim.",
+                "Takım çalışmasına yatkın ve sorumluluk almaktan çekinmeyen biri."
+            ]
+        },
+        "experience": [
+            {
+                "company": "Jotform",
+                "position": "Frontend Developer Intern",
+                "period": "Haziran 2023 - Ağustos 2023",
+                "description": [
+                    "Bildirim merkezi uygulaması geliştirme",
+                    "React ve Redux kullanarak kullanıcı arayüzü geliştirme",
+                    "API entegrasyonları ve optimizasyonlar"
+                ]
+            },
+            {
+                "company": "Parentwiser",
+                "position": "Mobile Developer Intern",
+                "period": "Ocak 2023 - Mayıs 2023",
+                "description": [
+                    "React Native ile mobil uygulama geliştirme",
+                    "Kullanıcı deneyimi iyileştirmeleri",
+                    "Performans optimizasyonları"
+                ]
+            }
+        ],
+        "education": [
+            {
+                "school": "Trakya Üniversitesi",
+                "degree": "Bilgisayar Mühendisliği",
+                "period": "2019 - 2024",
+                "description": "Lisans derecesi"
+            }
+        ],
+        "certifications": [
+            {
+                "name": "AWS Certified Cloud Practitioner",
+                "issuer": "Amazon Web Services",
+                "date": "2023"
+            },
+            {
+                "name": "Google Cloud Fundamentals",
+                "issuer": "Google",
+                "date": "2022"
+            }
+        ],
+        "blog": [
+            {
+                "title": "Modern Web Geliştirme Araçları",
+                "date": "2023-12-15",
+                "link": "https://blog.berkayozgun.com/modern-web-gelistirme"
+            },
+            {
+                "title": "React Native ile Mobil Uygulama Geliştirme",
+                "date": "2023-11-20",
+                "link": "https://blog.berkayozgun.com/react-native"
+            }
+        ],
+        "projects": [
+            {
+                "name": "Mikro Blog Platformu",
+                "description": "Flask, MongoDB ve Vue.js kullanarak geliştirilen tam özellikli mikro blog platformu.",
+                "technologies": [
+                    "Flask",
+                    "Vue.js",
+                    "MongoDB"
+                ],
+                "link": "https://github.com/berkayozgun/micro-blog",
+                "demo": "https://micro-blog.berkayozgun.com"
+            },
+            {
+                "name": "Bildirim Merkezi",
+                "description": "Jotform için geliştirilen kullanıcı odaklı bildirim merkezi uygulaması.",
+                "technologies": [
+                    "React",
+                    "Redux"
+                ],
+                "link": "https://github.com/berkayozgun/notification-center",
+                "demo": "https://notifications.jotform.com"
+            },
+            {
+                "name": "Parentwiser Mobil Uygulaması",
+                "description": "React Native ile geliştirilen mobil uygulama arayüzü.",
+                "technologies": [
+                    "React Native",
+                    "Redux"
+                ],
+                "link": "https://github.com/berkayozgun/parentwiser-app",
+                "demo": "https://parentwiser.com/app"
+            }
+        ],
+        "contact": {
+            "email": "berkay@berkayozgun.com",
+            "linkedin": "https://linkedin.com/in/berkayozgun",
+            "github": "https://github.com/berkayozgun",
+            "twitter": "https://twitter.com/berkayozgun",
+            "website": "https://berkayozgun.com"
+        },
+        "commands": {
+            "hakkımda": "Hakkımda detaylı bilgi",
+            "projeler": "Projelerim ve detayları",
+            "iletişim": "İletişim bilgileri",
+            "yardım": "Bu yardım menüsü",
+            "temizle": "Ekranı temizle",
+            "çıkış": "Dil seçimine dön",
+            "yazılar": "Blog yazılarım",
+            "deneyim": "İş deneyimlerim",
+            "eğitim": "Eğitim bilgilerim",
+            "yetenekler": "Detaylı yetenek listem",
+            "sertifikalar": "Sertifikalarım",
+            "tema": "Tema değiştir"
+        },
+        "tips": [
+            "Yukarı/Aşağı ok tuşları ile komut geçmişinde gezinebilirsiniz",
+            "Tab tuşu ile komutları otomatik tamamlayabilirsiniz",
+            "Tema değiştirmek için 'tema' komutunu kullanabilirsiniz"
+        ]
+    },
+    "en": {
+        "welcome": "Hello! I am Berkay Özgün. Welcome to my terminal interface.",
+        "helpPrompt": "Type \"help\" for assistance.",
+        "invalidCommand": "Invalid command. Type \"help\" for assistance.",
+        "about": {
+            "title": "Berkay Özgün - Software Engineer",
+            "skills": {
+                "frontend": [
+                    "React.js",
+                    "Next.js",
+                    "Vue.js",
+                    "TailwindCSS",
+                    "Redux",
+                    "MaterialUI",
+                    "React Native"
+                ],
+                "backend": [
+                    "Node.js",
+                    "Flask",
+                    "Express.js",
+                    "RESTful APIs",
+                    "Java"
+                ],
+                "database": [
+                    "PostgreSQL",
+                    "MongoDB",
+                    "SQL"
+                ],
+                "devops": [
+                    "Docker",
+                    "Git",
+                    "GitHub",
+                    "Postman",
+                    "Figma",
+                    "Vite"
+                ],
+                "other": [
+                    "Authentication & Authorization",
+                    "Cybersecurity",
+                    "NLP",
+                    "Linux",
+                    "Cloud Technologies"
+                ]
+            },
+            "description": [
+                "Computer Engineering graduate (Trakya University, 2019-2024).",
+                "Participated in various internships and projects in backend and frontend development.",
+                "Proficient in modern web technologies and software architectures.",
+                "Team-oriented with a proactive and responsible attitude."
+            ]
+        },
+        "experience": [
+            {
+                "company": "Jotform",
+                "position": "Frontend Developer Intern",
+                "period": "June 2023 - August 2023",
+                "description": [
+                    "Developed notification center application",
+                    "Built user interfaces using React and Redux",
+                    "API integrations and optimizations"
+                ]
+            },
+            {
+                "company": "Parentwiser",
+                "position": "Mobile Developer Intern",
+                "period": "January 2023 - May 2023",
+                "description": [
+                    "Mobile app development with React Native",
+                    "User experience improvements",
+                    "Performance optimizations"
+                ]
+            }
+        ],
+        "education": [
+            {
+                "school": "Trakya University",
+                "degree": "Computer Engineering",
+                "period": "2019 - 2024",
+                "description": "Bachelor's Degree"
+            }
+        ],
+        "certifications": [
+            {
+                "name": "AWS Certified Cloud Practitioner",
+                "issuer": "Amazon Web Services",
+                "date": "2023"
+            },
+            {
+                "name": "Google Cloud Fundamentals",
+                "issuer": "Google",
+                "date": "2022"
+            }
+        ],
+        "blog": [
+            {
+                "title": "Modern Web Development Tools",
+                "date": "2023-12-15",
+                "link": "https://blog.berkayozgun.com/modern-web-development"
+            },
+            {
+                "title": "Mobile App Development with React Native",
+                "date": "2023-11-20",
+                "link": "https://blog.berkayozgun.com/react-native"
+            }
+        ],
+        "projects": [
+            {
+                "name": "Micro Blog Platform",
+                "description": "A full-featured micro-blog platform built with Flask, MongoDB, and Vue.js.",
+                "technologies": [
+                    "Flask",
+                    "Vue.js",
+                    "MongoDB"
+                ],
+                "link": "https://github.com/berkayozgun/micro-blog",
+                "demo": "https://micro-blog.berkayozgun.com"
+            },
+            {
+                "name": "Notification Center",
+                "description": "A responsive notification center app developed for Jotform.",
+                "technologies": [
+                    "React",
+                    "Redux"
+                ],
+                "link": "https://github.com/berkayozgun/notification-center",
+                "demo": "https://notifications.jotform.com"
+            },
+            {
+                "name": "Parentwiser Mobile App",
+                "description": "Mobile UI built using React Native.",
+                "technologies": [
+                    "React Native",
+                    "Redux"
+                ],
+                "link": "https://github.com/berkayozgun/parentwiser-app",
+                "demo": "https://parentwiser.com/app"
+            }
+        ],
+        "contact": {
+            "email": "berkay@berkayozgun.com",
+            "linkedin": "https://linkedin.com/in/berkayozgun",
+            "github": "https://github.com/berkayozgun",
+            "twitter": "https://twitter.com/berkayozgun",
+            "website": "https://berkayozgun.com"
+        },
+        "commands": {
+            "about": "Detailed information about me",
+            "projects": "My projects and details",
+            "contact": "Contact information",
+            "help": "This help menu",
+            "clear": "Clear the screen",
+            "exit": "Return to language selection",
+            "blog": "My blog posts",
+            "experience": "My work experience",
+            "education": "My education",
+            "skills": "Detailed skills list",
+            "certs": "My certifications",
+            "theme": "Change theme"
+        },
+        "tips": [
+            "Use Up/Down arrow keys to navigate command history",
+            "Use Tab key for command auto-completion",
+            "Use 'theme' command to change the theme"
+        ]
+    }
+}
