@@ -1,22 +1,12 @@
-import React from "react";
-import HeroSection from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
-import ProjectsSection from "../components/ProjectsSection";
-import CertificationsSection from "../components/CertificationsSection";
-import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import React from 'react';
+import Terminal from '../components/Terminal';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <CertificationsSection />
-      <ContactSection />
-      <Footer />
+    <div className='min-h-screen bg-gray-900 text-white'>
+      <main className='container mx-auto px-4 py-8'>
+        <Terminal />
+      </main>
     </div>
   );
 };

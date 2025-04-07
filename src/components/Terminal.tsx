@@ -49,6 +49,69 @@ interface Theme {
   error: string;
 }
 
+interface ProfileData {
+  tr: {
+    welcome: string;
+    helpPrompt: string;
+    invalidCommand: string;
+    about: {
+      title: string;
+      skills: {
+        frontend: string[];
+        backend: string[];
+        database: string[];
+        devops: string[];
+        other: string[];
+      };
+      description: string[];
+    };
+    projects: Project[];
+    contact: {
+      email: string;
+      linkedin: string;
+      github: string;
+      twitter: string;
+      website: string;
+    };
+    commands: Record<string, string>;
+    tips: string[];
+    experience: Experience[];
+    education: Education[];
+    certifications: Certification[];
+    blog: BlogPost[];
+  };
+  en: {
+    welcome: string;
+    helpPrompt: string;
+    invalidCommand: string;
+    about: {
+      title: string;
+      skills: {
+        frontend: string[];
+        backend: string[];
+        database: string[];
+        devops: string[];
+        other: string[];
+      };
+      description: string[];
+    };
+    projects: Project[];
+    contact: {
+      email: string;
+      linkedin: string;
+      github: string;
+      twitter: string;
+      website: string;
+    };
+    commands: Record<string, string>;
+    tips: string[];
+    experience: Experience[];
+    education: Education[];
+    certifications: Certification[];
+    blog: BlogPost[];
+  };
+}
+
 const themes: Record<string, Theme> = {
   default: {
     background: 'bg-black',
@@ -81,7 +144,9 @@ const themes: Record<string, Theme> = {
 };
 
 const Terminal: React.FC = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+  const [selectedLanguage, setSelectedLanguage] = useState<'tr' | 'en' | null>(
+    null
+  );
   const [commands, setCommands] = useState<Command[]>([]);
   const [input, setInput] = useState('');
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
@@ -90,7 +155,7 @@ const Terminal: React.FC = () => {
   const [currentTheme, setCurrentTheme] = useState<Theme>(themes.default);
   const terminalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const typingTimeoutRef = useRef<NodeJS.Timeout>();
+  const typingTimeoutRef = useRef<number>();
 
   useEffect(() => {
     if (terminalRef.current) {
@@ -101,22 +166,22 @@ const Terminal: React.FC = () => {
   const typeText = (text: string, index: number) => {
     if (index < text.length) {
       setTypingIndex(index + 1);
-      typingTimeoutRef.current = setTimeout(() => {
+      typingTimeoutRef.current = window.setTimeout(() => {
         typeText(text, index + 1);
       }, 10);
     }
   };
 
-  const handleLanguageSelect = (langCode: string) => {
+  const handleLanguageSelect = (langCode: 'tr' | 'en') => {
     setSelectedLanguage(langCode);
-    const lang = profileData[langCode];
+    const lang = (profileData as ProfileData)[langCode];
     setCommands([
       { text: lang.welcome, type: 'output' },
       { text: lang.helpPrompt, type: 'output' },
     ]);
   };
 
-  const formatAboutText = (lang: any) => {
+  const formatAboutText = (lang: ProfileData['tr'] | ProfileData['en']) => {
     const about = lang.about;
     let text = `${about.title}\n\n`;
 
@@ -128,14 +193,16 @@ const Terminal: React.FC = () => {
     });
 
     text += selectedLanguage === 'tr' ? '\nHakkımda:\n' : '\nAbout:\n';
-    about.description.forEach((line) => {
+    about.description.forEach((line: string) => {
       text += `${line}\n`;
     });
 
     return text;
   };
 
-  const formatExperienceText = (lang: any) => {
+  const formatExperienceText = (
+    lang: ProfileData['tr'] | ProfileData['en']
+  ) => {
     let text =
       selectedLanguage === 'tr'
         ? 'İş Deneyimleri:\n\n'
@@ -152,7 +219,7 @@ const Terminal: React.FC = () => {
     return text;
   };
 
-  const formatEducationText = (lang: any) => {
+  const formatEducationText = (lang: ProfileData['tr'] | ProfileData['en']) => {
     let text = selectedLanguage === 'tr' ? 'Eğitim:\n\n' : 'Education:\n\n';
     lang.education.forEach((edu: Education) => {
       text += `${edu.school}\n`;
@@ -163,7 +230,9 @@ const Terminal: React.FC = () => {
     return text;
   };
 
-  const formatCertificationsText = (lang: any) => {
+  const formatCertificationsText = (
+    lang: ProfileData['tr'] | ProfileData['en']
+  ) => {
     let text =
       selectedLanguage === 'tr' ? 'Sertifikalar:\n\n' : 'Certifications:\n\n';
     lang.certifications.forEach((cert: Certification) => {
@@ -174,7 +243,7 @@ const Terminal: React.FC = () => {
     return text;
   };
 
-  const formatBlogText = (lang: any) => {
+  const formatBlogText = (lang: ProfileData['tr'] | ProfileData['en']) => {
     let text =
       selectedLanguage === 'tr' ? 'Blog Yazıları:\n\n' : 'Blog Posts:\n\n';
     lang.blog.forEach((post: BlogPost) => {
@@ -185,7 +254,7 @@ const Terminal: React.FC = () => {
     return text;
   };
 
-  const formatProjectsText = (lang: any) => {
+  const formatProjectsText = (lang: ProfileData['tr'] | ProfileData['en']) => {
     let text =
       selectedLanguage === 'tr' ? 'Projelerim:\n\n' : 'My Projects:\n\n';
     lang.projects.forEach((project: Project) => {
@@ -202,7 +271,7 @@ const Terminal: React.FC = () => {
     return text;
   };
 
-  const formatContactText = (lang: any) => {
+  const formatContactText = (lang: ProfileData['tr'] | ProfileData['en']) => {
     const contact = lang.contact;
     return (
       (selectedLanguage === 'tr'
@@ -216,7 +285,7 @@ const Terminal: React.FC = () => {
     );
   };
 
-  const formatHelpText = (lang: any) => {
+  const formatHelpText = (lang: ProfileData['tr'] | ProfileData['en']) => {
     let text =
       selectedLanguage === 'tr'
         ? 'Kullanılabilir komutlar:\n\n'
@@ -237,8 +306,11 @@ const Terminal: React.FC = () => {
     if (!selectedLanguage) return;
     if (command.trim() === '') return;
 
-    const lang = profileData[selectedLanguage];
-    const newCommands = [...commands, { text: `> ${command}`, type: 'input' }];
+    const lang = (profileData as ProfileData)[selectedLanguage];
+    const newCommands: Command[] = [
+      ...commands,
+      { text: `> ${command}`, type: 'input' },
+    ];
     setCommandHistory((prev) => [...prev, command]);
     setHistoryIndex(-1);
     setInput('');
@@ -296,7 +368,7 @@ const Terminal: React.FC = () => {
         break;
       case 'yetenekler':
       case 'skills':
-        outputText = formatSkillsText(lang);
+        outputText = formatAboutText(lang);
         break;
       case 'sertifikalar':
       case 'certs':
@@ -341,8 +413,8 @@ const Terminal: React.FC = () => {
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       if (!selectedLanguage) {
-        const langCode = input.toLowerCase();
-        if (profileData[langCode]) {
+        const langCode = input.toLowerCase() as 'tr' | 'en';
+        if (langCode === 'tr' || langCode === 'en') {
           handleLanguageSelect(langCode);
           setInput('');
         } else {
@@ -375,7 +447,7 @@ const Terminal: React.FC = () => {
     } else if (e.key === 'Tab' && selectedLanguage) {
       e.preventDefault();
       const availableCommands = Object.keys(
-        profileData[selectedLanguage].commands
+        (profileData as ProfileData)[selectedLanguage].commands
       );
       const currentInput = input.toLowerCase();
       const matchingCommand = availableCommands.find((cmd) =>
@@ -475,14 +547,14 @@ const Terminal: React.FC = () => {
               ? 'Kullanılabilir komutlar:'
               : 'Available commands:'}
             <br />
-            {Object.entries(profileData[selectedLanguage].commands).map(
-              ([cmd, desc]) => (
-                <React.Fragment key={cmd}>
-                  - {cmd}
-                  <br />
-                </React.Fragment>
-              )
-            )}
+            {Object.entries(
+              (profileData as ProfileData)[selectedLanguage].commands
+            ).map(([cmd]) => (
+              <React.Fragment key={cmd}>
+                - {cmd}
+                <br />
+              </React.Fragment>
+            ))}
           </div>
           <div className='terminal-input flex items-center bg-black/50 p-2 rounded'>
             <span className={`${currentTheme.prompt} mr-2`}>$</span>
