@@ -2,6 +2,9 @@
   "navigation": {
     "about": "Hakkımda",
     "projects": "Projeler",
+    "certifications": "Sertifikalar",
+    "education": "Eğitim",
+    "blog": "Blog",
     "experience": "Deneyim",
     "contact": "İletişim"
   },
@@ -36,10 +39,16 @@
     "current": "Günümüz"
   },
   "education": {
-    "title": "Eğitim"
+    "title": "Eğitim",
+    "description": "Eğitim geçmişim ve akademik başarılarım"
+  },
+  "blog": {
+    "title": "Blog Yazılarım",
+    "description": "Yazılım geliştirme ve teknoloji hakkında yazdığım makaleler"
   },
   "certifications": {
-    "title": "Sertifikalar"
+    "title": "Sertifikalar",
+    "description": "Elde ettiğim profesyonel sertifikalar ve eğitimler"
   },
   "contact": {
     "title": "İletişime Geç",

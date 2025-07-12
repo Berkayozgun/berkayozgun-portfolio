@@ -2,6 +2,9 @@
   "navigation": {
     "about": "About",
     "projects": "Projects",
+    "certifications": "Certifications",
+    "education": "Education",
+    "blog": "Blog",
     "experience": "Experience",
     "contact": "Contact"
   },
@@ -36,10 +39,16 @@
     "current": "Present"
   },
   "education": {
-    "title": "Education"
+    "title": "Education",
+    "description": "My educational background and academic achievements"
+  },
+  "blog": {
+    "title": "Blog Posts",
+    "description": "Articles I've written about software development and technology"
   },
   "certifications": {
-    "title": "Certifications"
+    "title": "Certifications",
+    "description": "Professional certifications and training I've obtained"
   },
   "contact": {
     "title": "Get In Touch",
