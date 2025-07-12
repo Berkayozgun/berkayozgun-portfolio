@@ -809,44 +809,6 @@
             "twitter": "https://twitter.com/berkayozgun",
             "website": "https://berkayozgun.com"
         },
-        "testimonials": [
-            {
-                "name": "Ahmet Yılmaz",
-                "position": "Senior Software Engineer",
-                "company": "Elmali Tech",
-                "avatar": "/testimonial-1.svg",
-                "content": "Berkay ile çalışmak gerçekten harika bir deneyimdi. React ve Next.js konusundaki derin bilgisi ve problem çözme yeteneği takdire şayan. Karmaşık projeleri hızlıca anlayıp etkili çözümler üretebiliyor.",
-                "rating": 5,
-                "date": "Mayıs 2025"
-            },
-            {
-                "name": "Zeynep Kaya",
-                "position": "Product Manager",
-                "company": "Sixfab",
-                "avatar": "/testimonial-2.svg",
-                "content": "Berkay'ın Flask ve Vue.js ile geliştirdiği mikro blog platformu gerçekten etkileyiciydi. Teknik becerilerinin yanı sıra takım çalışması ve iletişim konusunda da çok başarılı.",
-                "rating": 5,
-                "date": "Ocak 2024"
-            },
-            {
-                "name": "Mehmet Demir",
-                "position": "Frontend Team Lead",
-                "company": "Jotform",
-                "avatar": "/testimonial-3.svg",
-                "content": "Berkay'ın notification center projesindeki performansı mükemmeldi. Responsive tasarım ve kullanıcı deneyimi konusundaki anlayışı, projenin başarısında büyük rol oynadı.",
-                "rating": 5,
-                "date": "Ağustos 2023"
-            },
-            {
-                "name": "Ayşe Özkan",
-                "position": "Software Architect",
-                "company": "TechCorp",
-                "avatar": "/testimonial-4.svg",
-                "content": "Berkay'ın modern web teknolojileri konusundaki bilgisi ve sürekli öğrenme isteği gerçekten takdire şayan. Her projede yeni teknolojiler öğrenmeye ve takımına değer katmaya odaklanıyor.",
-                "rating": 5,
-                "date": "Haziran 2024"
-            }
-        ],
         "commands": {
             "hakkımda": "Hakkımda detaylı bilgi",
             "projeler": "Projelerim ve detayları",
@@ -1677,44 +1639,6 @@
             "twitter": "https://twitter.com/berkayozgun",
             "website": "https://berkayozgun.com"
         },
-        "testimonials": [
-            {
-                "name": "Ahmet Yılmaz",
-                "position": "Senior Software Engineer",
-                "company": "Elmali Tech",
-                "avatar": "/testimonial-1.svg",
-                "content": "Working with Berkay was truly an amazing experience. His deep knowledge of React and Next.js, along with his problem-solving abilities, is commendable. He can quickly understand complex projects and produce effective solutions.",
-                "rating": 5,
-                "date": "May 2025"
-            },
-            {
-                "name": "Zeynep Kaya",
-                "position": "Product Manager",
-                "company": "Sixfab",
-                "avatar": "/testimonial-2.svg",
-                "content": "The micro-blogging platform Berkay developed with Flask and Vue.js was truly impressive. In addition to his technical skills, he is also very successful in teamwork and communication.",
-                "rating": 5,
-                "date": "January 2024"
-            },
-            {
-                "name": "Mehmet Demir",
-                "position": "Frontend Team Lead",
-                "company": "Jotform",
-                "avatar": "/testimonial-3.svg",
-                "content": "Berkay's performance in the notification center project was excellent. His understanding of responsive design and user experience played a major role in the project's success.",
-                "rating": 5,
-                "date": "August 2023"
-            },
-            {
-                "name": "Ayşe Özkan",
-                "position": "Software Architect",
-                "company": "TechCorp",
-                "avatar": "/testimonial-4.svg",
-                "content": "Berkay's knowledge of modern web technologies and his desire for continuous learning is truly admirable. He focuses on learning new technologies and adding value to his team in every project.",
-                "rating": 5,
-                "date": "June 2024"
-            }
-        ],
         "commands": {
             "about": "Detailed information about me",
             "projects": "My projects and details",

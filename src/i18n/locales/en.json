@@ -3,7 +3,6 @@
     "about": "About",
     "projects": "Projects",
     "experience": "Experience",
-    "testimonials": "Testimonials",
     "contact": "Contact"
   },
   "hero": {
@@ -41,9 +40,6 @@
   },
   "certifications": {
     "title": "Certifications"
-  },
-  "testimonials": {
-    "title": "Testimonials"
   },
   "contact": {
     "title": "Get In Touch",

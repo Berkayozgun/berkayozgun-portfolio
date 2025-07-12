@@ -3,7 +3,6 @@
     "about": "Hakkımda",
     "projects": "Projeler",
     "experience": "Deneyim",
-    "testimonials": "Referanslar",
     "contact": "İletişim"
   },
   "hero": {
@@ -41,9 +40,6 @@
   },
   "certifications": {
     "title": "Sertifikalar"
-  },
-  "testimonials": {
-    "title": "Referanslar"
   },
   "contact": {
     "title": "İletişime Geç",

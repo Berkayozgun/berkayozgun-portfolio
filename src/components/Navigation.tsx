@@ -27,7 +27,6 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
     { id: 'about', label: t('navigation.about') },
     { id: 'projects', label: t('navigation.projects') },
     { id: 'experience', label: t('navigation.experience') },
-    { id: 'testimonials', label: t('navigation.testimonials') },
     { id: 'contact', label: t('navigation.contact') }
   ];
 
