@@ -1,34 +1,23 @@
-import Skeleton from "../common/Skeleton";
+import React from 'react';
 
-const ProjectCardSkeleton = () => {
+const ProjectSkeleton: React.FC = () => {
   return (
-    <div className='flex flex-col md:flex-row gap-4 items-center p-4'>
-      <Skeleton className='rounded-xl aspect-video w-full' />
-      <div className='w-full space-y-4'>
-        <Skeleton height='32px' width='60%' />
-        <Skeleton height='60px' width='90%' />
-        <div className='flex gap-2'>
-          <Skeleton width='100px' height='36px' />
-          <Skeleton width='100px' height='36px' />
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden animate-pulse">
+      <div className="p-6">
+        <div className="h-6 bg-gray-300 rounded mb-3"></div>
+        <div className="h-4 bg-gray-300 rounded mb-4"></div>
+        <div className="flex flex-wrap gap-2 mb-4">
+          <div className="h-6 bg-gray-300 rounded-full w-16"></div>
+          <div className="h-6 bg-gray-300 rounded-full w-20"></div>
+          <div className="h-6 bg-gray-300 rounded-full w-14"></div>
+        </div>
+        <div className="flex space-x-3">
+          <div className="h-4 bg-gray-300 rounded w-16"></div>
+          <div className="h-4 bg-gray-300 rounded w-12"></div>
         </div>
       </div>
     </div>
   );
 };
 
-const ProjectsSkeleton = () => {
-  return (
-    <section className='py-20 px-4 md:px-20'>
-      <Skeleton className='mx-auto' width='200px' height='40px' />
-      <Skeleton className='mx-auto mt-4' width='50px' height='4px' />
-
-      <div className='mt-10 space-y-12'>
-        {[1, 2, 3].map((i) => (
-          <ProjectCardSkeleton key={i} />
-        ))}
-      </div>
-    </section>
-  );
-};
-
-export default ProjectsSkeleton;
+export default ProjectSkeleton;

@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Berkay Özgün",
+    "subtitle": "Software Engineer",
+    "description": "A software engineer proficient in modern web technologies and software architectures, team-oriented with a proactive and responsible attitude.",
+    "viewProjects": "View My Projects",
+    "getInTouch": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a passionate software engineer with expertise in modern web technologies and software architectures. I enjoy creating efficient, scalable solutions and collaborating with teams to deliver high-quality products.",
+    "skills": "Skills",
+    "technologies": "Technologies",
+    "languages": "Languages",
+    "tools": "Tools & Platforms"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Projects I've developed and technologies used",
+    "viewProject": "View Project",
+    "viewDemo": "View Demo",
+    "projects": "projects",
+    "technologies": "Technologies",
+    "viewDetails": "View Details",
+    "liveDemo": "Live Demo",
+    "noImage": "No Image"
+  },
+  "experience": {
+    "title": "Experience",
+    "current": "Present"
+  },
+  "education": {
+    "title": "Education"
+  },
+  "certifications": {
+    "title": "Certifications"
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'm always interested in new opportunities and collaborations. Feel free to reach out!",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message sent successfully!",
+    "error": "Error sending message. Please try again.",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email",
+    "subjectRequired": "Subject is required",
+    "messageRequired": "Message is required",
+    "yourName": "Your name",
+    "messageSubject": "Message subject",
+    "yourMessage": "Your message"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous"
+  }
+} 

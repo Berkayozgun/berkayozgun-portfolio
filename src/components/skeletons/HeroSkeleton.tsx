@@ -1,21 +1,17 @@
-import Skeleton from "../common/Skeleton";
+import React from 'react';
 
-const HeroSkeleton = () => {
+const HeroSkeleton: React.FC = () => {
   return (
-    <section className='bg-gray-100 dark:bg-gray-900 min-h-fit p-20'>
-      <div className='container mx-auto flex flex-col text-center items-center justify-center md:flex-row md:space-x-4 md:text-left'>
-        <div className='md:mt-2 md:w-1/2'>
-          <Skeleton
-            className='rounded-full mx-auto'
-            width='325px'
-            height='325px'
-          />
-        </div>
-        <div className='md:mt-2 md:w-3/5'>
-          <Skeleton className='mt-6 md:mt-0' height='60px' width='80%' />
-          <Skeleton className='mt-4' height='100px' width='90%' />
-          <div className='mt-4'>
-            <Skeleton className='inline-block' width='150px' height='45px' />
+    <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gray-300 animate-pulse"></div>
+          <div className="h-12 bg-gray-300 rounded-lg mx-auto mb-4 w-64 animate-pulse"></div>
+          <div className="h-8 bg-gray-300 rounded-lg mx-auto mb-8 w-48 animate-pulse"></div>
+          <div className="h-6 bg-gray-300 rounded-lg mx-auto mb-8 w-96 animate-pulse"></div>
+          <div className="flex justify-center space-x-4">
+            <div className="h-12 bg-gray-300 rounded-lg w-32 animate-pulse"></div>
+            <div className="h-12 bg-gray-300 rounded-lg w-32 animate-pulse"></div>
           </div>
         </div>
       </div>

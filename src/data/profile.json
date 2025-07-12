@@ -16,59 +16,70 @@
                     "React Native"
                 ],
                 "backend": [
-                    "Node.js",
                     "Flask",
+                    "Node.js",
                     "Express.js",
-                    "RESTful API'ler",
-                    "Java"
+                    "RESTful API Design",
+                    "JWT/OAuth Authentication"
                 ],
                 "database": [
-                    "PostgreSQL",
                     "MongoDB",
-                    "SQL"
+                    "PostgreSQL",
+                    "Supabase (RLS)"
                 ],
                 "devops": [
                     "Docker",
+                    "AWS",
+                    "Alibaba Cloud",
                     "Git",
                     "GitHub",
                     "Postman",
-                    "Figma",
-                    "Vite"
+                    "Figma"
                 ],
                 "other": [
-                    "Kimlik Doğrulama & Yetkilendirme",
-                    "Siber Güvenlik",
-                    "NLP",
-                    "Linux",
-                    "Bulut Teknolojileri"
+                    "Python",
+                    "JavaScript (ES6+)",
+                    "TypeScript",
+                    "Linux Shell Scripting",
+                    "Cybersecurity Fundamentals"
                 ]
             },
             "description": [
                 "Bilgisayar Mühendisliği mezunu (Trakya Üniversitesi, 2019-2024).",
-                "Backend ve frontend alanlarında çeşitli staj ve projelerde yer aldı.",
+                "Frontend ve backend alanlarında çeşitli staj ve projelerde yer aldı.",
                 "Modern web teknolojileri ve yazılım mimarilerine hâkim.",
                 "Takım çalışmasına yatkın ve sorumluluk almaktan çekinmeyen biri."
             ]
         },
         "experience": [
             {
-                "company": "Jotform",
-                "position": "Frontend Developer Intern",
-                "period": "Haziran 2023 - Ağustos 2023",
+                "company": "Elmali Tech",
+                "position": "JavaScript Developer Intern",
+                "period": "Mart 2025 - Mayıs 2025",
                 "description": [
-                    "Bildirim merkezi uygulaması geliştirme",
-                    "React ve Redux kullanarak kullanıcı arayüzü geliştirme",
-                    "API entegrasyonları ve optimizasyonlar"
+                    "10+ production-ready React ve Next.js uygulaması geliştirdim, karmaşık state yönetimi, server-side rendering (SSR) ve dynamic routing uyguladım.",
+                    "Supabase Row Level Security (RLS) politikaları ve Firebase Cloud Functions ile gerçek zamanlı işbirliği özellikleri entegre ettim, e-ticaret ve rezervasyon platformlarında kullanıcı senkronizasyon sorunlarını etkili şekilde çözdüm.",
+                    "Birden fazla projede teknoloji stack'leri ve mimari kararları değerlendirdim, geliştirme standartları oluşturdum ve takım verimliliğini artırdım."
                 ]
             },
             {
-                "company": "Parentwiser",
-                "position": "Mobile Developer Intern",
-                "period": "Ocak 2023 - Mayıs 2023",
+                "company": "Sixfab",
+                "position": "Software Engineer Intern",
+                "period": "Kasım 2023 - Ocak 2024",
                 "description": [
-                    "React Native ile mobil uygulama geliştirme",
-                    "Kullanıcı deneyimi iyileştirmeleri",
-                    "Performans optimizasyonları"
+                    "Flask, Vue.js ve MongoDB kullanarak gelişmiş kullanıcı etkileşimleri, kimlik doğrulama akışları ve rol tabanlı erişim kontrolü içeren bir mikro-blog platformu tasarladım ve teslim ettim.",
+                    "İç içe yorumlama, gerçek zamanlı oylama sistemleri ve MongoDB aggregation pipeline'ları aracılığıyla kullanıcı etkileşim takibi dahil ölçeklenebilir sosyal özellikler oluşturdum.",
+                    "CI/CD pipeline'ları ve kod inceleme iş akışları kurarak bağımsız olarak uçtan uca proje yaşam döngüsünü yönettim, çözüm kalitesini artırmak için iteratif geri bildirimleri dahil ettim."
+                ]
+            },
+            {
+                "company": "Jotform",
+                "position": "Frontend Developer Intern",
+                "period": "Temmuz 2023 - Ağustos 2023",
+                "description": [
+                    "Enterprise Upgrade Team ile işbirliği yaparak responsive notification center uygulaması tasarladım ve geliştirdim, kurumsal iletişim iş akışlarını düzenledim.",
+                    "Proje başlangıcından başarılı canlı gösterime kadar 3 stajyerden oluşan cross-functional takımı yönettim, zamanında teslimat ve etkili işbirliği sağladım.",
+                    "Ölçeklenebilir monorepo mimarisi uyguladım, birden fazla projede kod sürdürülebilirliğini ve geliştirici verimliliğini artırdım."
                 ]
             }
         ],
@@ -76,65 +87,719 @@
             {
                 "school": "Trakya Üniversitesi",
                 "degree": "Bilgisayar Mühendisliği",
-                "period": "2019 - 2024",
+                "period": "2019 - Ocak 2024",
                 "description": "Lisans derecesi"
             }
         ],
         "certifications": [
             {
-                "name": "AWS Certified Cloud Practitioner",
-                "issuer": "Amazon Web Services",
-                "date": "2023"
+                "name": "Cisco Certified Cyberops Associate",
+                "issuer": "Cisco",
+                "date": "Mayıs 2025"
             },
             {
-                "name": "Google Cloud Fundamentals",
-                "issuer": "Google",
-                "date": "2022"
+                "name": "Alibaba Cloud Certified Cloud Computing Engineer",
+                "issuer": "Alibaba Cloud",
+                "date": "Ekim 2024"
+            },
+            {
+                "name": "IBM & edX – Developing Front End Apps with React",
+                "issuer": "IBM & edX",
+                "date": "2024"
             }
         ],
-        "blog": [
+        "medium": [
             {
-                "title": "Modern Web Geliştirme Araçları",
-                "date": "2023-12-15",
-                "link": "https://blog.berkayozgun.com/modern-web-gelistirme"
+                "title": "Modern Web Development Tools and Best Practices",
+                "date": "2024-01-15",
+                "link": "https://medium.com/@berkayozgun/modern-web-development-tools",
+                "readTime": "5 min read"
             },
             {
-                "title": "React Native ile Mobil Uygulama Geliştirme",
-                "date": "2023-11-20",
-                "link": "https://blog.berkayozgun.com/react-native"
+                "title": "Building Scalable React Applications with Next.js",
+                "date": "2023-12-20",
+                "link": "https://medium.com/@berkayozgun/building-scalable-react-applications",
+                "readTime": "8 min read"
+            },
+            {
+                "title": "The Future of Frontend Development: Trends to Watch",
+                "date": "2023-11-10",
+                "link": "https://medium.com/@berkayozgun/frontend-development-trends",
+                "readTime": "6 min read"
             }
         ],
         "projects": [
             {
                 "name": "Mikro Blog Platformu",
-                "description": "Flask, MongoDB ve Vue.js kullanarak geliştirilen tam özellikli mikro blog platformu.",
+                "description": "Flask, Vue.js ve MongoDB kullanarak geliştirilen gelişmiş kullanıcı etkileşimleri, kimlik doğrulama akışları ve rol tabanlı erişim kontrolü içeren tam özellikli mikro blog platformu.",
                 "technologies": [
                     "Flask",
                     "Vue.js",
                     "MongoDB"
                 ],
                 "link": "https://github.com/berkayozgun/micro-blog",
-                "demo": "https://micro-blog.berkayozgun.com"
+                "demo": "https://micro-blog.berkayozgun.com",
+                "images": [
+                    {
+                        "id": "micro-blog-1",
+                        "src": "/micro-blog-dashboard.png",
+                        "alt": "Micro Blog Dashboard",
+                        "title": "Dashboard Interface"
+                    },
+                    {
+                        "id": "micro-blog-2",
+                        "src": "/micro-blog-post.png",
+                        "alt": "Blog Post Creation",
+                        "title": "Post Creation Interface"
+                    },
+                    {
+                        "id": "micro-blog-3",
+                        "src": "/micro-blog-mobile.png",
+                        "alt": "Mobile Responsive Design",
+                        "title": "Mobile View"
+                    }
+                ]
             },
             {
                 "name": "Bildirim Merkezi",
-                "description": "Jotform için geliştirilen kullanıcı odaklı bildirim merkezi uygulaması.",
+                "description": "Jotform için geliştirilen responsive notification center uygulaması, kurumsal iletişim iş akışlarını düzenler.",
                 "technologies": [
                     "React",
                     "Redux"
                 ],
                 "link": "https://github.com/berkayozgun/notification-center",
-                "demo": "https://notifications.jotform.com"
+                "demo": "https://notifications.jotform.com",
+                "images": [
+                    {
+                        "id": "notification-1",
+                        "src": "/notification-center.png",
+                        "alt": "Notification Center Interface",
+                        "title": "Main Notification Interface"
+                    },
+                    {
+                        "id": "notification-2",
+                        "src": "/notification-settings.png",
+                        "alt": "Notification Settings",
+                        "title": "Settings Panel"
+                    }
+                ]
             },
             {
-                "name": "Parentwiser Mobil Uygulaması",
-                "description": "React Native ile geliştirilen mobil uygulama arayüzü.",
+                "name": "Production React/Next.js Uygulamaları",
+                "description": "Elmali Tech'te geliştirilen 10+ production-ready React ve Next.js uygulaması, karmaşık state yönetimi ve SSR içerir.",
                 "technologies": [
-                    "React Native",
-                    "Redux"
+                    "React",
+                    "Next.js",
+                    "Supabase",
+                    "Firebase"
                 ],
-                "link": "https://github.com/berkayozgun/parentwiser-app",
-                "demo": "https://parentwiser.com/app"
+                "link": "https://github.com/berkayozgun/production-apps",
+                "demo": "https://apps.elmali.tech",
+                "images": [
+                    {
+                        "id": "production-1",
+                        "src": "/production-app-1.png",
+                        "alt": "Production App Dashboard",
+                        "title": "Main Dashboard"
+                    },
+                    {
+                        "id": "production-2",
+                        "src": "/production-app-2.png",
+                        "alt": "User Management Interface",
+                        "title": "User Management"
+                    },
+                    {
+                        "id": "production-3",
+                        "src": "/production-app-3.png",
+                        "alt": "Analytics Dashboard",
+                        "title": "Analytics View"
+                    }
+                ]
+            },
+            {
+                "name": "Digiroom Landing-Mobil-Admin Web Panel",
+                "description": "Digiroom için geliştirilen kapsamlı web platformu. Landing page, mobil uygulama ve admin panel içeren tam özellikli sistem.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "Supabase"
+                ],
+                "link": "https://github.com/berkayozgun/digiroom-platform",
+                "demo": "https://digiroom.com",
+                "images": [
+                    {
+                        "id": "digiroom-1",
+                        "src": "/digiroom-landing.png",
+                        "alt": "Digiroom Landing Page",
+                        "title": "Landing Page"
+                    },
+                    {
+                        "id": "digiroom-2",
+                        "src": "/digiroom-admin.png",
+                        "alt": "Admin Panel",
+                        "title": "Admin Dashboard"
+                    },
+                    {
+                        "id": "digiroom-3",
+                        "src": "/digiroom-mobile.png",
+                        "alt": "Mobile Interface",
+                        "title": "Mobile App"
+                    }
+                ]
+            },
+            {
+                "name": "Adlambs Website",
+                "description": "Adlambs şirketi için geliştirilen modern ve responsive kurumsal website. SEO optimizasyonu ve hızlı yükleme süreleri ile öne çıkar.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TailwindCSS",
+                    "Framer Motion"
+                ],
+                "link": "https://github.com/berkayozgun/adlambs-website",
+                "demo": "https://adlambs.com",
+                "images": [
+                    {
+                        "id": "adlambs-1",
+                        "src": "/adlambs-home.png",
+                        "alt": "Adlambs Homepage",
+                        "title": "Homepage"
+                    },
+                    {
+                        "id": "adlambs-2",
+                        "src": "/adlambs-about.png",
+                        "alt": "About Page",
+                        "title": "About Section"
+                    }
+                ]
+            },
+            {
+                "name": "CV Oluşturma ve Yayınlama Platformu",
+                "description": "Kullanıcıların profesyonel CV'lerini oluşturup yayınlayabilecekleri modern web uygulaması. Çoklu şablon desteği ve PDF export özelliği.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "jsPDF"
+                ],
+                "link": "https://github.com/berkayozgun/cv-builder",
+                "demo": "https://cv-builder.berkayozgun.com",
+                "images": [
+                    {
+                        "id": "cv-builder-1",
+                        "src": "/cv-builder-interface.png",
+                        "alt": "CV Builder Interface",
+                        "title": "Builder Interface"
+                    },
+                    {
+                        "id": "cv-preview.png",
+                        "src": "/cv-preview.png",
+                        "alt": "CV Preview",
+                        "title": "CV Preview"
+                    }
+                ]
+            },
+            {
+                "name": "Elmali Collectibles",
+                "description": "NFT ve dijital koleksiyon yönetim platformu. Kullanıcıların dijital varlıklarını satın alıp satabilecekleri güvenli marketplace.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "Web3",
+                    "Ethereum",
+                    "MetaMask"
+                ],
+                "link": "https://github.com/berkayozgun/elmali-collectibles",
+                "demo": "https://collectibles.elmali.tech",
+                "images": [
+                    {
+                        "id": "collectibles-1",
+                        "src": "/collectibles-marketplace.png",
+                        "alt": "NFT Marketplace",
+                        "title": "Marketplace"
+                    },
+                    {
+                        "id": "collectibles-2",
+                        "src": "/collectibles-wallet.png",
+                        "alt": "Wallet Integration",
+                        "title": "Wallet Connect"
+                    }
+                ]
+            },
+            {
+                "name": "Londonbridge",
+                "description": "Uluslararası ticaret ve lojistik platformu. Şirketlerin global ticaret işlemlerini kolaylaştıran kapsamlı web uygulaması.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "Node.js",
+                    "PostgreSQL"
+                ],
+                "link": "https://github.com/berkayozgun/londonbridge",
+                "demo": "https://londonbridge.com",
+                "images": [
+                    {
+                        "id": "londonbridge-1",
+                        "src": "/londonbridge-dashboard.png",
+                        "alt": "Londonbridge Dashboard",
+                        "title": "Main Dashboard"
+                    },
+                    {
+                        "id": "londonbridge-2",
+                        "src": "/londonbridge-trade.png",
+                        "alt": "Trade Interface",
+                        "title": "Trade Platform"
+                    }
+                ]
+            },
+            {
+                "name": "Plango - Kişisel Planlama Uygulaması",
+                "description": "Kişisel proje. Kullanıcıların günlük görevlerini, projelerini ve hedeflerini yönetebilecekleri modern planlama uygulaması.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "Supabase"
+                ],
+                "link": "https://github.com/berkayozgun/plango",
+                "demo": "https://plango.berkayozgun.com",
+                "images": [
+                    {
+                        "id": "plango-1",
+                        "src": "/plango-dashboard.png",
+                        "alt": "Plango Dashboard",
+                        "title": "Task Dashboard"
+                    },
+                    {
+                        "id": "plango-2",
+                        "src": "/plango-calendar.png",
+                        "alt": "Calendar View",
+                        "title": "Calendar Interface"
+                    },
+                    {
+                        "id": "plango-3",
+                        "src": "/plango-mobile.png",
+                        "alt": "Mobile App",
+                        "title": "Mobile Interface"
+                    }
+                ]
+            },
+            {
+                "name": "Private Label Manufacturer Platform",
+                "description": "Üretim şirketleri için özel etiket üretim yönetim sistemi. Tedarik zinciri optimizasyonu ve kalite kontrol süreçleri.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "Node.js",
+                    "PostgreSQL",
+                    "Redis"
+                ],
+                "link": "https://github.com/berkayozgun/private-label-platform",
+                "demo": "https://manufacturer.elmali.tech",
+                "images": [
+                    {
+                        "id": "manufacturer-1",
+                        "src": "/manufacturer-dashboard.png",
+                        "alt": "Manufacturing Dashboard",
+                        "title": "Production Dashboard"
+                    },
+                    {
+                        "id": "manufacturer-2",
+                        "src": "/manufacturer-orders.png",
+                        "alt": "Order Management",
+                        "title": "Order System"
+                    }
+                ]
+            },
+            {
+                "name": "Tedarikçi Admin/Web/Backend Sistemi",
+                "description": "Tedarik zinciri yönetimi için kapsamlı platform. Tedarikçi yönetimi, stok takibi ve sipariş süreçleri.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB"
+                ],
+                "link": "https://github.com/berkayozgun/supplier-management",
+                "demo": "https://supplier.elmali.tech",
+                "images": [
+                    {
+                        "id": "supplier-1",
+                        "src": "/supplier-admin.png",
+                        "alt": "Supplier Admin Panel",
+                        "title": "Admin Panel"
+                    },
+                    {
+                        "id": "supplier-2",
+                        "src": "/supplier-web.png",
+                        "alt": "Web Interface",
+                        "title": "Web Platform"
+                    }
+                ]
+            },
+            {
+                "name": "Flight Search Application",
+                "description": "Modern uçuş arama ve rezervasyon uygulaması. Kullanıcıların uçuşları arayıp rezervasyon yapabilecekleri responsive web uygulaması.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/flight-search-application",
+                "demo": "https://flight-search-app.vercel.app",
+                "images": [
+                    {
+                        "id": "flight-search-1",
+                        "src": "/flight-search-app.png",
+                        "alt": "Flight Search Interface",
+                        "title": "Search Interface"
+                    },
+                    {
+                        "id": "flight-search-2",
+                        "src": "/flight-results.png",
+                        "alt": "Flight Results",
+                        "title": "Search Results"
+                    }
+                ]
+            },
+            {
+                "name": "Netflix Clone",
+                "description": "Netflix'in modern bir klonu. Film ve dizi kataloğu, kullanıcı profilleri ve responsive tasarım ile gerçek Netflix deneyimi.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/netflix-clone",
+                "demo": "https://netflix-clone-berkay.vercel.app",
+                "images": [
+                    {
+                        "id": "netflix-1",
+                        "src": "/netflix-home.png",
+                        "alt": "Netflix Homepage",
+                        "title": "Homepage"
+                    },
+                    {
+                        "id": "netflix-2",
+                        "src": "/netflix-movie.png",
+                        "alt": "Movie Detail",
+                        "title": "Movie Details"
+                    }
+                ]
+            },
+            {
+                "name": "Campfire Microblog Backend",
+                "description": "Twitter benzeri mikro blog platformu backend'i. Kullanıcıların post oluşturma, yorum yapma ve oylama yapabilecekleri API.",
+                "technologies": [
+                    "Python",
+                    "Flask",
+                    "MongoDB",
+                    "JWT"
+                ],
+                "link": "https://github.com/berkayozgun/campfire_microblog-backend",
+                "demo": "https://campfire-backend.herokuapp.com",
+                "images": [
+                    {
+                        "id": "campfire-backend-1",
+                        "src": "/campfire.png",
+                        "alt": "Campfire Backend",
+                        "title": "API Documentation"
+                    }
+                ]
+            },
+            {
+                "name": "E-commerce Dashboard",
+                "description": "Modern e-ticaret yönetim paneli. Satış analitikleri, ürün yönetimi ve müşteri takibi için kapsamlı dashboard.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "Chart.js",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/ecommerce-dashboard",
+                "demo": "https://ecommerce-dashboard-berkay.vercel.app",
+                "images": [
+                    {
+                        "id": "ecommerce-1",
+                        "src": "/e-commerce-dashboard.png",
+                        "alt": "E-commerce Dashboard",
+                        "title": "Main Dashboard"
+                    },
+                    {
+                        "id": "ecommerce-2",
+                        "src": "/ecommerce-analytics.png",
+                        "alt": "Analytics Panel",
+                        "title": "Analytics"
+                    }
+                ]
+            },
+            {
+                "name": "Campfire Frontend",
+                "description": "Vue.js ile geliştirilmiş mikro blog platformu frontend'i. Modern ve kullanıcı dostu arayüz ile sosyal medya deneyimi.",
+                "technologies": [
+                    "Vue.js",
+                    "JavaScript",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/campfire-frontend",
+                "demo": "https://campfire-frontend.vercel.app",
+                "images": [
+                    {
+                        "id": "campfire-frontend-1",
+                        "src": "/campfire-frontend.png",
+                        "alt": "Campfire Frontend",
+                        "title": "Main Interface"
+                    }
+                ]
+            },
+            {
+                "name": "YemekApp - Recipe Application",
+                "description": "Ionic framework ile geliştirilmiş yemek tarifi uygulaması. Kullanıcıların tarif paylaşabilecekleri mobil uygulama.",
+                "technologies": [
+                    "TypeScript",
+                    "Ionic",
+                    "Angular",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/yemekApp",
+                "demo": "https://yemek-app.vercel.app",
+                "images": [
+                    {
+                        "id": "yemekapp-1",
+                        "src": "/yemek-app.png",
+                        "alt": "YemekApp Interface",
+                        "title": "Recipe App"
+                    }
+                ]
+            },
+            {
+                "name": "Rising Dashboard",
+                "description": "Modern dashboard uygulaması. Kullanıcıların verilerini görselleştirebilecekleri interaktif dashboard.",
+                "technologies": [
+                    "TypeScript",
+                    "React",
+                    "Chart.js",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/rising-dashboard",
+                "demo": "https://rising-dashboard.vercel.app",
+                "images": [
+                    {
+                        "id": "rising-1",
+                        "src": "/rising-dashboard.png",
+                        "alt": "Rising Dashboard",
+                        "title": "Dashboard Interface"
+                    }
+                ]
+            },
+            {
+                "name": "Paradise Nursery",
+                "description": "Fidanlık yönetim uygulaması. Bitki kataloğu, bakım takibi ve satış yönetimi için kapsamlı platform.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/paradise-nursery",
+                "demo": "https://paradise-nursery.vercel.app",
+                "images": [
+                    {
+                        "id": "paradise-1",
+                        "src": "/paradise-nursery.png",
+                        "alt": "Paradise Nursery",
+                        "title": "Nursery Interface"
+                    }
+                ]
+            },
+            {
+                "name": "My Finance App",
+                "description": "Kişisel finans yönetim uygulaması. Gelir-gider takibi, bütçe planlama ve finansal analitikler.",
+                "technologies": [
+                    "TypeScript",
+                    "React",
+                    "Chart.js",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/my-finance-app",
+                "demo": "https://my-finance-app.vercel.app",
+                "images": [
+                    {
+                        "id": "finance-1",
+                        "src": "/finance-app.png",
+                        "alt": "Finance App",
+                        "title": "Finance Dashboard"
+                    }
+                ]
+            },
+            {
+                "name": "iWeather - Weather App",
+                "description": "Hava durumu uygulaması. Gerçek zamanlı hava durumu bilgileri, tahminler ve konum bazlı servisler.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "Weather API",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/iweather",
+                "demo": "https://iweather-app.vercel.app",
+                "images": [
+                    {
+                        "id": "weather-1",
+                        "src": "/weather-app.png",
+                        "alt": "Weather App",
+                        "title": "Weather Interface"
+                    }
+                ]
+            },
+            {
+                "name": "Flavor Fusion",
+                "description": "Yemek tarifi ve sosyal medya platformu. Kullanıcıların tarif paylaşabilecekleri ve etkileşimde bulunabilecekleri uygulama.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/flavor-fusion",
+                "demo": "https://flavor-fusion.vercel.app",
+                "images": [
+                    {
+                        "id": "flavor-1",
+                        "src": "/flavor-fusion.png",
+                        "alt": "Flavor Fusion",
+                        "title": "Recipe Platform"
+                    }
+                ]
+            },
+            {
+                "name": "Plane Scape",
+                "description": "Uçak ve havacılık temalı uygulama. Uçak bilgileri, uçuş takibi ve havacılık haberleri.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/plane-scape",
+                "demo": "https://plane-scape.vercel.app",
+                "images": [
+                    {
+                        "id": "plane-1",
+                        "src": "/plane-scape.png",
+                        "alt": "Plane Scape",
+                        "title": "Aviation App"
+                    }
+                ]
+            },
+            {
+                "name": "Bulut MD Mobile",
+                "description": "Mobil sağlık uygulaması. Hasta takibi, randevu yönetimi ve sağlık verileri için mobil platform.",
+                "technologies": [
+                    "TypeScript",
+                    "React Native",
+                    "Expo",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/bulut-md-mobile",
+                "demo": "https://bulut-md-mobile.vercel.app",
+                "images": [
+                    {
+                        "id": "bulut-1",
+                        "src": "/bulut-mobile.png",
+                        "alt": "Bulut MD Mobile",
+                        "title": "Mobile Health App"
+                    }
+                ]
+            },
+            {
+                "name": "Expo Todo App",
+                "description": "Expo ile geliştirilmiş modern todo uygulaması. Görev yönetimi, kategoriler ve bildirimler ile kapsamlı todo sistemi.",
+                "technologies": [
+                    "JavaScript",
+                    "Expo",
+                    "React Native",
+                    "AsyncStorage"
+                ],
+                "link": "https://github.com/berkayozgun/expo-todo",
+                "demo": "https://expo-todo-app.vercel.app",
+                "images": [
+                    {
+                        "id": "expo-todo-1",
+                        "src": "/expo-todo.png",
+                        "alt": "Expo Todo App",
+                        "title": "Todo Interface"
+                    }
+                ]
+            },
+            {
+                "name": "Ticket App",
+                "description": "Bilet satış ve yönetim uygulaması. Etkinlik biletleri, rezervasyon sistemi ve kullanıcı yönetimi.",
+                "technologies": [
+                    "TypeScript",
+                    "React",
+                    "Node.js",
+                    "MongoDB"
+                ],
+                "link": "https://github.com/berkayozgun/ticket-app",
+                "demo": "https://ticket-app-demo.vercel.app",
+                "images": [
+                    {
+                        "id": "ticket-1",
+                        "src": "/ticket-app.png",
+                        "alt": "Ticket App",
+                        "title": "Ticket System"
+                    }
+                ]
+            },
+            {
+                "name": "Spotify Clone",
+                "description": "Spotify'ın modern klonu. Müzik çalma, playlist yönetimi ve kullanıcı profilleri ile tam müzik deneyimi.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/spotify-clone",
+                "demo": "https://spotify-clone-berkay.vercel.app",
+                "images": [
+                    {
+                        "id": "spotify-1",
+                        "src": "/spotify-clone.png",
+                        "alt": "Spotify Clone",
+                        "title": "Music Player"
+                    }
+                ]
+            },
+            {
+                "name": "Recommended Jobs",
+                "description": "İş önerisi ve kariyer platformu. Kullanıcıların iş arayabilecekleri ve öneriler alabilecekleri sistem.",
+                "technologies": [
+                    "Python",
+                    "Django",
+                    "PostgreSQL",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/RecomendedJobs",
+                "demo": "https://recommended-jobs.vercel.app",
+                "images": [
+                    {
+                        "id": "jobs-1",
+                        "src": "/recommended-jobs.png",
+                        "alt": "Recommended Jobs",
+                        "title": "Job Platform"
+                    }
+                ]
             }
         ],
         "contact": {
@@ -144,6 +809,44 @@
             "twitter": "https://twitter.com/berkayozgun",
             "website": "https://berkayozgun.com"
         },
+        "testimonials": [
+            {
+                "name": "Ahmet Yılmaz",
+                "position": "Senior Software Engineer",
+                "company": "Elmali Tech",
+                "avatar": "/testimonial-1.svg",
+                "content": "Berkay ile çalışmak gerçekten harika bir deneyimdi. React ve Next.js konusundaki derin bilgisi ve problem çözme yeteneği takdire şayan. Karmaşık projeleri hızlıca anlayıp etkili çözümler üretebiliyor.",
+                "rating": 5,
+                "date": "Mayıs 2025"
+            },
+            {
+                "name": "Zeynep Kaya",
+                "position": "Product Manager",
+                "company": "Sixfab",
+                "avatar": "/testimonial-2.svg",
+                "content": "Berkay'ın Flask ve Vue.js ile geliştirdiği mikro blog platformu gerçekten etkileyiciydi. Teknik becerilerinin yanı sıra takım çalışması ve iletişim konusunda da çok başarılı.",
+                "rating": 5,
+                "date": "Ocak 2024"
+            },
+            {
+                "name": "Mehmet Demir",
+                "position": "Frontend Team Lead",
+                "company": "Jotform",
+                "avatar": "/testimonial-3.svg",
+                "content": "Berkay'ın notification center projesindeki performansı mükemmeldi. Responsive tasarım ve kullanıcı deneyimi konusundaki anlayışı, projenin başarısında büyük rol oynadı.",
+                "rating": 5,
+                "date": "Ağustos 2023"
+            },
+            {
+                "name": "Ayşe Özkan",
+                "position": "Software Architect",
+                "company": "TechCorp",
+                "avatar": "/testimonial-4.svg",
+                "content": "Berkay'ın modern web teknolojileri konusundaki bilgisi ve sürekli öğrenme isteği gerçekten takdire şayan. Her projede yeni teknolojiler öğrenmeye ve takımına değer katmaya odaklanıyor.",
+                "rating": 5,
+                "date": "Haziran 2024"
+            }
+        ],
         "commands": {
             "hakkımda": "Hakkımda detaylı bilgi",
             "projeler": "Projelerim ve detayları",
@@ -181,59 +884,70 @@
                     "React Native"
                 ],
                 "backend": [
-                    "Node.js",
                     "Flask",
+                    "Node.js",
                     "Express.js",
-                    "RESTful APIs",
-                    "Java"
+                    "RESTful API Design",
+                    "JWT/OAuth Authentication"
                 ],
                 "database": [
-                    "PostgreSQL",
                     "MongoDB",
-                    "SQL"
+                    "PostgreSQL",
+                    "Supabase (RLS)"
                 ],
                 "devops": [
                     "Docker",
+                    "AWS",
+                    "Alibaba Cloud",
                     "Git",
                     "GitHub",
                     "Postman",
-                    "Figma",
-                    "Vite"
+                    "Figma"
                 ],
                 "other": [
-                    "Authentication & Authorization",
-                    "Cybersecurity",
-                    "NLP",
-                    "Linux",
-                    "Cloud Technologies"
+                    "Python",
+                    "JavaScript (ES6+)",
+                    "TypeScript",
+                    "Linux Shell Scripting",
+                    "Cybersecurity Fundamentals"
                 ]
             },
             "description": [
                 "Computer Engineering graduate (Trakya University, 2019-2024).",
-                "Participated in various internships and projects in backend and frontend development.",
+                "Participated in various internships and projects in frontend and backend development.",
                 "Proficient in modern web technologies and software architectures.",
                 "Team-oriented with a proactive and responsible attitude."
             ]
         },
         "experience": [
             {
-                "company": "Jotform",
-                "position": "Frontend Developer Intern",
-                "period": "June 2023 - August 2023",
+                "company": "Elmali Tech",
+                "position": "JavaScript Developer Intern",
+                "period": "March 2025 - May 2025",
                 "description": [
-                    "Developed notification center application",
-                    "Built user interfaces using React and Redux",
-                    "API integrations and optimizations"
+                    "Developed 10+ production-ready React and Next.js applications, implementing complex state management, server-side rendering (SSR), and dynamic routing.",
+                    "Integrated real-time collaboration features with Supabase Row Level Security (RLS) policies and Firebase Cloud Functions, effectively resolving user synchronization issues on e-commerce and booking platforms.",
+                    "Led evaluation of technology stacks and architectural decisions across multiple projects, establishing development standards and improving team productivity."
                 ]
             },
             {
-                "company": "Parentwiser",
-                "position": "Mobile Developer Intern",
-                "period": "January 2023 - May 2023",
+                "company": "Sixfab",
+                "position": "Software Engineer Intern",
+                "period": "November 2023 - January 2024",
                 "description": [
-                    "Mobile app development with React Native",
-                    "User experience improvements",
-                    "Performance optimizations"
+                    "Designed and delivered a micro-blogging platform featuring advanced user interactions, authentication flows, and role-based access control using Flask, Vue.js, and MongoDB.",
+                    "Built scalable social features including nested commenting, real-time voting systems, and user engagement tracking via MongoDB aggregation pipelines.",
+                    "Managed end-to-end project lifecycle independently, setting up CI/CD pipelines and code review workflows, incorporating iterative feedback to enhance solution quality."
+                ]
+            },
+            {
+                "company": "Jotform",
+                "position": "Frontend Developer Intern",
+                "period": "July 2023 - August 2023",
+                "description": [
+                    "Collaborated with the Enterprise Upgrade Team to architect and develop a responsive notification center application, streamlining enterprise communication workflows.",
+                    "Led a cross-functional team of 3 interns from project initiation through successful live demonstration, ensuring timely delivery and effective collaboration.",
+                    "Implemented scalable monorepo architecture, enhancing code maintainability and developer efficiency across multiple projects."
                 ]
             }
         ],
@@ -241,65 +955,719 @@
             {
                 "school": "Trakya University",
                 "degree": "Computer Engineering",
-                "period": "2019 - 2024",
+                "period": "2019 - January 2024",
                 "description": "Bachelor's Degree"
             }
         ],
         "certifications": [
             {
-                "name": "AWS Certified Cloud Practitioner",
-                "issuer": "Amazon Web Services",
-                "date": "2023"
+                "name": "Cisco Certified Cyberops Associate",
+                "issuer": "Cisco",
+                "date": "May 2025"
             },
             {
-                "name": "Google Cloud Fundamentals",
-                "issuer": "Google",
-                "date": "2022"
+                "name": "Alibaba Cloud Certified Cloud Computing Engineer",
+                "issuer": "Alibaba Cloud",
+                "date": "October 2024"
+            },
+            {
+                "name": "IBM & edX – Developing Front End Apps with React",
+                "issuer": "IBM & edX",
+                "date": "2024"
             }
         ],
-        "blog": [
+        "medium": [
             {
-                "title": "Modern Web Development Tools",
-                "date": "2023-12-15",
-                "link": "https://blog.berkayozgun.com/modern-web-development"
+                "title": "Modern Web Development Tools and Best Practices",
+                "date": "2024-01-15",
+                "link": "https://medium.com/@berkayozgun/modern-web-development-tools",
+                "readTime": "5 min read"
             },
             {
-                "title": "Mobile App Development with React Native",
-                "date": "2023-11-20",
-                "link": "https://blog.berkayozgun.com/react-native"
+                "title": "Building Scalable React Applications with Next.js",
+                "date": "2023-12-20",
+                "link": "https://medium.com/@berkayozgun/building-scalable-react-applications",
+                "readTime": "8 min read"
+            },
+            {
+                "title": "The Future of Frontend Development: Trends to Watch",
+                "date": "2023-11-10",
+                "link": "https://medium.com/@berkayozgun/frontend-development-trends",
+                "readTime": "6 min read"
             }
         ],
         "projects": [
             {
-                "name": "Micro Blog Platform",
-                "description": "A full-featured micro-blog platform built with Flask, MongoDB, and Vue.js.",
+                "name": "Micro Blogging Platform",
+                "description": "A comprehensive micro-blogging platform featuring advanced user interactions, authentication flows, and role-based access control built with Flask, Vue.js, and MongoDB.",
                 "technologies": [
                     "Flask",
                     "Vue.js",
                     "MongoDB"
                 ],
                 "link": "https://github.com/berkayozgun/micro-blog",
-                "demo": "https://micro-blog.berkayozgun.com"
+                "demo": "https://micro-blog.berkayozgun.com",
+                "images": [
+                    {
+                        "id": "micro-blog-1",
+                        "src": "/micro-blog-dashboard.png",
+                        "alt": "Micro Blog Dashboard",
+                        "title": "Dashboard Interface"
+                    },
+                    {
+                        "id": "micro-blog-2",
+                        "src": "/micro-blog-post.png",
+                        "alt": "Blog Post Creation",
+                        "title": "Post Creation Interface"
+                    },
+                    {
+                        "id": "micro-blog-3",
+                        "src": "/micro-blog-mobile.png",
+                        "alt": "Mobile Responsive Design",
+                        "title": "Mobile View"
+                    }
+                ]
             },
             {
                 "name": "Notification Center",
-                "description": "A responsive notification center app developed for Jotform.",
+                "description": "Responsive notification center application developed for Jotform, streamlining enterprise communication workflows.",
                 "technologies": [
                     "React",
                     "Redux"
                 ],
                 "link": "https://github.com/berkayozgun/notification-center",
-                "demo": "https://notifications.jotform.com"
+                "demo": "https://notifications.jotform.com",
+                "images": [
+                    {
+                        "id": "notification-1",
+                        "src": "/notification-center.png",
+                        "alt": "Notification Center Interface",
+                        "title": "Main Notification Interface"
+                    },
+                    {
+                        "id": "notification-2",
+                        "src": "/notification-settings.png",
+                        "alt": "Notification Settings",
+                        "title": "Settings Panel"
+                    }
+                ]
             },
             {
-                "name": "Parentwiser Mobile App",
-                "description": "Mobile UI built using React Native.",
+                "name": "Production React/Next.js Applications",
+                "description": "10+ production-ready React and Next.js applications developed at Elmali Tech, featuring complex state management and SSR.",
                 "technologies": [
-                    "React Native",
-                    "Redux"
+                    "React",
+                    "Next.js",
+                    "Supabase",
+                    "Firebase"
                 ],
-                "link": "https://github.com/berkayozgun/parentwiser-app",
-                "demo": "https://parentwiser.com/app"
+                "link": "https://github.com/berkayozgun/production-apps",
+                "demo": "https://apps.elmali.tech",
+                "images": [
+                    {
+                        "id": "production-1",
+                        "src": "/production-app-1.png",
+                        "alt": "Production App Dashboard",
+                        "title": "Main Dashboard"
+                    },
+                    {
+                        "id": "production-2",
+                        "src": "/production-app-2.png",
+                        "alt": "User Management Interface",
+                        "title": "User Management"
+                    },
+                    {
+                        "id": "production-3",
+                        "src": "/production-app-3.png",
+                        "alt": "Analytics Dashboard",
+                        "title": "Analytics View"
+                    }
+                ]
+            },
+            {
+                "name": "Digiroom Landing-Mobil-Admin Web Panel",
+                "description": "Digiroom için geliştirilen kapsamlı web platformu. Landing page, mobil uygulama ve admin panel içeren tam özellikli sistem.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "Supabase"
+                ],
+                "link": "https://github.com/berkayozgun/digiroom-platform",
+                "demo": "https://digiroom.com",
+                "images": [
+                    {
+                        "id": "digiroom-1",
+                        "src": "/digiroom-landing.png",
+                        "alt": "Digiroom Landing Page",
+                        "title": "Landing Page"
+                    },
+                    {
+                        "id": "digiroom-2",
+                        "src": "/digiroom-admin.png",
+                        "alt": "Admin Panel",
+                        "title": "Admin Dashboard"
+                    },
+                    {
+                        "id": "digiroom-3",
+                        "src": "/digiroom-mobile.png",
+                        "alt": "Mobile Interface",
+                        "title": "Mobile App"
+                    }
+                ]
+            },
+            {
+                "name": "Adlambs Website",
+                "description": "Adlambs şirketi için geliştirilen modern and responsive corporate website. SEO optimization and fast loading times.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TailwindCSS",
+                    "Framer Motion"
+                ],
+                "link": "https://github.com/berkayozgun/adlambs-website",
+                "demo": "https://adlambs.com",
+                "images": [
+                    {
+                        "id": "adlambs-1",
+                        "src": "/adlambs-home.png",
+                        "alt": "Adlambs Homepage",
+                        "title": "Homepage"
+                    },
+                    {
+                        "id": "adlambs-2",
+                        "src": "/adlambs-about.png",
+                        "alt": "About Page",
+                        "title": "About Section"
+                    }
+                ]
+            },
+            {
+                "name": "CV Oluşturma ve Yayınlama Platformu",
+                "description": "Kullanıcıların profesyonel CV'lerini oluşturup yayınlayabilecekleri modern web uygulaması. Çoklu şablon desteği ve PDF export özelliği.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "jsPDF"
+                ],
+                "link": "https://github.com/berkayozgun/cv-builder",
+                "demo": "https://cv-builder.berkayozgun.com",
+                "images": [
+                    {
+                        "id": "cv-builder-1",
+                        "src": "/cv-builder-interface.png",
+                        "alt": "CV Builder Interface",
+                        "title": "Builder Interface"
+                    },
+                    {
+                        "id": "cv-preview.png",
+                        "src": "/cv-preview.png",
+                        "alt": "CV Preview",
+                        "title": "CV Preview"
+                    }
+                ]
+            },
+            {
+                "name": "Elmali Collectibles",
+                "description": "NFT ve dijital koleksiyon yönetim platformu. Kullanıcıların dijital varlıklarını satın alıp satabilecekleri güvenli marketplace.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "Web3",
+                    "Ethereum",
+                    "MetaMask"
+                ],
+                "link": "https://github.com/berkayozgun/elmali-collectibles",
+                "demo": "https://collectibles.elmali.tech",
+                "images": [
+                    {
+                        "id": "collectibles-1",
+                        "src": "/collectibles-marketplace.png",
+                        "alt": "NFT Marketplace",
+                        "title": "Marketplace"
+                    },
+                    {
+                        "id": "collectibles-2",
+                        "src": "/collectibles-wallet.png",
+                        "alt": "Wallet Integration",
+                        "title": "Wallet Connect"
+                    }
+                ]
+            },
+            {
+                "name": "Londonbridge",
+                "description": "Uluslararası ticaret ve lojistik platformu. Şirketlerin global ticaret işlemlerini kolaylaştıran kapsamlı web uygulaması.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "Node.js",
+                    "PostgreSQL"
+                ],
+                "link": "https://github.com/berkayozgun/londonbridge",
+                "demo": "https://londonbridge.com",
+                "images": [
+                    {
+                        "id": "londonbridge-1",
+                        "src": "/londonbridge-dashboard.png",
+                        "alt": "Londonbridge Dashboard",
+                        "title": "Main Dashboard"
+                    },
+                    {
+                        "id": "londonbridge-2",
+                        "src": "/londonbridge-trade.png",
+                        "alt": "Trade Interface",
+                        "title": "Trade Platform"
+                    }
+                ]
+            },
+            {
+                "name": "Plango - Kişisel Planlama Uygulaması",
+                "description": "Kişisel proje. Kullanıcıların günlük görevlerini, projelerini ve hedeflerini yönetebilecekleri modern planlama uygulaması.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "Supabase"
+                ],
+                "link": "https://github.com/berkayozgun/plango",
+                "demo": "https://plango.berkayozgun.com",
+                "images": [
+                    {
+                        "id": "plango-1",
+                        "src": "/plango-dashboard.png",
+                        "alt": "Plango Dashboard",
+                        "title": "Task Dashboard"
+                    },
+                    {
+                        "id": "plango-2",
+                        "src": "/plango-calendar.png",
+                        "alt": "Calendar View",
+                        "title": "Calendar Interface"
+                    },
+                    {
+                        "id": "plango-3",
+                        "src": "/plango-mobile.png",
+                        "alt": "Mobile App",
+                        "title": "Mobile Interface"
+                    }
+                ]
+            },
+            {
+                "name": "Private Label Manufacturer Platform",
+                "description": "Üretim şirketleri için özel etiket üretim yönetim sistemi. Tedarik zinciri optimizasyonu ve kalite kontrol süreçleri.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "Node.js",
+                    "PostgreSQL",
+                    "Redis"
+                ],
+                "link": "https://github.com/berkayozgun/private-label-platform",
+                "demo": "https://manufacturer.elmali.tech",
+                "images": [
+                    {
+                        "id": "manufacturer-1",
+                        "src": "/manufacturer-dashboard.png",
+                        "alt": "Manufacturing Dashboard",
+                        "title": "Production Dashboard"
+                    },
+                    {
+                        "id": "manufacturer-2",
+                        "src": "/manufacturer-orders.png",
+                        "alt": "Order Management",
+                        "title": "Order System"
+                    }
+                ]
+            },
+            {
+                "name": "Tedarikçi Admin/Web/Backend Sistemi",
+                "description": "Tedarik zinciri yönetimi için kapsamlı platform. Tedarikçi yönetimi, stok takibi ve sipariş süreçleri.",
+                "technologies": [
+                    "React",
+                    "Next.js",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB"
+                ],
+                "link": "https://github.com/berkayozgun/supplier-management",
+                "demo": "https://supplier.elmali.tech",
+                "images": [
+                    {
+                        "id": "supplier-1",
+                        "src": "/supplier-admin.png",
+                        "alt": "Supplier Admin Panel",
+                        "title": "Admin Panel"
+                    },
+                    {
+                        "id": "supplier-2",
+                        "src": "/supplier-web.png",
+                        "alt": "Web Interface",
+                        "title": "Web Platform"
+                    }
+                ]
+            },
+            {
+                "name": "Flight Search Application",
+                "description": "Modern uçuş arama ve rezervasyon uygulaması. Kullanıcıların uçuşları arayıp rezervasyon yapabilecekleri responsive web uygulaması.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/flight-search-application",
+                "demo": "https://flight-search-app.vercel.app",
+                "images": [
+                    {
+                        "id": "flight-search-1",
+                        "src": "/flight-search-app.png",
+                        "alt": "Flight Search Interface",
+                        "title": "Search Interface"
+                    },
+                    {
+                        "id": "flight-search-2",
+                        "src": "/flight-results.png",
+                        "alt": "Flight Results",
+                        "title": "Search Results"
+                    }
+                ]
+            },
+            {
+                "name": "Netflix Clone",
+                "description": "Netflix'in modern bir klonu. Film ve dizi kataloğu, kullanıcı profilleri ve responsive tasarım ile gerçek Netflix deneyimi.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/netflix-clone",
+                "demo": "https://netflix-clone-berkay.vercel.app",
+                "images": [
+                    {
+                        "id": "netflix-1",
+                        "src": "/netflix-home.png",
+                        "alt": "Netflix Homepage",
+                        "title": "Homepage"
+                    },
+                    {
+                        "id": "netflix-2",
+                        "src": "/netflix-movie.png",
+                        "alt": "Movie Detail",
+                        "title": "Movie Details"
+                    }
+                ]
+            },
+            {
+                "name": "Campfire Microblog Backend",
+                "description": "Twitter benzeri mikro blog platformu backend'i. Kullanıcıların post oluşturma, yorum yapma ve oylama yapabilecekleri API.",
+                "technologies": [
+                    "Python",
+                    "Flask",
+                    "MongoDB",
+                    "JWT"
+                ],
+                "link": "https://github.com/berkayozgun/campfire_microblog-backend",
+                "demo": "https://campfire-backend.herokuapp.com",
+                "images": [
+                    {
+                        "id": "campfire-backend-1",
+                        "src": "/campfire.png",
+                        "alt": "Campfire Backend",
+                        "title": "API Documentation"
+                    }
+                ]
+            },
+            {
+                "name": "E-commerce Dashboard",
+                "description": "Modern e-ticaret yönetim paneli. Satış analitikleri, ürün yönetimi ve müşteri takibi için kapsamlı dashboard.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "Chart.js",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/ecommerce-dashboard",
+                "demo": "https://ecommerce-dashboard-berkay.vercel.app",
+                "images": [
+                    {
+                        "id": "ecommerce-1",
+                        "src": "/e-commerce-dashboard.png",
+                        "alt": "E-commerce Dashboard",
+                        "title": "Main Dashboard"
+                    },
+                    {
+                        "id": "ecommerce-2",
+                        "src": "/ecommerce-analytics.png",
+                        "alt": "Analytics Panel",
+                        "title": "Analytics"
+                    }
+                ]
+            },
+            {
+                "name": "Campfire Frontend",
+                "description": "Vue.js ile geliştirilmiş mikro blog platformu frontend'i. Modern ve kullanıcı dostu arayüz ile sosyal medya deneyimi.",
+                "technologies": [
+                    "Vue.js",
+                    "JavaScript",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/campfire-frontend",
+                "demo": "https://campfire-frontend.vercel.app",
+                "images": [
+                    {
+                        "id": "campfire-frontend-1",
+                        "src": "/campfire-frontend.png",
+                        "alt": "Campfire Frontend",
+                        "title": "Main Interface"
+                    }
+                ]
+            },
+            {
+                "name": "YemekApp - Recipe Application",
+                "description": "Ionic framework ile geliştirilmiş yemek tarifi uygulaması. Kullanıcıların tarif paylaşabilecekleri mobil uygulama.",
+                "technologies": [
+                    "TypeScript",
+                    "Ionic",
+                    "Angular",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/yemekApp",
+                "demo": "https://yemek-app.vercel.app",
+                "images": [
+                    {
+                        "id": "yemekapp-1",
+                        "src": "/yemek-app.png",
+                        "alt": "YemekApp Interface",
+                        "title": "Recipe App"
+                    }
+                ]
+            },
+            {
+                "name": "Rising Dashboard",
+                "description": "Modern dashboard uygulaması. Kullanıcıların verilerini görselleştirebilecekleri interaktif dashboard.",
+                "technologies": [
+                    "TypeScript",
+                    "React",
+                    "Chart.js",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/rising-dashboard",
+                "demo": "https://rising-dashboard.vercel.app",
+                "images": [
+                    {
+                        "id": "rising-1",
+                        "src": "/rising-dashboard.png",
+                        "alt": "Rising Dashboard",
+                        "title": "Dashboard Interface"
+                    }
+                ]
+            },
+            {
+                "name": "Paradise Nursery",
+                "description": "Fidanlık yönetim uygulaması. Bitki kataloğu, bakım takibi ve satış yönetimi için kapsamlı platform.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/paradise-nursery",
+                "demo": "https://paradise-nursery.vercel.app",
+                "images": [
+                    {
+                        "id": "paradise-1",
+                        "src": "/paradise-nursery.png",
+                        "alt": "Paradise Nursery",
+                        "title": "Nursery Interface"
+                    }
+                ]
+            },
+            {
+                "name": "My Finance App",
+                "description": "Kişisel finans yönetim uygulaması. Gelir-gider takibi, bütçe planlama ve finansal analitikler.",
+                "technologies": [
+                    "TypeScript",
+                    "React",
+                    "Chart.js",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/my-finance-app",
+                "demo": "https://my-finance-app.vercel.app",
+                "images": [
+                    {
+                        "id": "finance-1",
+                        "src": "/finance-app.png",
+                        "alt": "Finance App",
+                        "title": "Finance Dashboard"
+                    }
+                ]
+            },
+            {
+                "name": "iWeather - Weather App",
+                "description": "Hava durumu uygulaması. Gerçek zamanlı hava durumu bilgileri, tahminler ve konum bazlı servisler.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "Weather API",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/iweather",
+                "demo": "https://iweather-app.vercel.app",
+                "images": [
+                    {
+                        "id": "weather-1",
+                        "src": "/weather-app.png",
+                        "alt": "Weather App",
+                        "title": "Weather Interface"
+                    }
+                ]
+            },
+            {
+                "name": "Flavor Fusion",
+                "description": "Yemek tarifi ve sosyal medya platformu. Kullanıcıların tarif paylaşabilecekleri ve etkileşimde bulunabilecekleri uygulama.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/flavor-fusion",
+                "demo": "https://flavor-fusion.vercel.app",
+                "images": [
+                    {
+                        "id": "flavor-1",
+                        "src": "/flavor-fusion.png",
+                        "alt": "Flavor Fusion",
+                        "title": "Recipe Platform"
+                    }
+                ]
+            },
+            {
+                "name": "Plane Scape",
+                "description": "Uçak ve havacılık temalı uygulama. Uçak bilgileri, uçuş takibi ve havacılık haberleri.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/plane-scape",
+                "demo": "https://plane-scape.vercel.app",
+                "images": [
+                    {
+                        "id": "plane-1",
+                        "src": "/plane-scape.png",
+                        "alt": "Plane Scape",
+                        "title": "Aviation App"
+                    }
+                ]
+            },
+            {
+                "name": "Bulut MD Mobile",
+                "description": "Mobil sağlık uygulaması. Hasta takibi, randevu yönetimi ve sağlık verileri için mobil platform.",
+                "technologies": [
+                    "TypeScript",
+                    "React Native",
+                    "Expo",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/bulut-md-mobile",
+                "demo": "https://bulut-md-mobile.vercel.app",
+                "images": [
+                    {
+                        "id": "bulut-1",
+                        "src": "/bulut-mobile.png",
+                        "alt": "Bulut MD Mobile",
+                        "title": "Mobile Health App"
+                    }
+                ]
+            },
+            {
+                "name": "Expo Todo App",
+                "description": "Expo ile geliştirilmiş modern todo uygulaması. Görev yönetimi, kategoriler ve bildirimler ile kapsamlı todo sistemi.",
+                "technologies": [
+                    "JavaScript",
+                    "Expo",
+                    "React Native",
+                    "AsyncStorage"
+                ],
+                "link": "https://github.com/berkayozgun/expo-todo",
+                "demo": "https://expo-todo-app.vercel.app",
+                "images": [
+                    {
+                        "id": "expo-todo-1",
+                        "src": "/expo-todo.png",
+                        "alt": "Expo Todo App",
+                        "title": "Todo Interface"
+                    }
+                ]
+            },
+            {
+                "name": "Ticket App",
+                "description": "Bilet satış ve yönetim uygulaması. Etkinlik biletleri, rezervasyon sistemi ve kullanıcı yönetimi.",
+                "technologies": [
+                    "TypeScript",
+                    "React",
+                    "Node.js",
+                    "MongoDB"
+                ],
+                "link": "https://github.com/berkayozgun/ticket-app",
+                "demo": "https://ticket-app-demo.vercel.app",
+                "images": [
+                    {
+                        "id": "ticket-1",
+                        "src": "/ticket-app.png",
+                        "alt": "Ticket App",
+                        "title": "Ticket System"
+                    }
+                ]
+            },
+            {
+                "name": "Spotify Clone",
+                "description": "Spotify'ın modern klonu. Müzik çalma, playlist yönetimi ve kullanıcı profilleri ile tam müzik deneyimi.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "CSS3",
+                    "HTML5"
+                ],
+                "link": "https://github.com/berkayozgun/spotify-clone",
+                "demo": "https://spotify-clone-berkay.vercel.app",
+                "images": [
+                    {
+                        "id": "spotify-1",
+                        "src": "/spotify-clone.png",
+                        "alt": "Spotify Clone",
+                        "title": "Music Player"
+                    }
+                ]
+            },
+            {
+                "name": "Recommended Jobs",
+                "description": "İş önerisi ve kariyer platformu. Kullanıcıların iş arayabilecekleri ve öneriler alabilecekleri sistem.",
+                "technologies": [
+                    "Python",
+                    "Django",
+                    "PostgreSQL",
+                    "CSS3"
+                ],
+                "link": "https://github.com/berkayozgun/RecomendedJobs",
+                "demo": "https://recommended-jobs.vercel.app",
+                "images": [
+                    {
+                        "id": "jobs-1",
+                        "src": "/recommended-jobs.png",
+                        "alt": "Recommended Jobs",
+                        "title": "Job Platform"
+                    }
+                ]
             }
         ],
         "contact": {
@@ -309,24 +1677,62 @@
             "twitter": "https://twitter.com/berkayozgun",
             "website": "https://berkayozgun.com"
         },
+        "testimonials": [
+            {
+                "name": "Ahmet Yılmaz",
+                "position": "Senior Software Engineer",
+                "company": "Elmali Tech",
+                "avatar": "/testimonial-1.svg",
+                "content": "Working with Berkay was truly an amazing experience. His deep knowledge of React and Next.js, along with his problem-solving abilities, is commendable. He can quickly understand complex projects and produce effective solutions.",
+                "rating": 5,
+                "date": "May 2025"
+            },
+            {
+                "name": "Zeynep Kaya",
+                "position": "Product Manager",
+                "company": "Sixfab",
+                "avatar": "/testimonial-2.svg",
+                "content": "The micro-blogging platform Berkay developed with Flask and Vue.js was truly impressive. In addition to his technical skills, he is also very successful in teamwork and communication.",
+                "rating": 5,
+                "date": "January 2024"
+            },
+            {
+                "name": "Mehmet Demir",
+                "position": "Frontend Team Lead",
+                "company": "Jotform",
+                "avatar": "/testimonial-3.svg",
+                "content": "Berkay's performance in the notification center project was excellent. His understanding of responsive design and user experience played a major role in the project's success.",
+                "rating": 5,
+                "date": "August 2023"
+            },
+            {
+                "name": "Ayşe Özkan",
+                "position": "Software Architect",
+                "company": "TechCorp",
+                "avatar": "/testimonial-4.svg",
+                "content": "Berkay's knowledge of modern web technologies and his desire for continuous learning is truly admirable. He focuses on learning new technologies and adding value to his team in every project.",
+                "rating": 5,
+                "date": "June 2024"
+            }
+        ],
         "commands": {
             "about": "Detailed information about me",
             "projects": "My projects and details",
             "contact": "Contact information",
             "help": "This help menu",
-            "clear": "Clear the screen",
+            "clear": "Clear screen",
             "exit": "Return to language selection",
             "blog": "My blog posts",
             "experience": "My work experience",
-            "education": "My education",
+            "education": "My education information",
             "skills": "Detailed skills list",
-            "certs": "My certifications",
+            "certifications": "My certifications",
             "theme": "Change theme"
         },
         "tips": [
-            "Use Up/Down arrow keys to navigate command history",
-            "Use Tab key for command auto-completion",
-            "Use 'theme' command to change the theme"
+            "You can navigate through command history with Up/Down arrow keys",
+            "You can auto-complete commands with Tab key",
+            "You can change theme using 'theme' command"
         ]
     }
 }

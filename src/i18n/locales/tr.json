@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "experience": "Deneyim",
+    "testimonials": "Referanslar",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Berkay Özgün",
+    "subtitle": "Yazılım Geliştirici",
+    "description": "Modern web teknolojileri ve yazılım mimarilerine hâkim, takım çalışmasına yatkın ve sorumluluk almaktan çekinmeyen bir yazılım geliştirici.",
+    "viewProjects": "Projelerimi Gör",
+    "getInTouch": "İletişime Geç"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "description": "Modern web teknolojileri ve yazılım mimarilerinde uzman, tutkulu bir yazılım geliştiricisiyim. Verimli, ölçeklenebilir çözümler oluşturmayı ve takımlarla işbirliği yaparak yüksek kaliteli ürünler sunmayı seviyorum.",
+    "skills": "Yetenekler",
+    "technologies": "Teknolojiler",
+    "languages": "Programlama Dilleri",
+    "tools": "Araçlar ve Platformlar"
+  },
+  "projects": {
+    "title": "Projelerim",
+    "description": "Geliştirdiğim projeler ve teknolojiler",
+    "viewProject": "Projeyi Görüntüle",
+    "viewDemo": "Demo İncele",
+    "projects": "proje",
+    "technologies": "Teknolojiler",
+    "viewDetails": "Detayları Görüntüle",
+    "liveDemo": "Canlı Demo",
+    "noImage": "Görsel Yok"
+  },
+  "experience": {
+    "title": "Deneyim",
+    "current": "Günümüz"
+  },
+  "education": {
+    "title": "Eğitim"
+  },
+  "certifications": {
+    "title": "Sertifikalar"
+  },
+  "testimonials": {
+    "title": "Referanslar"
+  },
+  "contact": {
+    "title": "İletişime Geç",
+    "subtitle": "Yeni fırsatlar ve işbirlikleri konusunda her zaman ilgiliyim. Çekinmeden ulaşabilirsiniz!",
+    "name": "İsim",
+    "email": "E-posta",
+    "subject": "Konu",
+    "message": "Mesaj",
+    "sendMessage": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "sent": "Mesaj başarıyla gönderildi!",
+    "error": "Mesaj gönderilirken hata oluştu. Lütfen tekrar deneyin.",
+    "nameRequired": "İsim gereklidir",
+    "emailRequired": "E-posta gereklidir",
+    "emailInvalid": "Lütfen geçerli bir e-posta adresi girin",
+    "subjectRequired": "Konu gereklidir",
+    "messageRequired": "Mesaj gereklidir",
+    "yourName": "Adınız",
+    "messageSubject": "Mesaj konusu",
+    "yourMessage": "Mesajınız"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "close": "Kapat",
+    "next": "Sonraki",
+    "previous": "Önceki"
+  }
+} 
