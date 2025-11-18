@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Terminal } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -16,7 +16,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -40,32 +40,35 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-dark-900/80 backdrop-blur-md border-b border-white/5 shadow-lg'
           : 'bg-transparent'
-      }`}
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
-            className="flex items-center"
+            className="flex items-center space-x-2 cursor-pointer group"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-              Berkay Özgün
-            </h1>
+            <div className="p-2 rounded-lg bg-primary-500/10 border border-primary-500/20 group-hover:bg-primary-500/20 transition-colors">
+              <Terminal className="w-6 h-6 text-primary-400" />
+            </div>
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 font-mono">
+              ~/berkay-ozgun
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}
           <motion.div
-            className="hidden md:flex items-center space-x-8"
+            className="hidden md:flex items-center space-x-1"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -74,19 +77,15 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
               <motion.button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group"
-                whileHover={{ y: -2 }}
+                className="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white transition-colors relative group rounded-lg hover:bg-white/5"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {item.label}
-                <motion.div
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-400"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.2 }}
-                />
+                <span className="relative z-10">
+                  <span className="text-primary-500 mr-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">&gt;</span>
+                  {item.label}
+                </span>
               </motion.button>
             ))}
           </motion.div>
@@ -98,18 +97,20 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <LanguageSwitcher />
-            <ThemeToggle />
-            
+            <div className="hidden md:flex items-center space-x-2 border-l border-white/10 pl-4">
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
+
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200 text-gray-700 dark:text-gray-300"
+              className="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-slate-300"
             >
               {isMobileMenuOpen ? (
-                <X className="w-5 h-5" />
+                <X className="w-6 h-6" />
               ) : (
-                <Menu className="w-5 h-5" />
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </motion.div>
@@ -124,21 +125,26 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-700"
+            className="md:hidden bg-dark-900/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-4 py-6 space-y-2">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2"
+                  className="block w-full text-left px-4 py-3 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all font-mono"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
                 >
+                  <span className="text-primary-500 mr-2">$</span>
                   {item.label}
                 </motion.button>
               ))}
+              <div className="flex items-center space-x-4 px-4 pt-4 border-t border-white/10 mt-4">
+                <LanguageSwitcher />
+                <ThemeToggle />
+              </div>
             </div>
           </motion.div>
         )}
@@ -147,4 +153,4 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
   );
 };
 
-export default Navigation; 
+export default Navigation;

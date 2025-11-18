@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github, Linkedin, Mail, Terminal, Code, Database, Server, Cpu, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import profileData from '../data/profile.json';
 import ProjectModal from '../components/ProjectModal';
@@ -74,94 +74,127 @@ const Home: React.FC = () => {
       <Navigation scrollToSection={scrollToSection} />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.div 
-              className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-[100px] animate-pulse-slow"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              <img
-                src="/headshot.jpg"
-                alt="Berkay Özgün"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
-            </motion.div>
-            <motion.h1 
-              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {t('hero.title')}
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              {t('hero.subtitle')}
-            </motion.p>
-            <motion.p 
-              className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              {t('hero.description')}
-            </motion.p>
-            <motion.div 
-              className="flex justify-center space-x-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              <motion.button
-                onClick={() => scrollToSection('projects')}
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <motion.div
+                className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-400 text-sm font-mono mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
               >
-                <span>{t('hero.viewProjects')}</span>
-                <ExternalLink className="w-4 h-4" />
-              </motion.button>
-              <motion.button
-                onClick={() => scrollToSection('contact')}
-                className="border-2 border-blue-600 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>{t('hero.getInTouch')}</span>
-              </motion.button>
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+                </span>
+                <span>Available for hire</span>
+              </motion.div>
+
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                <span className="block text-slate-400 text-2xl md:text-3xl mb-2 font-normal">Hello, I'm</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-purple-400 to-primary-400 animate-gradient-x">
+                  Berkay Özgün
+                </span>
+              </h1>
+
+              <p className="text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
+                {t('hero.description')}
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <motion.button
+                  onClick={() => scrollToSection('projects')}
+                  className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all shadow-lg shadow-primary-500/25 flex items-center space-x-2 group"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Terminal className="w-5 h-5" />
+                  <span>{t('hero.viewProjects')}</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+
+                <motion.button
+                  onClick={() => scrollToSection('contact')}
+                  className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-lg font-medium transition-all backdrop-blur-sm flex items-center space-x-2"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>{t('hero.getInTouch')}</span>
+                </motion.button>
+              </div>
+
+              <div className="mt-12 flex items-center space-x-6 text-slate-400">
+                <a href="https://github.com/Berkayozgun" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors transform hover:scale-110 duration-200">
+                  <Github className="w-6 h-6" />
+                </a>
+                <a href="https://linkedin.com/in/berkayozgun" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors transform hover:scale-110 duration-200">
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <div className="h-px w-12 bg-white/10"></div>
+                <span className="text-sm font-mono">Full Stack Developer</span>
+              </div>
             </motion.div>
-          </motion.div>
+
+            <motion.div
+              className="relative hidden lg:block"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="relative w-full aspect-square max-w-md mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-purple-500 rounded-2xl rotate-6 opacity-20 blur-lg"></div>
+                <div className="absolute inset-0 bg-dark-800 rounded-2xl border border-white/10 shadow-2xl overflow-hidden group">
+                  <div className="absolute top-0 left-0 right-0 h-8 bg-dark-900 border-b border-white/5 flex items-center px-4 space-x-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+                  </div>
+                  <div className="p-8 pt-12 font-mono text-sm text-slate-300">
+                    <div className="space-y-4">
+                      <p><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = <span className="text-yellow-400">{'{'}</span></p>
+                      <p className="pl-4">name: <span className="text-green-400">'Berkay Özgün'</span>,</p>
+                      <p className="pl-4">role: <span className="text-green-400">'Full Stack Developer'</span>,</p>
+                      <p className="pl-4">skills: <span className="text-yellow-400">['React', 'Node.js', 'Python', 'AWS']</span>,</p>
+                      <p className="pl-4">hardWorker: <span className="text-purple-400">true</span>,</p>
+                      <p className="pl-4">quickLearner: <span className="text-purple-400">true</span>,</p>
+                      <p className="pl-4">problemSolver: <span className="text-purple-400">true</span></p>
+                      <p><span className="text-yellow-400">{'}'}</span>;</p>
+                      <p className="animate-pulse text-primary-400">_</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-white dark:bg-gray-800">
+      <section id="about" className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 flex items-center justify-center gap-3">
+              <span className="text-primary-500 font-mono">01.</span>
               {t('about.title')}
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
               {t('about.description')}
             </p>
           </motion.div>
@@ -172,21 +205,24 @@ const Home: React.FC = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {/* Frontend */}
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-lg"
+              className="glass-card p-6 group hover:bg-primary-900/10 border-primary-500/10 hover:border-primary-500/30"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Code className="w-6 h-6 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4 font-mono">
                 Frontend
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {data.about.skills.frontend.map((skill: string, index: number) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="text-gray-700 dark:text-gray-300">{skill}</span>
+                  <div key={index} className="flex items-center space-x-3 group/item">
+                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full group-hover/item:scale-150 transition-transform"></div>
+                    <span className="text-slate-400 group-hover/item:text-slate-200 transition-colors">{skill}</span>
                   </div>
                 ))}
               </div>
@@ -195,16 +231,19 @@ const Home: React.FC = () => {
             {/* Backend */}
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-lg"
+              className="glass-card p-6 group hover:bg-green-900/10 border-green-500/10 hover:border-green-500/30"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Server className="w-6 h-6 text-green-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4 font-mono">
                 Backend
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {data.about.skills.backend.map((skill: string, index: number) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700 dark:text-gray-300">{skill}</span>
+                  <div key={index} className="flex items-center space-x-3 group/item">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full group-hover/item:scale-150 transition-transform"></div>
+                    <span className="text-slate-400 group-hover/item:text-slate-200 transition-colors">{skill}</span>
                   </div>
                 ))}
               </div>
@@ -213,16 +252,19 @@ const Home: React.FC = () => {
             {/* Database */}
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-lg"
+              className="glass-card p-6 group hover:bg-purple-900/10 border-purple-500/10 hover:border-purple-500/30"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Database className="w-6 h-6 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4 font-mono">
                 Database
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {data.about.skills.database.map((skill: string, index: number) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-gray-700 dark:text-gray-300">{skill}</span>
+                  <div key={index} className="flex items-center space-x-3 group/item">
+                    <div className="w-1.5 h-1.5 bg-purple-500 rounded-full group-hover/item:scale-150 transition-transform"></div>
+                    <span className="text-slate-400 group-hover/item:text-slate-200 transition-colors">{skill}</span>
                   </div>
                 ))}
               </div>
@@ -231,56 +273,23 @@ const Home: React.FC = () => {
             {/* DevOps */}
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-orange-50 to-red-100 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-lg"
+              className="glass-card p-6 group hover:bg-orange-900/10 border-orange-500/10 hover:border-orange-500/30"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Cpu className="w-6 h-6 text-orange-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4 font-mono">
                 DevOps
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {data.about.skills.devops.map((skill: string, index: number) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span className="text-gray-700 dark:text-gray-300">{skill}</span>
+                  <div key={index} className="flex items-center space-x-3 group/item">
+                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full group-hover/item:scale-150 transition-transform"></div>
+                    <span className="text-slate-400 group-hover/item:text-slate-200 transition-colors">{skill}</span>
                   </div>
                 ))}
               </div>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('projects.title')}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              {t('projects.description')}
-            </p>
-          </motion.div>
-
-          {/* Project Carousel */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <ProjectCarousel 
-              projects={data.projects} 
-              onProjectClick={(project) => {
-                setSelectedProject(project);
-                setIsModalOpen(true);
-              }}
-            />
           </motion.div>
         </div>
       </section>
