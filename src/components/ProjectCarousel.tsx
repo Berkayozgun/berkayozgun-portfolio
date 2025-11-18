@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github, Eye } from 'lucide-rea
 import { useTranslation } from 'react-i18next';
 
 interface Project {
-  name: string;
+  title: string;
   description: string;
   technologies: string[];
   link: string;
@@ -32,7 +32,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
   // Auto-play functionality
   useEffect(() => {
     if (!isPaused) {
-      autoPlayRef.current = setInterval(() => {
+      autoPlayRef.current = window.setInterval(() => {
         setSlideDirection('right');
         setCurrentIndex((prev) => (prev + 1) % projects.length);
       }, 4000); // Change slide every 4 seconds
@@ -82,7 +82,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
       </div>
 
       {/* Main Carousel Container */}
-      <div 
+      <div
         className="relative max-w-6xl mx-auto px-4 overflow-hidden"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -113,7 +113,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
           >
             {visibleProjects.map((project, index) => (
               <div
-                key={`${project.name}-${currentIndex + index}`}
+                key={`${project.title}-${currentIndex + index}`}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Project Image */}
@@ -142,7 +142,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
                 {/* Project Details */}
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                    {project.name}
+                    {project.title}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                     {project.description}
@@ -210,11 +210,10 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentIndex
+            className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex
                 ? 'bg-blue-600'
                 : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
-            }`}
+              }`}
           />
         ))}
       </div>
@@ -222,4 +221,4 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
   );
 };
 
-export default ProjectCarousel; 
+export default ProjectCarousel;

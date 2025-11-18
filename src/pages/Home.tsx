@@ -10,7 +10,7 @@ import Navigation from '../components/Navigation';
 import ProjectCarousel from '../components/ProjectCarousel';
 
 interface Project {
-  name: string;
+  title: string;
   description: string;
   technologies: string[];
   link: string;
@@ -294,6 +294,34 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-16 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              {t('projects.title')}
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              {t('projects.description')}
+            </p>
+          </motion.div>
+
+          <ProjectCarousel
+            projects={data.projects || []}
+            onProjectClick={(project) => {
+              setSelectedProject(project);
+              setIsModalOpen(true);
+            }}
+          />
+        </div>
+      </section>
+
       {/* Certifications Section */}
       <section id="certifications" className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -411,7 +439,7 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {data.medium?.map((post: any, idx: number) => (
+            {(data.medium || []).map((post: any, idx: number) => (
               <motion.div
                 key={idx}
                 variants={fadeInUp}
