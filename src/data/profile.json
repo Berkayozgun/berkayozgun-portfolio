@@ -124,7 +124,7 @@
         "projects": [
             {
                 "id": "campfire",
-                "title": "Campfire Microblog",
+                "name": "Campfire Microblog",
                 "description": "Kullanıcıların kısa gönderiler paylaşabildiği, modern ve ölçeklenebilir bir sosyal medya platformu.",
                 "technologies": [
                     "React",
@@ -137,7 +137,7 @@
             },
             {
                 "id": "portfolio",
-                "title": "Kişisel Portfolyo",
+                "name": "Kişisel Portfolyo",
                 "description": "Modern web teknolojileri ile geliştirilmiş, terminal temalı kişisel web sitesi.",
                 "technologies": [
                     "React",
@@ -170,6 +170,24 @@
             "experience": "Deneyim",
             "contact": "İletişim"
         },
+        "blog": {
+            "title": "Blog",
+            "description": "Yazılarımı buradan takip edebilirsiniz."
+        },
+        "medium": [
+            {
+                "title": "İlk Yazım",
+                "date": "2023-01-15",
+                "readTime": "5 min read",
+                "link": "https://medium.com/@berkayozgun/ilk-yaz%C4%B1m-1234567890"
+            },
+            {
+                "title": "İkinci Yazım",
+                "date": "2023-03-20",
+                "readTime": "8 min read",
+                "link": "https://medium.com/@berkayozgun/ikinci-yaz%C4%B1m-0987654321"
+            }
+        ],
         "footer": {
             "rights": "Tüm hakları saklıdır."
         }
@@ -299,7 +317,7 @@
         "projects": [
             {
                 "id": "campfire",
-                "title": "Campfire Microblog",
+                "name": "Campfire Microblog",
                 "description": "A modern and scalable social media platform where users can share short posts.",
                 "technologies": [
                     "React",
@@ -312,7 +330,7 @@
             },
             {
                 "id": "portfolio",
-                "title": "Personal Portfolio",
+                "name": "Personal Portfolio",
                 "description": "Terminal-themed personal website built with modern web technologies.",
                 "technologies": [
                     "React",
@@ -342,9 +360,28 @@
             "projects": "Projects",
             "certifications": "Certifications",
             "education": "Education",
+            "blog": "Blog",
             "experience": "Experience",
             "contact": "Contact"
         },
+        "blog": {
+            "title": "Blog",
+            "description": "You can follow my articles here."
+        },
+        "medium": [
+            {
+                "title": "My First Post",
+                "date": "2023-01-15",
+                "readTime": "5 min read",
+                "link": "https://medium.com/@berkayozgun/my-first-post-1234567890"
+            },
+            {
+                "title": "My Second Post",
+                "date": "2023-03-20",
+                "readTime": "8 min read",
+                "link": "https://medium.com/@berkayozgun/my-second-post-0987654321"
+            }
+        ],
         "footer": {
             "rights": "All rights reserved."
         }

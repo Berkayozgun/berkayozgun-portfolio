@@ -10,7 +10,7 @@ import Navigation from '../components/Navigation';
 import ProjectCarousel from '../components/ProjectCarousel';
 
 interface Project {
-  title: string;
+  name: string;
   description: string;
   technologies: string[];
   link: string;
@@ -448,7 +448,7 @@ const Home: React.FC = () => {
                 <div className="flex flex-col h-full">
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 line-clamp-2">
-                      {post.title}
+                      {post.name}
                     </h3>
                     <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
                       <span>{new Date(post.date).toLocaleDateString()}</span>

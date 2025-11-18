@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github, Eye } from 'lucide-rea
 import { useTranslation } from 'react-i18next';
 
 interface Project {
-  title: string;
+  name: string;
   description: string;
   technologies: string[];
   link: string;
@@ -113,7 +113,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
           >
             {visibleProjects.map((project, index) => (
               <div
-                key={`${project.title}-${currentIndex + index}`}
+                key={`${project.name}-${currentIndex + index}`}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Project Image */}
@@ -142,7 +142,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
                 {/* Project Details */}
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                    {project.title}
+                    {project.name}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                     {project.description}
