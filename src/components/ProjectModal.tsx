@@ -2,17 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Github, Code, Globe } from 'lucide-react';
 
-interface Project {
-  name: string;
-  description: string;
-  technologies: string[];
-  link: string;
-  demo?: string;
-  image?: string;
-  features?: string[];
-  challenges?: string[];
-  solutions?: string[];
-}
+import { Project } from '../types/profile';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -45,7 +35,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose, l
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                {project.name}
+                {project.title}
               </h2>
               <button
                 onClick={onClose}
@@ -62,7 +52,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose, l
                 <div className="aspect-video bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.name}
+                    alt={project.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -85,7 +75,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose, l
                   {language === 'tr' ? 'Teknolojiler' : 'Technologies'}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
+                  {project.tags.map((tech) => (
                     <span
                       key={tech}
                       className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
@@ -96,59 +86,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose, l
                 </div>
               </div>
 
-              {/* Features */}
-              {project.features && (
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                    {language === 'tr' ? 'Özellikler' : 'Features'}
-                  </h3>
-                  <ul className="space-y-2">
-                    {project.features.map((feature, index) => (
-                      <li key={index} className="text-gray-700 dark:text-gray-300 flex items-start">
-                        <span className="text-green-500 mr-2">•</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Challenges & Solutions */}
-              {project.challenges && project.solutions && (
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      {language === 'tr' ? 'Zorluklar' : 'Challenges'}
-                    </h3>
-                    <ul className="space-y-2">
-                      {project.challenges.map((challenge, index) => (
-                        <li key={index} className="text-gray-700 dark:text-gray-300 flex items-start">
-                          <span className="text-red-500 mr-2">•</span>
-                          {challenge}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      {language === 'tr' ? 'Çözümler' : 'Solutions'}
-                    </h3>
-                    <ul className="space-y-2">
-                      {project.solutions.map((solution, index) => (
-                        <li key={index} className="text-gray-700 dark:text-gray-300 flex items-start">
-                          <span className="text-blue-500 mr-2">•</span>
-                          {solution}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              )}
-
               {/* Links */}
               <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                 <a
-                  href={project.link}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
@@ -176,4 +117,4 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose, l
   );
 };
 
-export default ProjectModal; 
+export default ProjectModal;

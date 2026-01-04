@@ -26,10 +26,9 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
   const navItems = [
     { id: 'about', label: t('navigation.about') },
     { id: 'projects', label: t('navigation.projects') },
-    { id: 'certifications', label: t('navigation.certifications') },
+    { id: 'experience', label: t('navigation.experience') },
     { id: 'education', label: t('navigation.education') },
     { id: 'blog', label: t('navigation.blog') },
-    { id: 'experience', label: t('navigation.experience') },
     { id: 'contact', label: t('navigation.contact') }
   ];
 
@@ -41,8 +40,8 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-dark-900/80 backdrop-blur-md border-b border-white/5 shadow-lg'
-          : 'bg-transparent'
+        ? 'bg-white/80 dark:bg-dark-900/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5 shadow-lg'
+        : 'bg-transparent'
         }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -61,7 +60,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
             <div className="p-2 rounded-lg bg-primary-500/10 border border-primary-500/20 group-hover:bg-primary-500/20 transition-colors">
               <Terminal className="w-6 h-6 text-primary-400" />
             </div>
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 font-mono">
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 dark:from-white to-slate-500 dark:to-slate-400 font-mono">
               ~/berkay-ozgun
             </span>
           </motion.div>
@@ -77,7 +76,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
               <motion.button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white transition-colors relative group rounded-lg hover:bg-white/5"
+                className="px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors relative group rounded-lg hover:bg-slate-100 dark:hover:bg-white/5"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -105,7 +104,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-slate-300"
+              className="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-600 dark:text-slate-300"
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -125,14 +124,14 @@ const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-dark-900/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
+            className="md:hidden bg-white/95 dark:bg-dark-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 overflow-hidden"
           >
             <div className="px-4 py-6 space-y-2">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="block w-full text-left px-4 py-3 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all font-mono"
+                  className="block w-full text-left px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all font-mono"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}

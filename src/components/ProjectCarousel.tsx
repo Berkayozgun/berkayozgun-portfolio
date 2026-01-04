@@ -3,19 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ExternalLink, Github, Eye } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-interface Project {
-  name: string;
-  description: string;
-  technologies: string[];
-  link: string;
-  demo?: string;
-  images?: {
-    id: string;
-    src: string;
-    alt: string;
-    title: string;
-  }[];
-}
+import { Project } from '../types/profile';
 
 interface ProjectCarouselProps {
   projects: Project[];
@@ -90,13 +78,13 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 rounded-full shadow-lg transition-colors"
+          className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 rounded-full shadow-lg transition-colors items-center justify-center"
         >
           <ChevronLeft className="w-5 h-5 text-gray-700 dark:text-gray-300" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 rounded-full shadow-lg transition-colors"
+          className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 rounded-full shadow-lg transition-colors items-center justify-center"
         >
           <ChevronRight className="w-5 h-5 text-gray-700 dark:text-gray-300" />
         </button>
@@ -113,15 +101,15 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
           >
             {visibleProjects.map((project, index) => (
               <div
-                key={`${project.name}-${currentIndex + index}`}
+                key={`${project.title}-${currentIndex + index}`}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Project Image */}
                 <div className="relative h-48 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-700 dark:to-gray-600">
-                  {project.images && project.images.length > 0 ? (
+                  {project.image ? (
                     <img
-                      src={project.images[0].src}
-                      alt={project.images[0].alt}
+                      src={project.image}
+                      alt={project.title}
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
@@ -142,7 +130,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
                 {/* Project Details */}
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                    {project.name}
+                    {project.title}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                     {project.description}
@@ -151,7 +139,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
                   {/* Technologies */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-1">
-                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                      {project.tags.slice(0, 3).map((tech, techIndex) => (
                         <span
                           key={techIndex}
                           className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full"
@@ -159,9 +147,9 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
                           {tech}
                         </span>
                       ))}
-                      {project.technologies.length > 3 && (
+                      {project.tags.length > 3 && (
                         <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full">
-                          +{project.technologies.length - 3}
+                          +{project.tags.length - 3}
                         </span>
                       )}
                     </div>
@@ -171,9 +159,9 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
                   <div className="flex space-x-2">
                     <button
                       onClick={() => onProjectClick(project)}
-                      className="flex-1 flex items-center justify-center space-x-1 px-3 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+                      className="flex-1 flex items-center justify-center space-x-1 px-3 py-3 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors min-h-[44px]"
                     >
-                      <Eye className="w-3 h-3" />
+                      <Eye className="w-4 h-4" />
                       <span>{t('projects.viewDetails')}</span>
                     </button>
                     {project.demo && (
@@ -181,19 +169,19 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center px-3 py-2 border border-blue-600 text-blue-600 dark:text-blue-400 text-sm rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+                        className="flex items-center justify-center px-4 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 text-sm rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors min-h-[44px]"
                       >
-                        <ExternalLink className="w-3 h-3" />
+                        <ExternalLink className="w-4 h-4" />
                       </a>
                     )}
-                    {project.link && (
+                    {project.github && (
                       <a
-                        href={project.link}
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center px-3 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                        className="flex items-center justify-center px-4 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors min-h-[44px]"
                       >
-                        <Github className="w-3 h-3" />
+                        <Github className="w-4 h-4" />
                       </a>
                     )}
                   </div>
@@ -211,8 +199,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, onProjectCl
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex
-                ? 'bg-blue-600'
-                : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+              ? 'bg-blue-600'
+              : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
               }`}
           />
         ))}

@@ -1,299 +1,104 @@
 {
-    "tr": {
-        "welcome": "Merhaba! Ben Berkay Özgün. Terminal arayüzüme hoş geldiniz.",
-        "hero": {
-            "title": "Bilgisayar Mühendisi & Full Stack Geliştirici",
-            "subtitle": "Modern web deneyimleri tasarlıyorum",
-            "description": "React.js, Next.js ve Node.js kullanarak ölçeklenebilir web uygulamaları geliştiren, modern UI/UX prensiplerine ve temiz kod mimarisine hakim bir Bilgisayar Mühendisiyim.",
-            "viewProjects": "Projelerimi Gör",
-            "getInTouch": "İletişime Geç"
-        },
-        "about": {
-            "title": "Hakkımda",
-            "description": "React.js, Next.js ve Node.js kullanarak ölçeklenebilir web uygulamaları geliştirme konusunda pratik deneyime sahip bir Bilgisayar Mühendisiyim. Modern UI/UX prensipleri, RESTful API tasarımı ve bileşen tabanlı mimari konularında güçlü bir anlayışa sahibim. Temiz ve sürdürülebilir kod ile duyarlı ve erişilebilir web çözümleri geliştirmeye tutkuluyum.",
-            "skills": {
-                "frontend": [
-                    "React.js",
-                    "Next.js",
-                    "Vue.js",
-                    "Redux",
-                    "React Query",
-                    "Tailwind CSS",
-                    "React-Native"
-                ],
-                "backend": [
-                    "Node.js",
-                    "Express.js",
-                    "Python",
-                    "RESTful API",
-                    "JWT"
-                ],
-                "database": [
-                    "MongoDB",
-                    "PostgreSQL",
-                    "Supabase",
-                    "Firebase"
-                ],
-                "devops": [
-                    "Docker",
-                    "AWS",
-                    "CI/CD Pipelines",
-                    "Git/GitHub",
-                    "Agile & Scrum"
-                ]
-            }
-        },
-        "experience": [
-            {
-                "company": "BGO TEAM",
-                "position": "Gönüllü Backend Geliştirici",
-                "period": "Ekim 2025 - Halen",
-                "description": [
-                    "Yeni bir topluluk web platformu için Node.js ve Express.js ile RESTful API'ler geliştiriyorum.",
-                    "JWT (JSON Web Tokens) kullanarak kullanıcı kimlik doğrulama ve yetkilendirme mantığını uyguluyorum.",
-                    "Veritabanı şemaları tasarlıyor ve MongoDB ile veri operasyonlarını yönetiyorum.",
-                    "Agile ortamında Git versiyon kontrolü kullanarak ekip üyeleriyle işbirliği yapıyorum."
-                ]
-            },
-            {
-                "company": "Elmali Tech",
-                "position": "JavaScript Developer Stajyer",
-                "period": "Mart 2025 – Mayıs 2025",
-                "description": [
-                    "Canlı Digiroom projesi dahil olmak üzere, karmaşık durum yönetimi, sunucu tarafı oluşturma (SSR) ve dinamik yönlendirme içeren 10'dan fazla üretime hazır React ve Next.js uygulaması geliştirdim.",
-                    "Supabase Row Level Security (RLS) politikaları ve Firebase Cloud Functions ile gerçek zamanlı işbirliği özellikleri entegre ederek e-ticaret ve rezervasyon platformlarındaki senkronizasyon sorunlarını çözdüm.",
-                    "Teknik dokümantasyon ve proje yol haritaları oluşturdum. Birden fazla projede teknoloji yığınlarının değerlendirilmesine ve mimari kararlara liderlik ettim."
-                ]
-            },
-            {
-                "company": "Sixfab",
-                "position": "Yazılım Mühendisi Stajyer",
-                "period": "Kasım 2023 – Ocak 2024",
-                "description": [
-                    "Flask, Vue.js ve MongoDB kullanarak gelişmiş kullanıcı etkileşimleri, kimlik doğrulama akışları ve rol tabanlı erişim kontrolü içeren bir mikro blog platformu tasarladım ve sundum.",
-                    "MongoDB toplama (aggregation) hatlarını kullanarak iç içe yorumlar, gerçek zamanlı oylama ve kullanıcı etkileşimi takibi gibi ölçeklenebilir sosyal özellikler geliştirdim.",
-                    "CI/CD süreçlerini ve kod inceleme iş akışlarını kurarak uçtan uca proje yaşam döngüsünü yönettim."
-                ]
-            },
-            {
-                "company": "Jotform",
-                "position": "Frontend Developer Stajyer",
-                "period": "Temmuz 2023 – Ağustos 2023",
-                "description": [
-                    "React.js ve Redux Toolkit kullanarak kurumsal ekipler için dahili bir bildirim merkezi geliştirdim.",
-                    "3 kişilik bir stajyer ekibine liderlik ederek projenin zamanında teslim edilmesini ve başarılı bir şekilde sunulmasını sağladım.",
-                    "Kodun yeniden kullanılabilirliğini ve bakımını iyileştirmek için monorepo mimarisi uyguladım."
-                ]
-            },
-            {
-                "company": "Parentwiser",
-                "position": "Frontend Developer Stajyer",
-                "period": "Ocak 2022 – Ekim 2022",
-                "description": [
-                    "Şirketin web sitesini WordPress'ten React.js'e taşıyarak kod tabanını modernize ettim.",
-                    "React Native kullanarak yerel çocuk etkinliklerini öneren bir mobil uygulamanın geliştirilmesine katkıda bulundum.",
-                    "Mentorlarla yakın işbirliği içinde çalışarak React.js ve React Native geliştirmede pratik deneyim kazandım."
-                ]
-            }
-        ],
-        "education": [
-            {
-                "school": "Trakya Üniversitesi",
-                "degree": "Bilgisayar Mühendisliği",
-                "period": "Mezuniyet: Ocak 2024",
-                "description": "Lisans Derecesi - Bitirme Projesi: ML Tabanlı Özgeçmiş Analizi ve İş Öneri Sistemi"
-            }
-        ],
-        "certifications": [
-            {
-                "name": "Cisco Certified Cyberops Associate",
-                "issuer": "Cisco",
-                "date": "Mayıs 2025"
-            },
-            {
-                "name": "Alibaba Cloud Certified Cloud Computing Engineer",
-                "issuer": "Alibaba Cloud",
-                "date": "Ekim 2024"
-            },
-            {
-                "name": "Developing Front End Apps with React",
-                "issuer": "IBM & edX",
-                "date": "2024"
-            }
-        ],
-        "projects": [
-            {
-                "id": "campfire",
-                "name": "Campfire Microblog",
-                "description": "Kullanıcıların kısa gönderiler paylaşabildiği, modern ve ölçeklenebilir bir sosyal medya platformu.",
-                "technologies": [
-                    "React",
-                    "Node.js",
-                    "MongoDB",
-                    "Socket.io"
-                ],
-                "link": "https://github.com/Berkayozgun/campfire_microblog-backend",
-                "image": "/projects/campfire.png"
-            },
-            {
-                "id": "portfolio",
-                "name": "Kişisel Portfolyo",
-                "description": "Modern web teknolojileri ile geliştirilmiş, terminal temalı kişisel web sitesi.",
-                "technologies": [
-                    "React",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "Framer Motion"
-                ],
-                "link": "https://github.com/Berkayozgun/berkayozgun-portfolio",
-                "image": "/projects/portfolio.png"
-            }
-        ],
-        "contact": {
-            "title": "İletişim",
-            "subtitle": "Projeleriniz için benimle iletişime geçin",
-            "form": {
-                "name": "Adınız",
-                "email": "E-posta Adresiniz",
-                "message": "Mesajınız",
-                "send": "Gönder",
-                "sending": "Gönderiliyor...",
-                "success": "Mesajınız başarıyla gönderildi!",
-                "error": "Bir hata oluştu. Lütfen tekrar deneyin."
-            }
-        },
-        "navigation": {
-            "about": "Hakkımda",
-            "projects": "Projeler",
-            "certifications": "Sertifikalar",
-            "education": "Eğitim",
-            "experience": "Deneyim",
-            "contact": "İletişim"
-        },
-        "blog": {
-            "title": "Blog",
-            "description": "Yazılarımı buradan takip edebilirsiniz."
-        },
-        "medium": [
-            {
-                "title": "İlk Yazım",
-                "date": "2023-01-15",
-                "readTime": "5 min read",
-                "link": "https://medium.com/@berkayozgun/ilk-yaz%C4%B1m-1234567890"
-            },
-            {
-                "title": "İkinci Yazım",
-                "date": "2023-03-20",
-                "readTime": "8 min read",
-                "link": "https://medium.com/@berkayozgun/ikinci-yaz%C4%B1m-0987654321"
-            }
-        ],
-        "footer": {
-            "rights": "Tüm hakları saklıdır."
-        }
-    },
     "en": {
-        "welcome": "Hello! I'm Berkay Özgün. Welcome to my terminal interface.",
         "hero": {
-            "title": "Computer Engineer & Full Stack Developer",
-            "subtitle": "Crafting modern web experiences",
-            "description": "Computer Engineer with hands-on experience in full-stack development, building scalable web applications using React.js, Next.js, and Node.js.",
-            "viewProjects": "View Projects",
-            "getInTouch": "Get In Touch"
+            "title": "Full Stack Engineer & AI Enthusiast",
+            "subtitle": "Building Scalable Web Ecosystems",
+            "description": "I engineer robust web applications using React.js, Next.js, and Node.js. My focus is on creating production-ready solutions with clean architecture and integrating AI services into modern user interfaces.",
+            "cta": "View My Work"
         },
         "about": {
             "title": "About Me",
-            "description": "Computer Engineer with hands-on experience in full-stack development, building scalable web applications using React.js, Next.js, and Node.js. Strong understanding of modern UI/UX principles, RESTful API design, and component-based architecture. Passionate about developing responsive and accessible web solutions with clean and maintainable code.",
-            "skills": {
-                "frontend": [
-                    "React.js",
-                    "Next.js",
-                    "Vue.js",
-                    "Redux",
-                    "React Query",
-                    "Tailwind CSS",
-                    "React-Native"
-                ],
-                "backend": [
-                    "Node.js",
-                    "Express.js",
-                    "Python",
-                    "RESTful API",
-                    "JWT"
-                ],
-                "database": [
-                    "MongoDB",
-                    "PostgreSQL",
-                    "Supabase",
-                    "Firebase"
-                ],
-                "devops": [
-                    "Docker",
-                    "AWS",
-                    "CI/CD Pipelines",
-                    "Git/GitHub",
-                    "Agile & Scrum"
-                ]
-            }
+            "description": "As a Computer Engineer with a passion for product development, I specialize in the JavaScript ecosystem (TypeScript, React, Node.js). Beyond coding, I focus on system architecture, performance optimization, and DX (Developer Experience). I have successfully shipped products in FinTech, EdTech, and Social Media domains, always aiming for the perfect balance between functionality and design."
         },
+        "projects": [
+            {
+                "id": 1,
+                "title": "AI Resume Analyst",
+                "description": "A machine learning system that parses resumes and matches them with real-time job listings using NLP (TF-IDF, Cosine Similarity).",
+                "tags": [
+                    "Python",
+                    "Machine Learning",
+                    "Django",
+                    "NLP"
+                ],
+                "github": "https://github.com/Berkayozgun/ai-resume-job-matcher",
+                "demo": "",
+                "image": "/images/resume-ai.png"
+            },
+            {
+                "id": 2,
+                "title": "Node.js Production Boilerplate",
+                "description": "Enterprise-level backend starter kit featuring layered architecture, advanced security (Helmet, Rate Limiting), and automated Swagger documentation.",
+                "tags": [
+                    "Node.js",
+                    "Express",
+                    "Security",
+                    "Swagger"
+                ],
+                "github": "https://github.com/Berkayozgun/nodejs-boilerplate",
+                "demo": "",
+                "image": "/images/node-boilerplate.png"
+            },
+            {
+                "id": 3,
+                "title": "Campfire Social",
+                "description": "A scalable micro-blogging platform backend built with Flask and MongoDB. Features include JWT authentication, nested comment structures using MongoDB's document model, and a smart voting system with aggregation pipelines for performance.",
+                "tags": [
+                    "Python",
+                    "Flask",
+                    "MongoDB",
+                    "Rest API"
+                ],
+                "github": "https://github.com/Berkayozgun/campfire_microblog-backend",
+                "demo": "",
+                "image": "/images/campfire.png"
+            },
+            {
+                "id": 4,
+                "title": "E-Commerce Dashboard",
+                "description": "A comprehensive admin panel for managing products and analytics. Built with React, TypeScript and modern UI principles.",
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Recharts"
+                ],
+                "github": "https://github.com/Berkayozgun/ecommerce-dashboard-v2",
+                "demo": "",
+                "image": "/images/dashboard.png"
+            }
+        ],
         "experience": [
             {
-                "company": "BGO TEAM",
-                "position": "Volunteer Backend Developer",
-                "period": "October 2025 - Present",
-                "description": [
-                    "Developing RESTful APIs with Node.js and Express.js for a new community web platform.",
-                    "Implementing user authentication and authorization logic utilizing JWT (JSON Web Tokens).",
-                    "Designing database schemas and managing data operations with MongoDB.",
-                    "Collaborating with team members using Git version control in an Agile environment."
-                ]
+                "company": "BGO Team",
+                "role": "Backend Developer",
+                "period": "Oct 2025 - Present",
+                "description": "Developing RESTful APIs with Node.js & Express. Implementing JWT auth and MongoDB schemas."
             },
             {
                 "company": "Elmali Tech",
-                "position": "JavaScript Developer Intern",
-                "period": "March 2025 – May 2025",
-                "description": [
-                    "Developed 10+ production-ready React and Next.js applications, including the live Digiroom project, with complex state management, server-side rendering, and dynamic routing.",
-                    "Integrated real-time collaboration features with Supabase Row Level Security (RLS) policies and Firebase Cloud Functions, resolving synchronization issues in e-commerce and booking platforms.",
-                    "Created technical documentation and project roadmaps. Led evaluation of technology stacks and architectural decisions across multiple projects."
-                ]
+                "role": "JavaScript Developer",
+                "period": "Mar 2025 - May 2025",
+                "description": "Developed 10+ production-ready Next.js apps. Integrated Supabase RLS and Firebase Functions."
             },
             {
                 "company": "Sixfab",
-                "position": "Software Engineer Intern",
-                "period": "November 2023 – January 2024",
-                "description": [
-                    "Designed and delivered a micro-blogging platform with advanced user interactions, authentication flows, and role-based access control using Flask, Vue.js, and MongoDB.",
-                    "Built scalable social features including nested comments, real-time voting, and user engagement tracking using MongoDB aggregation pipelines.",
-                    "Managed end-to-end project lifecycle, setting up CI/CD pipelines and code review workflows."
-                ]
+                "role": "Software Engineer Intern",
+                "period": "Nov 2023 - Jan 2024",
+                "description": "Designed a micro-blogging platform using Vue.js and Flask. Managed CI/CD pipelines."
             },
             {
                 "company": "Jotform",
-                "position": "Frontend Developer Intern",
-                "period": "July 2023 – August 2023",
-                "description": [
-                    "Built an internal notification center for enterprise teams using React.js and Redux Toolkit.",
-                    "Led a 3-person intern team, ensuring on-time delivery and successful live presentation of the project.",
-                    "Applied a monorepo architecture to improve code reusability and maintainability."
-                ]
-            },
-            {
-                "company": "Parentwiser",
-                "position": "Frontend Developer Intern",
-                "period": "January 2022 – October 2022",
-                "description": [
-                    "Migrated the company’s website from WordPress to React.js, modernizing its codebase.",
-                    "Contributed to the development of a mobile application suggesting local kids’ events, using React Native.",
-                    "Collaborated closely with mentors and gained hands-on experience in React.js and React Native development."
-                ]
+                "role": "Frontend Developer Intern",
+                "period": "July 2023 - Aug 2023",
+                "description": "Built an internal notification center using React.js and Redux. Led a team of 3 interns."
             }
         ],
         "education": [
             {
                 "school": "Trakya University",
                 "degree": "BS in Computer Engineering",
-                "period": "Graduation: Jan 2024",
+                "date": "Graduation: Jan 2024",
                 "description": "Graduation Project: ML-Based Resume Analysis & Job Recommendation System"
             }
         ],
@@ -314,76 +119,146 @@
                 "date": "2024"
             }
         ],
+        "blog": [
+            {
+                "title": "Build Your First Next.js App in 10 Minutes: Intro to App Router",
+                "description": "A comprehensive guide to getting started with Next.js 13+ App Router features.",
+                "date": "2024",
+                "readTime": "5 min read",
+                "link": "https://medium.com/@berkayozgun001/next-js-ile-i%CC%87lk-uygulaman%C4%B1z%C4%B1-10-dakikada-kurun-app-router-d%C3%B6nemine-gi%CC%87ri%CC%87%C5%9F-61de5a561447",
+                "image": "/images/blog-nextjs.png"
+            }
+        ]
+    },
+    "tr": {
+        "hero": {
+            "title": "Full Stack Geliştirici & Bilgisayar Mühendisi",
+            "subtitle": "Ölçeklenebilir Web Çözümleri",
+            "description": "React.js, Next.js ve Node.js kullanarak modern web ekosistemleri inşa ediyorum. Temiz kod mimarisi ve Yapay Zeka entegrasyonlarına odaklanarak, son kullanıcı için performanslı ürünler geliştiriyorum.",
+            "cta": "Projelerimi İncele"
+        },
+        "about": {
+            "title": "Hakkımda",
+            "description": "Ürün geliştirmeye tutkulu bir Bilgisayar Mühendisi olarak JavaScript ekosisteminde (TypeScript, React, Node.js) uzmanlaşıyorum. Kod yazmanın ötesinde sistem mimarisi, performans optimizasyonu ve geliştirici deneyimine (DX) odaklanırım. FinTech, Eğitim ve Sosyal Medya alanlarında gerçek ürünler ortaya koydum."
+        },
         "projects": [
             {
-                "id": "campfire",
-                "name": "Campfire Microblog",
-                "description": "A modern and scalable social media platform where users can share short posts.",
-                "technologies": [
-                    "React",
-                    "Node.js",
-                    "MongoDB",
-                    "Socket.io"
+                "id": 1,
+                "title": "YZ Tabanlı CV Analisti",
+                "description": "Özgeçmişleri analiz eden ve NLP teknikleri (TF-IDF) kullanarak gerçek zamanlı iş ilanlarıyla eşleştiren bir makine öğrenmesi sistemi.",
+                "tags": [
+                    "Python",
+                    "Machine Learning",
+                    "Django",
+                    "NLP"
                 ],
-                "link": "https://github.com/Berkayozgun/campfire_microblog-backend",
-                "image": "/projects/campfire.png"
+                "github": "https://github.com/Berkayozgun/ai-resume-job-matcher",
+                "demo": "",
+                "image": "/images/resume-ai.png"
             },
             {
-                "id": "portfolio",
-                "name": "Personal Portfolio",
-                "description": "Terminal-themed personal website built with modern web technologies.",
-                "technologies": [
+                "id": 2,
+                "title": "Node.js Production Boilerplate",
+                "description": "Katmanlı mimari, gelişmiş güvenlik (Helmet, Rate Limiting) ve otomatik Swagger dokümantasyonu içeren kurumsal backend başlangıç kiti.",
+                "tags": [
+                    "Node.js",
+                    "Express",
+                    "Security",
+                    "Swagger"
+                ],
+                "github": "https://github.com/Berkayozgun/nodejs-boilerplate",
+                "demo": "",
+                "image": "/images/node-boilerplate.png"
+            },
+            {
+                "id": 3,
+                "title": "Campfire Social",
+                "description": "Flask ve MongoDB ile geliştirilmiş; iç içe yorumlar, JWT kimlik doğrulama ve oylama sistemi içeren ölçeklenebilir mikro-blog backend'i. MongoDB agregasyon boru hatları ile optimize edilmiş oylama mantığı ve doküman tabanlı yorum mimarisi sunar.",
+                "tags": [
+                    "Python",
+                    "Flask",
+                    "MongoDB",
+                    "Rest API"
+                ],
+                "github": "https://github.com/Berkayozgun/campfire_microblog-backend",
+                "demo": "",
+                "image": "/images/campfire.png"
+            },
+            {
+                "id": 4,
+                "title": "E-Ticaret Yönetim Paneli",
+                "description": "Ürünleri ve analizleri yönetmek için geliştirilmiş kapsamlı admin paneli. React, TypeScript ve modern UI prensipleri ile oluşturuldu.",
+                "tags": [
                     "React",
                     "TypeScript",
                     "Tailwind CSS",
-                    "Framer Motion"
+                    "Recharts"
                 ],
-                "link": "https://github.com/Berkayozgun/berkayozgun-portfolio",
-                "image": "/projects/portfolio.png"
+                "github": "https://github.com/Berkayozgun/ecommerce-dashboard-v2",
+                "demo": "",
+                "image": "/images/dashboard.png"
             }
         ],
-        "contact": {
-            "title": "Contact",
-            "subtitle": "Get in touch for your projects",
-            "form": {
-                "name": "Your Name",
-                "email": "Your Email",
-                "message": "Your Message",
-                "send": "Send Message",
-                "sending": "Sending...",
-                "success": "Message sent successfully!",
-                "error": "An error occurred. Please try again."
-            }
-        },
-        "navigation": {
-            "about": "About",
-            "projects": "Projects",
-            "certifications": "Certifications",
-            "education": "Education",
-            "blog": "Blog",
-            "experience": "Experience",
-            "contact": "Contact"
-        },
-        "blog": {
-            "title": "Blog",
-            "description": "You can follow my articles here."
-        },
-        "medium": [
+        "experience": [
             {
-                "title": "My First Post",
-                "date": "2023-01-15",
-                "readTime": "5 min read",
-                "link": "https://medium.com/@berkayozgun/my-first-post-1234567890"
+                "company": "BGO Team",
+                "role": "Backend Geliştirici",
+                "period": "Ekim 2025 - Günümüz",
+                "description": "Node.js & Express ile RESTful API geliştirimi. JWT auth ve MongoDB şemaları."
             },
             {
-                "title": "My Second Post",
-                "date": "2023-03-20",
-                "readTime": "8 min read",
-                "link": "https://medium.com/@berkayozgun/my-second-post-0987654321"
+                "company": "Elmali Tech",
+                "role": "JavaScript Geliştirici",
+                "period": "Mart 2025 - Mayıs 2025",
+                "description": "10+ production-ready Next.js uygulaması geliştirildi. Supabase RLS entegrasyonu."
+            },
+            {
+                "company": "Sixfab",
+                "role": "Yazılım Mühendisi Stajyeri",
+                "period": "Kas 2023 - Oca 2024",
+                "description": "Vue.js ve Flask kullanarak mikro-blog platformu tasarlandı. CI/CD süreçleri yönetildi."
+            },
+            {
+                "company": "Jotform",
+                "role": "Frontend Geliştirici Stajyeri",
+                "period": "Tem 2023 - Ağu 2023",
+                "description": "React.js ve Redux kullanılarak dahili bildirim merkezi geliştirildi. 3 kişilik ekip yönetildi."
             }
         ],
-        "footer": {
-            "rights": "All rights reserved."
-        }
+        "education": [
+            {
+                "school": "Trakya Üniversitesi",
+                "degree": "Bilgisayar Mühendisliği Lisans",
+                "date": "Mezuniyet: Ocak 2024",
+                "description": "Bitirme Projesi: ML Tabanlı CV Analiz ve İş Öneri Sistemi"
+            }
+        ],
+        "certifications": [
+            {
+                "name": "Cisco Certified Cyberops Associate",
+                "issuer": "Cisco",
+                "date": "Mayıs 2025"
+            },
+            {
+                "name": "Alibaba Cloud Certified Cloud Computing Engineer",
+                "issuer": "Alibaba Cloud",
+                "date": "Ekim 2024"
+            },
+            {
+                "name": "Developing Front End Apps with React",
+                "issuer": "IBM & edX",
+                "date": "2024"
+            }
+        ],
+        "blog": [
+            {
+                "title": "Next.js ile İlk Uygulamanızı 10 Dakikada Kurun: App Router Dönemine Giriş",
+                "description": "Next.js 13+ App Router özellikleri ile projenize hızlı bir başlangıç yapın.",
+                "date": "2024",
+                "readTime": "5 dk okuma",
+                "link": "https://medium.com/@berkayozgun001/next-js-ile-i%CC%87lk-uygulaman%C4%B1z%C4%B1-10-dakikada-kurun-app-router-d%C3%B6nemine-gi%CC%87ri%CC%87%C5%9F-61de5a561447",
+                "image": "/images/blog-nextjs.png"
+            }
+        ]
     }
 }
