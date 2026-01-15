@@ -12,6 +12,35 @@
         },
         "projects": [
             {
+                "id": 5,
+                "title": "Browser Video Crunch",
+                "description": "A serverless video compression tool that processes 4K video entirely in the browser (client-side) using WebAssembly. Features real-time performance metrics and resolution scaling.",
+                "tags": [
+                    "Next.js 14",
+                    "FFmpeg.wasm",
+                    "WebAssembly",
+                    "Tailwind CSS",
+                    "Multi-threading"
+                ],
+                "github": "https://github.com/Berkayozgun/browser-video-crunch",
+                "demo": "https://video-crunch.vercel.app",
+                "image": "/images/video-crunch.png"
+            },
+            {
+                "id": 6,
+                "title": "Fast Apply Extension",
+                "description": "A productivity extension designed to speed up job applications by 50%. Features a dynamic context menu manager for inserting custom text snippets instantly.",
+                "tags": [
+                    "Chrome Extension V3",
+                    "JavaScript",
+                    "DOM Manipulation",
+                    "LocalStorage API"
+                ],
+                "github": "https://github.com/Berkayozgun/fast-apply-extension",
+                "demo": "https://chromewebstore.google.com/detail/fast-apply",
+                "image": "/images/fast-apply.png"
+            },
+            {
                 "id": 1,
                 "title": "AI Resume Analyst",
                 "description": "A machine learning system that parses resumes and matches them with real-time job listings using NLP (TF-IDF, Cosine Similarity).",
@@ -142,6 +171,35 @@
             "description": "Ürün geliştirmeye tutkulu bir Bilgisayar Mühendisi olarak JavaScript ekosisteminde (TypeScript, React, Node.js) uzmanlaşıyorum. Kod yazmanın ötesinde sistem mimarisi, performans optimizasyonu ve geliştirici deneyimine (DX) odaklanırım. FinTech, Eğitim ve Sosyal Medya alanlarında gerçek ürünler ortaya koydum."
         },
         "projects": [
+            {
+                "id": 5,
+                "title": "Browser Video Crunch",
+                "description": "4K videoları tamamen tarayıcıda (istemci tarafı) WebAssembly kullanarak işleyen sunucusuz bir video sıkıştırma aracı. Gerçek zamanlı performans metrikleri ve çözünürlük ölçeklendirme özelliklerine sahiptir.",
+                "tags": [
+                    "Next.js 14",
+                    "FFmpeg.wasm",
+                    "WebAssembly",
+                    "Tailwind CSS",
+                    "Multi-threading"
+                ],
+                "github": "https://github.com/Berkayozgun/browser-video-crunch",
+                "demo": "https://video-crunch.vercel.app",
+                "image": "/images/video-crunch.png"
+            },
+            {
+                "id": 6,
+                "title": "Fast Apply Extension",
+                "description": "İş başvurularını %50 hızlandırmak için tasarlanmış bir verimlilik uzantısı. Özel metin snippet'lerini anında eklemek için dinamik bir sağ tık menü yöneticisi içerir.",
+                "tags": [
+                    "Chrome Extension V3",
+                    "JavaScript",
+                    "DOM Manipulation",
+                    "LocalStorage API"
+                ],
+                "github": "https://github.com/Berkayozgun/fast-apply-extension",
+                "demo": "https://chromewebstore.google.com/detail/fast-apply",
+                "image": "/images/fast-apply.png"
+            },
             {
                 "id": 1,
                 "title": "YZ Tabanlı CV Analisti",
