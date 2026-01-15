@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 import LoadingSpinner from './LoadingSpinner';
 
 interface FormData {
@@ -12,6 +13,7 @@ interface FormData {
 
 const ContactForm: React.FC = () => {
   const { t } = useTranslation();
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -21,16 +23,34 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
+  // EmailJS Constants (from environment variables)
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!form.current) return;
+
+    // Temporary verification log for security setup
+    console.log('EmailJS Public Key:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
     setIsSubmitting(true);
-    
+    setSubmitStatus('idle');
+
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        form.current,
+        PUBLIC_KEY
+      );
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch {
+      form.current.reset();
+    } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -40,7 +60,7 @@ const ContactForm: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[name as keyof FormData]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
@@ -82,7 +102,7 @@ const ContactForm: React.FC = () => {
         </motion.div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form ref={form} onSubmit={handleSubmit} className="space-y-4">
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -94,9 +114,8 @@ const ContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
-                errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-              }`}
+              className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white ${errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                }`}
               placeholder={t('contact.yourName')}
             />
             {errors.name && (
@@ -114,9 +133,8 @@ const ContactForm: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
-                errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-              }`}
+              className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white ${errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                }`}
               placeholder="email@example.com"
             />
             {errors.email && (
@@ -135,9 +153,8 @@ const ContactForm: React.FC = () => {
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white resize-none ${
-              errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-            }`}
+            className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white resize-none ${errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+              }`}
             placeholder={t('contact.yourMessage')}
           />
           {errors.message && (
@@ -148,11 +165,10 @@ const ContactForm: React.FC = () => {
         <motion.button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors ${
-            isSubmitting
+          className={`w-full flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors ${isSubmitting
               ? 'bg-gray-400 dark:bg-gray-600 text-gray-200 cursor-not-allowed'
               : 'bg-blue-600 hover:bg-blue-700 text-white'
-          }`}
+            }`}
           whileHover={!isSubmitting ? { scale: 1.02 } : {}}
           whileTap={!isSubmitting ? { scale: 0.98 } : {}}
         >
