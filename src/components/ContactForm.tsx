@@ -32,8 +32,6 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     if (!form.current) return;
 
-    // Temporary verification log for security setup
-    console.log('EmailJS Public Key:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -166,8 +164,8 @@ const ContactForm: React.FC = () => {
           type="submit"
           disabled={isSubmitting}
           className={`w-full flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors ${isSubmitting
-              ? 'bg-gray-400 dark:bg-gray-600 text-gray-200 cursor-not-allowed'
-              : 'bg-blue-600 hover:bg-blue-700 text-white'
+            ? 'bg-gray-400 dark:bg-gray-600 text-gray-200 cursor-not-allowed'
+            : 'bg-blue-600 hover:bg-blue-700 text-white'
             }`}
           whileHover={!isSubmitting ? { scale: 1.02 } : {}}
           whileTap={!isSubmitting ? { scale: 0.98 } : {}}
