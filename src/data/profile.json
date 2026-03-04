@@ -1,16 +1,95 @@
 {
     "en": {
         "hero": {
-            "title": "Full Stack Engineer & AI Enthusiast",
-            "subtitle": "Building Scalable Web Ecosystems",
+            "title": "AI-Aware Full Stack Engineer",
+            "subtitle": "Building scalable web applications & integrating AI-driven solutions.",
             "description": "I engineer robust web applications using React.js, Next.js, and Node.js. My focus is on creating production-ready solutions with clean architecture and integrating AI services into modern user interfaces.",
             "cta": "View My Work"
         },
         "about": {
             "title": "About Me",
-            "description": "As a Computer Engineer with a passion for product development, I specialize in the JavaScript ecosystem (TypeScript, React, Node.js). Beyond coding, I focus on system architecture, performance optimization, and DX (Developer Experience). I have successfully shipped products in FinTech, EdTech, and Social Media domains, always aiming for the perfect balance between functionality and design."
+            "description": "As a Computer Engineer with a passion for product development, I specialize in the JavaScript ecosystem (TypeScript, React, Node.js). Beyond coding, I focus on system architecture, performance optimization, and DX (Developer Experience). Currently pursuing an M.Sc. in Computer Engineering at Trakya University. Actively researching and taking coursework in Machine Learning, Text Mining, and Cognitive Technologies. I have successfully shipped products in FinTech, EdTech, and Social Media domains, always aiming for the perfect balance between functionality and design."
         },
+        "skills": [
+            {
+                "category": "Frontend",
+                "technologies": [
+                    "React.js",
+                    "Next.js",
+                    "Vue.js",
+                    "Redux",
+                    "React Query",
+                    "Tailwind CSS",
+                    "React-Native"
+                ]
+            },
+            {
+                "category": "Backend",
+                "technologies": [
+                    "Node.js",
+                    "Express.js",
+                    "Django",
+                    "RESTful API",
+                    "JWT",
+                    "MongoDB",
+                    "PostgreSQL",
+                    "Supabase",
+                    "Firebase"
+                ]
+            },
+            {
+                "category": "AI & Data Science",
+                "technologies": [
+                    "Machine Learning",
+                    "Natural Language Processing (NLP)",
+                    "TF-IDF",
+                    "KNN",
+                    "Web Scraping (BeautifulSoup)"
+                ]
+            },
+            {
+                "category": "DevOps & Tools",
+                "technologies": [
+                    "Docker",
+                    "AWS",
+                    "CI/CD Pipelines",
+                    "Git",
+                    "GitHub",
+                    "Postman",
+                    "Figma",
+                    "Agile & Scrum"
+                ]
+            }
+        ],
         "projects": [
+            {
+                "id": 7,
+                "title": "AI-Powered Career Recommendation System",
+                "description": "A machine learning-based recommendation engine utilizing NLP, TF-IDF, and KNN algorithms. Built automated data pipelines using Python and BeautifulSoup to scrape job market data. Integrated into a scalable full-stack web application using Django within a 6-person Agile team.",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "NLP",
+                    "Machine Learning"
+                ],
+                "github": "",
+                "demo": "",
+                "image": "/images/ai-career-recommender.png"
+            },
+            {
+                "id": 8,
+                "title": "CS-Playground",
+                "description": "Interactive algorithm and data structure visualization platform. Built with Next.js and modern React architecture to help developers understand complex CS concepts visually.",
+                "tags": [
+                    "Next.js",
+                    "React",
+                    "TypeScript",
+                    "Vercel"
+                ],
+                "github": "https://github.com/Berkayozgun/algoviz",
+                "demo": "https://algoviz-rho.vercel.app",
+                "image": "/images/cs-playground.png"
+            },
             {
                 "id": 5,
                 "title": "Browser Video Crunch",
@@ -121,14 +200,26 @@
                 "role": "Frontend Developer Intern",
                 "period": "July 2023 - Aug 2023",
                 "description": "Built an internal notification center using React.js and Redux. Led a team of 3 interns."
+            },
+            {
+                "company": "Parentwiser",
+                "role": "Frontend Developer Intern",
+                "period": "Jan 2022 - Oct 2022",
+                "description": "Migrated the company’s website from WordPress to React.js. Contributed to a React Native mobile application for local kids' events."
             }
         ],
         "education": [
             {
                 "school": "Trakya University",
+                "degree": "M.Sc. in Computer Engineering",
+                "date": "February 2026 - Present",
+                "description": "Relevant Coursework: Machine Learning, Text Mining, Cognitive Technologies, Scientific Ethics."
+            },
+            {
+                "school": "Trakya University",
                 "degree": "BS in Computer Engineering",
                 "date": "Graduation: Jan 2024",
-                "description": "Graduation Project: ML-Based Resume Analysis & Job Recommendation System"
+                "description": "Graduation Project: AI-Powered Career Recommendation System"
             }
         ],
         "certifications": [
@@ -161,16 +252,95 @@
     },
     "tr": {
         "hero": {
-            "title": "Full Stack Geliştirici & Bilgisayar Mühendisi",
-            "subtitle": "Ölçeklenebilir Web Çözümleri",
+            "title": "YZ Odaklı Full Stack Geliştirici",
+            "subtitle": "Ölçeklenebilir web uygulamaları geliştiriyor ve YZ odaklı çözümler entegre ediyorum.",
             "description": "React.js, Next.js ve Node.js kullanarak modern web ekosistemleri inşa ediyorum. Temiz kod mimarisi ve Yapay Zeka entegrasyonlarına odaklanarak, son kullanıcı için performanslı ürünler geliştiriyorum.",
             "cta": "Projelerimi İncele"
         },
         "about": {
             "title": "Hakkımda",
-            "description": "Ürün geliştirmeye tutkulu bir Bilgisayar Mühendisi olarak JavaScript ekosisteminde (TypeScript, React, Node.js) uzmanlaşıyorum. Kod yazmanın ötesinde sistem mimarisi, performans optimizasyonu ve geliştirici deneyimine (DX) odaklanırım. FinTech, Eğitim ve Sosyal Medya alanlarında gerçek ürünler ortaya koydum."
+            "description": "Ürün geliştirmeye tutkulu bir Bilgisayar Mühendisi olarak JavaScript ekosisteminde (TypeScript, React, Node.js) uzmanlaşıyorum. Kod yazmanın ötesinde sistem mimarisi, performans optimizasyonu ve geliştirici deneyimine (DX) odaklanırım. Şu anda Trakya Üniversitesi'nde Bilgisayar Mühendisliği alanında Yüksek Lisans yapmaktayım. Makine Öğrenmesi, Metin Madenciliği ve Bilişsel Teknolojiler üzerine aktif olarak araştırma yapıyor ve dersler alıyorum. FinTech, Eğitim ve Sosyal Medya alanlarında gerçek ürünler ortaya koydum."
         },
+        "skills": [
+            {
+                "category": "Frontend",
+                "technologies": [
+                    "React.js",
+                    "Next.js",
+                    "Vue.js",
+                    "Redux",
+                    "React Query",
+                    "Tailwind CSS",
+                    "React-Native"
+                ]
+            },
+            {
+                "category": "Backend",
+                "technologies": [
+                    "Node.js",
+                    "Express.js",
+                    "Django",
+                    "RESTful API",
+                    "JWT",
+                    "MongoDB",
+                    "PostgreSQL",
+                    "Supabase",
+                    "Firebase"
+                ]
+            },
+            {
+                "category": "Yapay Zeka & Veri Bilimi",
+                "technologies": [
+                    "Machine Learning",
+                    "Natural Language Processing (NLP)",
+                    "TF-IDF",
+                    "KNN",
+                    "Web Scraping (BeautifulSoup)"
+                ]
+            },
+            {
+                "category": "DevOps & Araçlar",
+                "technologies": [
+                    "Docker",
+                    "AWS",
+                    "CI/CD Pipelines",
+                    "Git",
+                    "GitHub",
+                    "Postman",
+                    "Figma",
+                    "Agile & Scrum"
+                ]
+            }
+        ],
         "projects": [
+            {
+                "id": 7,
+                "title": "YZ Tabanlı Kariyer Öneri Sistemi",
+                "description": "NLP, TF-IDF ve KNN algoritmalarını kullanan makine öğrenimi tabanlı bir öneri motoru. İş piyasası verilerini kazımak için Python ve BeautifulSoup kullanarak otomatik veri boru hatları oluşturdum. 6 kişilik çevik (Agile) bir ekipte Django kullanarak ölçeklenebilir bir tam yığın (full-stack) web uygulamasına entegre ettim.",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "NLP",
+                    "Machine Learning"
+                ],
+                "github": "",
+                "demo": "",
+                "image": "/images/ai-career-recommender.png"
+            },
+            {
+                "id": 8,
+                "title": "CS-Playground",
+                "description": "Etkileşimli algoritma ve veri yapısı görselleştirme platformu. Geliştiricilerin karmaşık CS konseptlerini görsel olarak anlamalarına yardımcı olmak için Next.js ve modern React mimarisi ile oluşturuldu.",
+                "tags": [
+                    "Next.js",
+                    "React",
+                    "TypeScript",
+                    "Vercel"
+                ],
+                "github": "https://github.com/Berkayozgun/algoviz",
+                "demo": "https://algoviz-rho.vercel.app",
+                "image": "/images/cs-playground.png"
+            },
             {
                 "id": 5,
                 "title": "Browser Video Crunch",
@@ -281,14 +451,26 @@
                 "role": "Frontend Geliştirici Stajyeri",
                 "period": "Tem 2023 - Ağu 2023",
                 "description": "React.js ve Redux kullanılarak dahili bildirim merkezi geliştirildi. 3 kişilik ekip yönetildi."
+            },
+            {
+                "company": "Parentwiser",
+                "role": "Frontend Geliştirici Stajyeri",
+                "period": "Oca 2022 - Eki 2022",
+                "description": "Şirketin web sitesini WordPress'ten React.js'e taşıdım. Yerel çocuk etkinlikleri için bir React Native mobil uygulamasına katkıda bulundum."
             }
         ],
         "education": [
             {
                 "school": "Trakya Üniversitesi",
+                "degree": "Bilgisayar Mühendisliği Yüksek Lisans (M.Sc.)",
+                "date": "Şubat 2026 - Günümüz",
+                "description": "İlgili Dersler: Makine Öğrenmesi, Metin Madenciliği, Bilişsel Teknolojiler, Bilimsel Etik."
+            },
+            {
+                "school": "Trakya Üniversitesi",
                 "degree": "Bilgisayar Mühendisliği Lisans",
                 "date": "Mezuniyet: Ocak 2024",
-                "description": "Bitirme Projesi: ML Tabanlı CV Analiz ve İş Öneri Sistemi"
+                "description": "Bitirme Projesi: AI Tabanlı Kariyer Öneri Sistemi"
             }
         ],
         "certifications": [

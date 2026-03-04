@@ -150,8 +150,8 @@ const Home: React.FC = () => {
                     <div className="space-y-4">
                       <p><span className="text-purple-600 dark:text-purple-400">const</span> <span className="text-blue-600 dark:text-blue-400">developer</span> = <span className="text-yellow-600 dark:text-yellow-400">{'{'}</span></p>
                       <p className="pl-4">name: <span className="text-green-600 dark:text-green-400">'Berkay Özgün'</span>,</p>
-                      <p className="pl-4">role: <span className="text-green-600 dark:text-green-400">'Full Stack Engineer'</span>,</p>
-                      <p className="pl-4">skills: <span className="text-yellow-600 dark:text-yellow-400">['React', 'Node.js', 'TypeScript', 'AI']</span>,</p>
+                      <p className="pl-4">role: <span className="text-green-600 dark:text-green-400">'AI-Aware Full Stack Engineer'</span>,</p>
+                      <p className="pl-4">skills: <span className="text-yellow-600 dark:text-yellow-400">['React', 'Node.js', 'Python', 'Machine Learning']</span>,</p>
                       <p className="pl-4">onProduction: <span className="text-purple-600 dark:text-purple-400">true</span>,</p>
                       <p className="pl-4">lovesCleanCode: <span className="text-purple-600 dark:text-purple-400">true</span></p>
                       <p><span className="text-yellow-600 dark:text-yellow-400">{'}'}</span>;</p>
@@ -183,6 +183,38 @@ const Home: React.FC = () => {
               {data.about.description}
             </p>
           </motion.div>
+
+          {data.skills && data.skills.length > 0 && (
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+            >
+              {data.skills.map((skillGroup, idx) => (
+                <motion.div
+                  key={idx}
+                  variants={fadeInUp}
+                  className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-white/5 hover:border-primary-500/50 transition-all duration-300 flex flex-col h-full"
+                >
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-100 dark:border-gray-700 pb-2">
+                    {skillGroup.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {skillGroup.technologies.map((tech, techIdx) => (
+                      <span
+                        key={techIdx}
+                        className="px-3 py-1 bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 text-sm rounded-full border border-primary-100 dark:border-primary-800/30 font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
         </div>
       </section>
 

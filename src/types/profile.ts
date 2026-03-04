@@ -37,6 +37,11 @@ export interface BlogPost {
     image: string;
 }
 
+export interface SkillCategory {
+    category: string;
+    technologies: string[];
+}
+
 export interface ProfileData {
     hero: {
         title: string;
@@ -48,6 +53,7 @@ export interface ProfileData {
         title: string;
         description: string;
     };
+    skills: SkillCategory[];
     projects: Project[];
     experience: Experience[];
     education: Education[];
