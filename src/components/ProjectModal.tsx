@@ -1,120 +1,23 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Github, Code, Globe } from 'lucide-react';
+'use client';
 
-import { Project } from '../types/profile';
+import { Code, Github, Globe, X } from 'lucide-react';
+import * as Dialog from '@radix-ui/react-dialog';
+import type { Project } from '@/types/profile';
 
-interface ProjectModalProps {
-  project: Project | null;
-  isOpen: boolean;
-  onClose: () => void;
-  language: 'tr' | 'en';
-}
-
-const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose, language }) => {
+export default function ProjectModal({ project, isOpen, onClose, language }: { project: Project | null; isOpen: boolean; onClose: () => void; language: 'tr' | 'en' }) {
   if (!project) return null;
-
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={onClose}
-        >
-          <motion.div
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                {project.title}
-              </h2>
-              <button
-                onClick={onClose}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-              >
-                <X className="w-6 h-6 text-gray-500 dark:text-gray-400" />
-              </button>
-            </div>
-
-            {/* Content */}
-            <div className="p-6 space-y-6">
-              {/* Project Image */}
-              {project.image && (
-                <div className="aspect-video bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )}
-
-              {/* Description */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                  {language === 'tr' ? 'Açıklama' : 'Description'}
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {project.description}
-                </p>
-              </div>
-
-              {/* Technologies */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                  <Code className="w-5 h-5 mr-2" />
-                  {language === 'tr' ? 'Teknolojiler' : 'Technologies'}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Links */}
-              <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
-                >
-                  <Github className="w-4 h-4" />
-                  <span>GitHub</span>
-                </a>
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    <Globe className="w-4 h-4" />
-                    <span>Live Demo</span>
-                  </a>
-                )}
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
-
-export default ProjectModal;
+  return <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
+    <Dialog.Portal>
+      <Dialog.Overlay className="fixed inset-0 z-50 bg-zinc-950/50 backdrop-blur-sm dark:bg-zinc-950/80" />
+      <Dialog.Content aria-describedby="project-description" className="fixed left-1/2 top-1/2 z-50 max-h-[90vh] w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-2xl border border-zinc-200 bg-white shadow-2xl backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-900/60">
+        <div className="flex items-center justify-between border-b border-zinc-200 p-6 dark:border-zinc-800"><Dialog.Title className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">{project.title}</Dialog.Title><Dialog.Close asChild><button aria-label={language === 'tr' ? 'Kapat' : 'Close'} className="rounded-lg p-2 text-zinc-500 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"><X /></button></Dialog.Close></div>
+        <div className="space-y-7 p-6">
+          <div className="code-preview flex aspect-video items-center justify-center rounded-xl text-center"><Code className="mr-3" /> {project.image || 'architecture / implementation preview'}</div>
+          <div><h3 className="mb-2 text-lg font-semibold text-zinc-900 dark:text-zinc-100">{language === 'tr' ? 'Açıklama' : 'Description'}</h3><p id="project-description" className="leading-7 text-zinc-700 dark:text-zinc-300">{project.description}</p></div>
+          <div><h3 className="mb-3 flex items-center gap-2 text-lg font-semibold text-zinc-900 dark:text-white"><Code size={18} /> {language === 'tr' ? 'Teknolojiler' : 'Technologies'}</h3><div className="flex flex-wrap gap-2">{project.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div></div>
+          <div className="flex flex-wrap gap-3 border-t border-zinc-200 pt-5 dark:border-zinc-800">{project.github && <a className="button-secondary" href={project.github} target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>}{project.demo && <a className="button-primary" href={project.demo} target="_blank" rel="noreferrer"><Globe size={17} /> {language === 'tr' ? 'Canlı Demo' : 'Live Demo'}</a>}</div>
+        </div>
+      </Dialog.Content>
+    </Dialog.Portal>
+  </Dialog.Root>;
+}

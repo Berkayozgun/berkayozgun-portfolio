@@ -1,3 +1,5 @@
+export type Locale = 'en' | 'tr';
+
 export interface Project {
     id: number;
     title: string;

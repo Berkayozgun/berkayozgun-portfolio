@@ -13,7 +13,8 @@
     "subtitle": "Yazılım Geliştirici",
     "description": "Modern web teknolojileri ve yazılım mimarilerine hâkim, takım çalışmasına yatkın ve sorumluluk almaktan çekinmeyen bir yazılım geliştirici.",
     "viewProjects": "Projelerimi Gör",
-    "getInTouch": "İletişime Geç"
+    "getInTouch": "İletişime Geç",
+    "availableForHire": "Yeni fırsatlara açığım"
   },
   "about": {
     "title": "Hakkımda",
@@ -52,23 +53,12 @@
   },
   "contact": {
     "title": "İletişime Geç",
-    "subtitle": "Yeni fırsatlar ve işbirlikleri konusunda her zaman ilgiliyim. Çekinmeden ulaşabilirsiniz!",
-    "name": "İsim",
-    "email": "E-posta",
-    "subject": "Konu",
-    "message": "Mesaj",
-    "sendMessage": "Mesaj Gönder",
-    "sending": "Gönderiliyor...",
-    "sent": "Mesaj başarıyla gönderildi!",
-    "error": "Mesaj gönderilirken hata oluştu. Lütfen tekrar deneyin.",
-    "nameRequired": "İsim gereklidir",
-    "emailRequired": "E-posta gereklidir",
-    "emailInvalid": "Lütfen geçerli bir e-posta adresi girin",
-    "subjectRequired": "Konu gereklidir",
-    "messageRequired": "Mesaj gereklidir",
-    "yourName": "Adınız",
-    "messageSubject": "Mesaj konusu",
-    "yourMessage": "Mesajınız"
+    "description": "Yeni fırsatlar, mobil/web mimarileri ve projeler için iletişime geçebilirsiniz.",
+    "copyEmail": "E-postayı kopyala",
+    "copied": "Kopyalandı!",
+    "sendEmail": "Mail Gönder",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
   "footer": {
     "rights": "Tüm hakları saklıdır."

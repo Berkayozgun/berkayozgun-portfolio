@@ -2,14 +2,13 @@
 export default {
   darkMode: 'class',
   content: [
-    './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        mono: ['Fira Code', 'monospace'],
+        mono: ['var(--font-mono)', 'monospace'],
       },
       colors: {
         primary: {

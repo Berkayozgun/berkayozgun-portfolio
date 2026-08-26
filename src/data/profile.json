@@ -2,13 +2,13 @@
     "en": {
         "hero": {
             "title": "AI-Aware Full Stack Engineer",
-            "subtitle": "Building scalable web applications & integrating AI-driven solutions.",
-            "description": "I engineer robust web applications using React.js, Next.js, and Node.js. My focus is on creating production-ready solutions with clean architecture and integrating AI services into modern user interfaces.",
+            "subtitle": "Building full-stack products and applied ML systems.",
+            "description": "I build full-stack products with React, Next.js, Node.js and React Native, while researching machine learning and NLP with Python, BERTurk and explainable AI. Currently pursuing an M.Sc. in Computer Engineering and building ReHeal, a digital health startup.",
             "cta": "View My Work"
         },
         "about": {
             "title": "About Me",
-            "description": "As a Computer Engineer with a passion for product development, I specialize in the JavaScript ecosystem (TypeScript, React, Node.js). Beyond coding, I focus on system architecture, performance optimization, and DX (Developer Experience). Currently pursuing an M.Sc. in Computer Engineering at Trakya University. Actively researching and taking coursework in Machine Learning, Text Mining, and Cognitive Technologies. I have successfully shipped products in FinTech, EdTech, and Social Media domains, always aiming for the perfect balance between functionality and design."
+            "description": "I am a Computer Engineer focused on full-stack product development and applied machine learning. I work across TypeScript, React, Next.js, Node.js, React Native and Python, with current research in BERTurk, NLP and explainable AI. I am pursuing an M.Sc. in Computer Engineering at Trakya University and building ReHeal, a digital health startup."
         },
         "skills": [
             {
@@ -20,7 +20,9 @@
                     "Redux",
                     "React Query",
                     "Tailwind CSS",
-                    "React-Native"
+                    "React Native",
+                    "Expo",
+                    "Zustand"
                 ]
             },
             {
@@ -34,7 +36,8 @@
                     "MongoDB",
                     "PostgreSQL",
                     "Supabase",
-                    "Firebase"
+                    "Firebase",
+                    "FastAPI"
                 ]
             },
             {
@@ -44,7 +47,12 @@
                     "Natural Language Processing (NLP)",
                     "TF-IDF",
                     "KNN",
-                    "Web Scraping (BeautifulSoup)"
+                    "Web Scraping (BeautifulSoup)",
+                    "BERTurk",
+                    "Transformers",
+                    "SHAP",
+                    "Isolation Forest",
+                    "XAI"
                 ]
             },
             {
@@ -57,22 +65,54 @@
                     "GitHub",
                     "Postman",
                     "Figma",
-                    "Agile & Scrum"
+                    "Agile & Scrum",
+                    "Playwright"
                 ]
             }
         ],
         "projects": [
             {
+                "id": 10,
+                "title": "ReHeal Digital Health Platform",
+                "description": "A digital health product with a React Native patient app and a Next.js clinic platform. Includes QR onboarding, lab report OCR, medication adherence, patient health trends, RBAC, PostgreSQL RLS and Supabase Auth, Realtime and Storage.",
+                "tags": [
+                    "React Native",
+                    "Expo",
+                    "Next.js",
+                    "Supabase",
+                    "Gemini Vision",
+                    "PostgreSQL"
+                ],
+                "github": "",
+                "demo": "",
+                "image": ""
+            },
+            {
+                "id": 9,
+                "title": "Turkish Crisis XAI Verification",
+                "description": "A BERTurk-based binary classifier for Turkish crisis tweets with hybrid NER/Regex location extraction and explainability analysis. Evaluated on 11,268 samples with 5-fold cross-validation, reaching 92.26% ± 0.81 F1.",
+                "tags": [
+                    "Python",
+                    "BERTurk",
+                    "NLP",
+                    "XAI",
+                    "scikit-learn"
+                ],
+                "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
+                "demo": "",
+                "image": ""
+            },
+            {
                 "id": 7,
                 "title": "AI-Powered Career Recommendation System",
-                "description": "A machine learning-based recommendation engine utilizing NLP, TF-IDF, and KNN algorithms. Built automated data pipelines using Python and BeautifulSoup to scrape job market data. Integrated into a scalable full-stack web application using Django within a 6-person Agile team.",
+                "description": "A machine learning recommendation engine using Kariyer.net data, NLP, TF-IDF and KNN. Built with Python, BeautifulSoup and Django as a graduation project in a 6-person team.",
                 "tags": [
                     "Python",
                     "Django",
                     "NLP",
                     "Machine Learning"
                 ],
-                "github": "",
+                "github": "https://github.com/Berkayozgun/RecommendedJobs",
                 "demo": "",
                 "image": "/images/ai-career-recommender.png"
             },
@@ -178,16 +218,22 @@
         ],
         "experience": [
             {
+                "company": "ReHeal",
+                "role": "Founding Engineer",
+                "period": "Jun 2026 - Present",
+                "description": "Building a digital health startup across a React Native patient app, a Next.js clinic platform, and PharmaGuard AI. Working with Expo, Supabase, PostgreSQL RLS, Gemini Vision, and TypeScript rule engines."
+            },
+            {
                 "company": "BGO Team",
-                "role": "Backend Developer",
+                "role": "Volunteer Full-Stack Engineer / Mentor",
                 "period": "Oct 2025 - Present",
-                "description": "Developing RESTful APIs with Node.js & Express. Implementing JWT auth and MongoDB schemas."
+                "description": "Volunteer contributor and mentor for university projects. Helped migrate cPanel/MySQL systems to Supabase PostgreSQL with RLS and supported the team with Git and Agile practices."
             },
             {
                 "company": "Elmali Tech",
                 "role": "JavaScript Developer",
                 "period": "Mar 2025 - May 2025",
-                "description": "Developed 10+ production-ready Next.js apps. Integrated Supabase RLS and Firebase Functions."
+                "description": "Worked on production React and Next.js applications, including Digiroom. Contributed to SSR, dynamic routing, Supabase RLS, Firebase Cloud Functions, and e-commerce and booking synchronization."
             },
             {
                 "company": "Sixfab",
@@ -213,13 +259,13 @@
                 "school": "Trakya University",
                 "degree": "M.Sc. in Computer Engineering",
                 "date": "February 2026 - Present",
-                "description": "Relevant Coursework: Machine Learning, Text Mining, Cognitive Technologies, Scientific Ethics."
+                "description": "Relevant coursework: Machine Learning, Text Mining, Cognitive Technologies, Scientific Ethics. Projects include a BERTurk crisis-tweet classifier with hybrid NER/Regex location extraction (11,268 samples; 95.75% accuracy), a CrowdStrike/Microsoft crisis analysis, and an ADS-B flight anomaly detector using Isolation Forest, SHAP, FastAPI and Next.js."
             },
             {
                 "school": "Trakya University",
                 "degree": "BS in Computer Engineering",
                 "date": "Graduation: Jan 2024",
-                "description": "Graduation Project: AI-Powered Career Recommendation System"
+                "description": "Graduation Project: AI-Powered Career Recommendation System, built with Kariyer.net scraping, TF-IDF, KNN and Django in a 6-person team."
             }
         ],
         "certifications": [
@@ -253,13 +299,13 @@
     "tr": {
         "hero": {
             "title": "YZ Odaklı Full Stack Geliştirici",
-            "subtitle": "Ölçeklenebilir web uygulamaları geliştiriyor ve YZ odaklı çözümler entegre ediyorum.",
-            "description": "React.js, Next.js ve Node.js kullanarak modern web ekosistemleri inşa ediyorum. Temiz kod mimarisi ve Yapay Zeka entegrasyonlarına odaklanarak, son kullanıcı için performanslı ürünler geliştiriyorum.",
+            "subtitle": "Full-stack ürünler ve uygulamalı makine öğrenmesi sistemleri geliştiriyorum.",
+            "description": "React, Next.js, Node.js ve React Native ile full-stack ürünler geliştiriyor; Python, BERTurk ve açıklanabilir yapay zeka ile makine öğrenmesi ve NLP araştırıyorum. Şu anda Trakya Üniversitesi'nde yüksek lisans yapıyor ve dijital sağlık girişimi ReHeal'i geliştiriyorum.",
             "cta": "Projelerimi İncele"
         },
         "about": {
             "title": "Hakkımda",
-            "description": "Ürün geliştirmeye tutkulu bir Bilgisayar Mühendisi olarak JavaScript ekosisteminde (TypeScript, React, Node.js) uzmanlaşıyorum. Kod yazmanın ötesinde sistem mimarisi, performans optimizasyonu ve geliştirici deneyimine (DX) odaklanırım. Şu anda Trakya Üniversitesi'nde Bilgisayar Mühendisliği alanında Yüksek Lisans yapmaktayım. Makine Öğrenmesi, Metin Madenciliği ve Bilişsel Teknolojiler üzerine aktif olarak araştırma yapıyor ve dersler alıyorum. FinTech, Eğitim ve Sosyal Medya alanlarında gerçek ürünler ortaya koydum."
+            "description": "Full-stack ürün geliştirme ve uygulamalı makine öğrenmesine odaklanan bir Bilgisayar Mühendisiyim. TypeScript, React, Next.js, Node.js, React Native ve Python ile çalışıyor; BERTurk, NLP ve açıklanabilir yapay zeka üzerine araştırıyorum. Trakya Üniversitesi'nde Bilgisayar Mühendisliği yüksek lisansına devam ediyor ve dijital sağlık girişimi ReHeal'i geliştiriyorum."
         },
         "skills": [
             {
@@ -271,7 +317,9 @@
                     "Redux",
                     "React Query",
                     "Tailwind CSS",
-                    "React-Native"
+                    "React Native",
+                    "Expo",
+                    "Zustand"
                 ]
             },
             {
@@ -285,7 +333,8 @@
                     "MongoDB",
                     "PostgreSQL",
                     "Supabase",
-                    "Firebase"
+                    "Firebase",
+                    "FastAPI"
                 ]
             },
             {
@@ -295,7 +344,12 @@
                     "Natural Language Processing (NLP)",
                     "TF-IDF",
                     "KNN",
-                    "Web Scraping (BeautifulSoup)"
+                    "Web Scraping (BeautifulSoup)",
+                    "BERTurk",
+                    "Transformers",
+                    "SHAP",
+                    "Isolation Forest",
+                    "XAI"
                 ]
             },
             {
@@ -308,22 +362,54 @@
                     "GitHub",
                     "Postman",
                     "Figma",
-                    "Agile & Scrum"
+                    "Agile & Scrum",
+                    "Playwright"
                 ]
             }
         ],
         "projects": [
             {
+                "id": 10,
+                "title": "ReHeal Dijital Sağlık Platformu",
+                "description": "React Native hasta uygulaması ve Next.js klinik panelinden oluşan dijital sağlık ürünü. QR onboarding, laboratuvar raporu OCR, ilaç uyumu, hasta sağlık trendleri, RBAC, PostgreSQL RLS ve Supabase Auth, Realtime ve Storage kullanır.",
+                "tags": [
+                    "React Native",
+                    "Expo",
+                    "Next.js",
+                    "Supabase",
+                    "Gemini Vision",
+                    "PostgreSQL"
+                ],
+                "github": "",
+                "demo": "",
+                "image": ""
+            },
+            {
+                "id": 9,
+                "title": "Turkish Crisis XAI Verification",
+                "description": "Türkçe kriz tweetleri için BERTurk tabanlı ikili sınıflandırıcı; hibrit NER/Regex konum çıkarımı ve açıklanabilirlik analizi içerir. 11.268 örnek üzerinde 5 katlı çapraz doğrulamada %92,26 ± %0,81 F1 elde etti.",
+                "tags": [
+                    "Python",
+                    "BERTurk",
+                    "NLP",
+                    "XAI",
+                    "scikit-learn"
+                ],
+                "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
+                "demo": "",
+                "image": ""
+            },
+            {
                 "id": 7,
                 "title": "YZ Tabanlı Kariyer Öneri Sistemi",
-                "description": "NLP, TF-IDF ve KNN algoritmalarını kullanan makine öğrenimi tabanlı bir öneri motoru. İş piyasası verilerini kazımak için Python ve BeautifulSoup kullanarak otomatik veri boru hatları oluşturdum. 6 kişilik çevik (Agile) bir ekipte Django kullanarak ölçeklenebilir bir tam yığın (full-stack) web uygulamasına entegre ettim.",
+                "description": "Kariyer.net verilerini, NLP, TF-IDF ve KNN'i kullanan bir makine öğrenmesi öneri motoru. 6 kişilik ekipte bitirme projesi olarak Python, BeautifulSoup ve Django ile geliştirildi.",
                 "tags": [
                     "Python",
                     "Django",
                     "NLP",
                     "Machine Learning"
                 ],
-                "github": "",
+                "github": "https://github.com/Berkayozgun/RecommendedJobs",
                 "demo": "",
                 "image": "/images/ai-career-recommender.png"
             },
@@ -429,16 +515,22 @@
         ],
         "experience": [
             {
+                "company": "ReHeal",
+                "role": "Kurucu Mühendis",
+                "period": "Haziran 2026 - Günümüz",
+                "description": "React Native hasta uygulaması, Next.js klinik paneli ve PharmaGuard AI üzerinde çalıştığım dijital sağlık girişimi. Expo, Supabase, PostgreSQL RLS, Gemini Vision ve TypeScript kural motorları kullanıyorum."
+            },
+            {
                 "company": "BGO Team",
-                "role": "Backend Geliştirici",
+                "role": "Gönüllü Full-Stack Mühendis / Mentor",
                 "period": "Ekim 2025 - Günümüz",
-                "description": "Node.js & Express ile RESTful API geliştirimi. JWT auth ve MongoDB şemaları."
+                "description": "Üniversite projelerine gönüllü katkı ve mentorluk. cPanel/MySQL sistemlerinin Supabase PostgreSQL ve RLS'e taşınmasına, Git ve Agile süreçlerine destek."
             },
             {
                 "company": "Elmali Tech",
                 "role": "JavaScript Geliştirici",
                 "period": "Mart 2025 - Mayıs 2025",
-                "description": "10+ production-ready Next.js uygulaması geliştirildi. Supabase RLS entegrasyonu."
+                "description": "Digiroom dahil production React ve Next.js uygulamalarında çalıştım. SSR, dynamic routing, Supabase RLS, Firebase Cloud Functions ve e-ticaret/booking senkronizasyonuna katkı sundum."
             },
             {
                 "company": "Sixfab",
@@ -464,13 +556,13 @@
                 "school": "Trakya Üniversitesi",
                 "degree": "Bilgisayar Mühendisliği Yüksek Lisans (M.Sc.)",
                 "date": "Şubat 2026 - Günümüz",
-                "description": "İlgili Dersler: Makine Öğrenmesi, Metin Madenciliği, Bilişsel Teknolojiler, Bilimsel Etik."
+                "description": "İlgili dersler: Makine Öğrenmesi, Metin Madenciliği, Bilişsel Teknolojiler, Bilimsel Etik. Projeler: hibrit NER/Regex konum çıkarımlı BERTurk kriz tweeti sınıflandırıcısı (11.268 örnek; %95,75 doğruluk), CrowdStrike/Microsoft kriz analizi ve Isolation Forest, SHAP, FastAPI ve Next.js kullanan ADS-B uçuş anomalisi tespit sistemi."
             },
             {
                 "school": "Trakya Üniversitesi",
                 "degree": "Bilgisayar Mühendisliği Lisans",
                 "date": "Mezuniyet: Ocak 2024",
-                "description": "Bitirme Projesi: AI Tabanlı Kariyer Öneri Sistemi"
+                "description": "Bitirme Projesi: Kariyer.net veri kazıma, TF-IDF, KNN ve Django ile 6 kişilik ekipte geliştirilen YZ Tabanlı Kariyer Öneri Sistemi."
             }
         ],
         "certifications": [

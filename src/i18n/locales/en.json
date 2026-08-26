@@ -13,7 +13,8 @@
     "subtitle": "Software Engineer",
     "description": "A software engineer proficient in modern web technologies and software architectures, team-oriented with a proactive and responsible attitude.",
     "viewProjects": "View My Projects",
-    "getInTouch": "Get In Touch"
+    "getInTouch": "Get In Touch",
+    "availableForHire": "Available for hire"
   },
   "about": {
     "title": "About Me",
@@ -52,23 +53,12 @@
   },
   "contact": {
     "title": "Get In Touch",
-    "subtitle": "I'm always interested in new opportunities and collaborations. Feel free to reach out!",
-    "name": "Name",
-    "email": "Email",
-    "subject": "Subject",
-    "message": "Message",
-    "sendMessage": "Send Message",
-    "sending": "Sending...",
-    "sent": "Message sent successfully!",
-    "error": "Error sending message. Please try again.",
-    "nameRequired": "Name is required",
-    "emailRequired": "Email is required",
-    "emailInvalid": "Please enter a valid email",
-    "subjectRequired": "Subject is required",
-    "messageRequired": "Message is required",
-    "yourName": "Your name",
-    "messageSubject": "Message subject",
-    "yourMessage": "Your message"
+    "description": "For new opportunities, mobile/web architectures, and projects, feel free to get in touch.",
+    "copyEmail": "Copy email",
+    "copied": "Copied!",
+    "sendEmail": "Send email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
   "footer": {
     "rights": "All rights reserved."
