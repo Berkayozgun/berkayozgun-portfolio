@@ -45,7 +45,7 @@ export default function Portfolio() {
             <button className="py-2 text-emerald-400" onClick={() => setLocale(locale === 'en' ? 'tr' : 'en')}>{locale === 'en' ? 'Türkçe' : 'English'}</button>
           </div>}
         </nav>
-        <div id="top"><HeroSection data={data} labels={{ available: locale === 'tr' ? 'Yeni fırsatlara açığım' : 'Available for hire', work: data.hero.cta, contact: t.hero.getInTouch }} onScroll={scrollTo} /></div>
+        <div id="top"><HeroSection data={data} labels={{ available: 'Open to work', work: data.hero.cta, contact: t.hero.getInTouch }} onScroll={scrollTo} /></div>
         <section id="about" className="section-container border-t border-zinc-200/80 dark:border-zinc-800/80">
           <p className="eyebrow">01 / about</p>
           <h2 className="section-title">{data.about.title}</h2>

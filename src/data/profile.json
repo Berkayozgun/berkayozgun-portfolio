@@ -1,14 +1,14 @@
 {
     "en": {
         "hero": {
-            "title": "AI-Aware Full Stack Engineer",
-            "subtitle": "Building full-stack products and applied ML systems.",
-            "description": "I build full-stack products with React, Next.js, Node.js and React Native, while researching machine learning and NLP with Python, BERTurk and explainable AI. Currently pursuing an M.Sc. in Computer Engineering and building ReHeal, a digital health startup.",
+            "title": "Full-stack engineer | Building ReHeal",
+            "subtitle": "Next.js · React Native · Node · Open to work",
+            "description": "",
             "cta": "View My Work"
         },
         "about": {
             "title": "About Me",
-            "description": "I am a Computer Engineer focused on full-stack product development and applied machine learning. I work across TypeScript, React, Next.js, Node.js, React Native and Python, with current research in BERTurk, NLP and explainable AI. I am pursuing an M.Sc. in Computer Engineering at Trakya University and building ReHeal, a digital health startup."
+            "description": "I'm a full-stack engineer (B.Sc. Trakya, 2024; M.Sc. ongoing) building ReHeal, an early-stage digital health product: a React Native patient app, a Next.js clinic dashboard, and a SUT/SGK rule engine for pharmacies. Before that I interned at Jotform, Sixfab, and Parentwiser, and spent a short stretch at Elmali Tech shipping Next.js apps. I also work with ML when the problem needs it (BERTurk, XAI, ADS-B), but the day-to-day is TypeScript, Next.js, Expo, Supabase, Node. Open to full-stack roles."
         },
         "skills": [
             {
@@ -73,181 +73,69 @@
         "projects": [
             {
                 "id": 10,
-                "title": "ReHeal Digital Health Platform",
-                "description": "A digital health product with a React Native patient app and a Next.js clinic platform. Includes QR onboarding, lab report OCR, medication adherence, patient health trends, RBAC, PostgreSQL RLS and Supabase Auth, Realtime and Storage.",
+                "title": "ReHeal",
+                "description": "Early-stage digital health product: a React Native patient app, a Next.js clinic dashboard, and a SUT/SGK pharmacy rule engine (Pharmaguard AI) for prescription compliance, Gemini-assisted medical PDF processing, QR onboarding, lab-report OCR, medication adherence, and Supabase Auth, Realtime, and Storage.",
                 "tags": [
                     "React Native",
                     "Expo",
                     "Next.js",
                     "Supabase",
-                    "Gemini Vision",
-                    "PostgreSQL"
+                    "TypeScript",
+                    "Digital Health",
+                    "SUT/SGK"
                 ],
                 "github": "",
                 "demo": "",
                 "image": ""
             },
             {
-                "id": 12,
-                "title": "Pharmaguard AI — SUT & Prescription Compliance",
-                "description": "AI-powered healthcare compliance web app analyzing Healthcare Implementation Directive (SUT) regulations and medical reports using Gemini LLM models with batch PDF processing.",
-                "tags": [
-                    "Next.js",
-                    "TypeScript",
-                    "Gemini LLM",
-                    "Tailwind CSS",
-                    "PDF Processing",
-                    "Healthcare AI"
-                ],
-                "github": "https://github.com/berkayozgun/pharmaguard-ai",
-                "demo": "",
-                "image": "/images/pharmaguard.png"
-            },
-            {
                 "id": 8,
-                "title": "Algoviz — Interactive CS & AI Playground",
-                "description": "An interactive educational platform simulating 23 core concepts across computer science, distributed systems (Raft, LRU Cache), and modern AI/ML (Self-Attention, CNN, Decision Trees). Features 3D WebGL loss landscapes powered by Three.js.",
+                "title": "Algoviz",
+                "description": "Interactive CS and AI simulation lab with 23 modules covering distributed systems (Raft, LRU Cache) and modern ML (Self-Attention, CNN, Decision Trees), plus 3D Three.js / WebGL loss landscapes.",
                 "tags": [
                     "Next.js 16",
                     "React 19",
                     "Three.js",
+                    "WebGL",
+                    "TypeScript",
                     "Zustand",
-                    "Machine Learning",
-                    "Distributed Systems"
+                    "Machine Learning"
                 ],
                 "github": "https://github.com/berkayozgun/algoviz",
                 "demo": "https://algoviz-rho.vercel.app",
                 "image": "/images/algoviz.png"
             },
             {
-                "id": 9,
-                "title": "DropSpot — Smart Locker & Delivery Network",
-                "description": "End-to-end delivery and smart locker management system built with Next.js 16, Express microservices, Prisma ORM, PostgreSQL, dynamic priority scoring engine, and full-stack Docker containerization.",
-                "tags": [
-                    "Next.js 16",
-                    "Express.js",
-                    "Prisma",
-                    "PostgreSQL",
-                    "Docker",
-                    "TypeScript"
-                ],
-                "github": "https://github.com/berkayozgun/dropspot",
-                "demo": "",
-                "image": "/images/dropspot.png"
-            },
-            {
                 "id": 11,
-                "title": "Turkish Crisis XAI Verification",
-                "description": "A BERTurk-based binary classifier for Turkish crisis tweets with hybrid NER/Regex location extraction and explainability analysis. Evaluated on 11,268 samples with 5-fold cross-validation, reaching 92.26% ± 0.81 F1.",
+                "title": "Crisis XAI",
+                "description": "Crisis-time message classification with explainable AI (SHAP, LIME). BERTurk/PyTorch model, hybrid NER/Regex location extraction, evaluated on 11,268 samples with 5-fold CV (92.26% ± 0.81 F1). FastAPI backend and Next.js interface.",
                 "tags": [
                     "Python",
-                    "BERTurk",
-                    "NLP",
+                    "PyTorch",
                     "XAI",
-                    "scikit-learn"
+                    "BERTurk",
+                    "FastAPI",
+                    "Next.js"
                 ],
                 "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
                 "demo": "",
                 "image": ""
             },
             {
-                "id": 7,
-                "title": "AI-Powered Career Recommendation System",
-                "description": "A machine learning recommendation engine using Kariyer.net data, NLP, TF-IDF and KNN. Built with Python, BeautifulSoup and Django as a graduation project in a 6-person team.",
+                "id": 9,
+                "title": "DropSpot",
+                "description": "Limited stock product drops and waitlist platform; built with Next.js 16, Express, Prisma, PostgreSQL, dynamic priority scoring engine, and Docker Compose.",
                 "tags": [
-                    "Python",
-                    "Django",
-                    "NLP",
-                    "Machine Learning"
+                    "Next.js 16",
+                    "Express.js",
+                    "Prisma",
+                    "PostgreSQL",
+                    "priority-scoring",
+                    "Docker Compose"
                 ],
-                "github": "https://github.com/Berkayozgun/RecommendedJobs",
+                "github": "https://github.com/berkayozgun/dropspot",
                 "demo": "",
-                "image": "/images/ai-career-recommender.png"
-            },
-            {
-                "id": 5,
-                "title": "Browser Video Crunch",
-                "description": "A serverless video compression tool that processes 4K video entirely in the browser (client-side) using WebAssembly. Features real-time performance metrics and resolution scaling.",
-                "tags": [
-                    "Next.js 14",
-                    "FFmpeg.wasm",
-                    "WebAssembly",
-                    "Tailwind CSS",
-                    "Multi-threading"
-                ],
-                "github": "https://github.com/Berkayozgun/browser-video-crunch",
-                "demo": "https://video-crunch.vercel.app",
-                "image": "/images/video-crunch.png"
-            },
-            {
-                "id": 6,
-                "title": "Fast Apply Extension",
-                "description": "A productivity extension designed to speed up job applications by 50%. Features a dynamic context menu manager for inserting custom text snippets instantly.",
-                "tags": [
-                    "Chrome Extension V3",
-                    "JavaScript",
-                    "DOM Manipulation",
-                    "LocalStorage API"
-                ],
-                "github": "https://github.com/Berkayozgun/fast-apply-extension",
-                "demo": "https://chromewebstore.google.com/detail/fast-apply",
-                "image": "/images/fast-apply.png"
-            },
-            {
-                "id": 1,
-                "title": "AI Resume Analyst",
-                "description": "A machine learning system that parses resumes and matches them with real-time job listings using NLP (TF-IDF, Cosine Similarity).",
-                "tags": [
-                    "Python",
-                    "Machine Learning",
-                    "Django",
-                    "NLP"
-                ],
-                "github": "https://github.com/Berkayozgun/ai-resume-job-matcher",
-                "demo": "",
-                "image": "/images/resume-ai.png"
-            },
-            {
-                "id": 2,
-                "title": "Node.js Production Boilerplate",
-                "description": "Enterprise-level backend starter kit featuring layered architecture, advanced security (Helmet, Rate Limiting), and automated Swagger documentation.",
-                "tags": [
-                    "Node.js",
-                    "Express",
-                    "Security",
-                    "Swagger"
-                ],
-                "github": "https://github.com/Berkayozgun/nodejs-boilerplate",
-                "demo": "",
-                "image": "/images/node-boilerplate.png"
-            },
-            {
-                "id": 3,
-                "title": "Campfire Social",
-                "description": "A scalable micro-blogging platform backend built with Flask and MongoDB. Features include JWT authentication, nested comment structures using MongoDB's document model, and a smart voting system with aggregation pipelines for performance.",
-                "tags": [
-                    "Python",
-                    "Flask",
-                    "MongoDB",
-                    "Rest API"
-                ],
-                "github": "https://github.com/Berkayozgun/campfire_microblog-backend",
-                "demo": "",
-                "image": "/images/campfire.png"
-            },
-            {
-                "id": 4,
-                "title": "E-Commerce Dashboard",
-                "description": "A comprehensive admin panel for managing products and analytics. Built with React, TypeScript and modern UI principles.",
-                "tags": [
-                    "React",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "Recharts"
-                ],
-                "github": "https://github.com/Berkayozgun/ecommerce-dashboard-v2",
-                "demo": "",
-                "image": "/images/dashboard.png"
+                "image": "/images/dropspot.png"
             }
         ],
         "experience": [
@@ -332,14 +220,14 @@
     },
     "tr": {
         "hero": {
-            "title": "YZ Odaklı Full Stack Geliştirici",
-            "subtitle": "Full-stack ürünler ve uygulamalı makine öğrenmesi sistemleri geliştiriyorum.",
-            "description": "React, Next.js, Node.js ve React Native ile full-stack ürünler geliştiriyor; Python, BERTurk ve açıklanabilir yapay zeka ile makine öğrenmesi ve NLP araştırıyorum. Şu anda Trakya Üniversitesi'nde yüksek lisans yapıyor ve dijital sağlık girişimi ReHeal'i geliştiriyorum.",
+            "title": "Full-stack mühendis | ReHeal geliştiriyor",
+            "subtitle": "Next.js · React Native · Node · Open to work",
+            "description": "",
             "cta": "Projelerimi İncele"
         },
         "about": {
             "title": "Hakkımda",
-            "description": "Full-stack ürün geliştirme ve uygulamalı makine öğrenmesine odaklanan bir Bilgisayar Mühendisiyim. TypeScript, React, Next.js, Node.js, React Native ve Python ile çalışıyor; BERTurk, NLP ve açıklanabilir yapay zeka üzerine araştırıyorum. Trakya Üniversitesi'nde Bilgisayar Mühendisliği yüksek lisansına devam ediyor ve dijital sağlık girişimi ReHeal'i geliştiriyorum."
+            "description": "Erken aşama bir dijital sağlık ürünü olan ReHeal'i (React Native hasta uygulaması, Next.js klinik paneli ve eczaneler için SUT/SGK kural motoru) geliştiren bir full-stack mühendisim (Trakya Üniv. Lisans, 2024; Yüksek Lisans devam ediyor). Öncesinde Jotform, Sixfab ve Parentwiser'da staj yaptım; Elmali Tech'te Next.js uygulamaları geliştirdim. Problem gerektirdiğinde makine öğrenimiyle de çalışıyorum (BERTurk, XAI, ADS-B), ancak günlük odağım TypeScript, Next.js, Expo, Supabase ve Node.js. Full-stack rollerine açığım."
         },
         "skills": [
             {
@@ -404,181 +292,69 @@
         "projects": [
             {
                 "id": 10,
-                "title": "ReHeal Dijital Sağlık Platformu",
-                "description": "React Native hasta uygulaması ve Next.js klinik panelinden oluşan dijital sağlık ürünü. QR onboarding, laboratuvar raporu OCR, ilaç uyumu, hasta sağlık trendleri, RBAC, PostgreSQL RLS ve Supabase Auth, Realtime ve Storage kullanır.",
+                "title": "ReHeal",
+                "description": "Erken aşama dijital sağlık ürünü: React Native hasta uygulaması, Next.js klinik paneli ve eczaneler için SUT/SGK kural motoru (Pharmaguard AI). Reçete uygunluğu, Gemini ile tıbbi PDF işleme, QR onboarding, laboratuvar raporu OCR, ilaç uyumu ve Supabase Auth, Realtime, Storage.",
                 "tags": [
                     "React Native",
                     "Expo",
                     "Next.js",
                     "Supabase",
-                    "Gemini Vision",
-                    "PostgreSQL"
+                    "TypeScript",
+                    "Digital Health",
+                    "SUT/SGK"
                 ],
                 "github": "",
                 "demo": "",
                 "image": ""
             },
             {
-                "id": 12,
-                "title": "Pharmaguard AI — SUT & Prescription Compliance",
-                "description": "Sağlık Uygulama Tebliği (SUT) mevzuat kurallarını ve 24 aya kadar geçerli tıbbi ilaç raporlarını Gemini LLM ile analiz eden, reçete uygunluğunu denetleyen ve PDF raporlarını toplu işleyen yapay zeka destekli sağlık platformu.",
-                "tags": [
-                    "Next.js",
-                    "TypeScript",
-                    "Gemini LLM",
-                    "Tailwind CSS",
-                    "PDF Processing",
-                    "Healthcare AI"
-                ],
-                "github": "https://github.com/berkayozgun/pharmaguard-ai",
-                "demo": "",
-                "image": "/images/pharmaguard.png"
-            },
-            {
                 "id": 8,
-                "title": "Algoviz — Interactive CS & AI Playground",
-                "description": "Bilgisayar bilimleri, dağıtık sistemler (Raft Konsensüsü, LRU Cache) ve yapay zeka (Transformer Self-Attention, CNN, CART) konularını 23 interaktif modülle simüle eden açık kaynaklı platform. Three.js ile 3D Loss Landscapes optimizasyonu içerir.",
+                "title": "Algoviz",
+                "description": "23 interaktif modüllü CS ve AI simülasyon laboratuvarı: dağıtık sistemler (Raft, LRU Cache), modern ML (Self-Attention, CNN, CART) ve Three.js ile 3D Loss Landscapes.",
                 "tags": [
                     "Next.js 16",
                     "React 19",
                     "Three.js",
+                    "WebGL",
+                    "TypeScript",
                     "Zustand",
-                    "Machine Learning",
-                    "Distributed Systems"
+                    "Machine Learning"
                 ],
                 "github": "https://github.com/berkayozgun/algoviz",
                 "demo": "https://algoviz-rho.vercel.app",
                 "image": "/images/algoviz.png"
             },
             {
-                "id": 9,
-                "title": "DropSpot — Smart Locker & Delivery Network",
-                "description": "Akıllı kargo teslimat dolapları için geliştirilmiş uçtan uca teslimat ve kilit yönetim platformu. Next.js 16, Node/Express mikroservis mimarisi, Prisma ORM, dinamik öncelik puanlama motoru ve tam yığın Docker konteynerizasyonu ile inşa edildi.",
-                "tags": [
-                    "Next.js 16",
-                    "Express.js",
-                    "Prisma",
-                    "PostgreSQL",
-                    "Docker",
-                    "TypeScript"
-                ],
-                "github": "https://github.com/berkayozgun/dropspot",
-                "demo": "",
-                "image": "/images/dropspot.png"
-            },
-            {
                 "id": 11,
-                "title": "Turkish Crisis XAI Verification",
-                "description": "Türkçe kriz tweetleri için BERTurk tabanlı ikili sınıflandırıcı; hibrit NER/Regex konum çıkarımı ve açıklanabilirlik analizi içerir. 11.268 örnek üzerinde 5 katlı çapraz doğrulamada %92,26 ± %0,81 F1 elde etti.",
+                "title": "Crisis XAI",
+                "description": "Kriz anı mesaj sınıflandırma ve açıklanabilir yapay zeka (XAI / SHAP / LIME). BERTurk/PyTorch modeli, hibrit NER/Regex konum çıkarımı; 11.268 örnek, 5 katlı CV, %92,26 ± %0,81 F1. FastAPI ve Next.js.",
                 "tags": [
                     "Python",
-                    "BERTurk",
-                    "NLP",
+                    "PyTorch",
                     "XAI",
-                    "scikit-learn"
+                    "BERTurk",
+                    "FastAPI",
+                    "Next.js"
                 ],
                 "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
                 "demo": "",
                 "image": ""
             },
             {
-                "id": 7,
-                "title": "YZ Tabanlı Kariyer Öneri Sistemi",
-                "description": "Kariyer.net verilerini, NLP, TF-IDF ve KNN'i kullanan bir makine öğrenmesi öneri motoru. 6 kişilik ekipte bitirme projesi olarak Python, BeautifulSoup ve Django ile geliştirildi.",
+                "id": 9,
+                "title": "DropSpot",
+                "description": "Sınırlı stoklu ürün lansmanları ve bekleme listesi (waitlist) platformu; Next.js 16, Express, Prisma, PostgreSQL, dinamik öncelik puanlama motoru ve Docker Compose ile geliştirildi.",
                 "tags": [
-                    "Python",
-                    "Django",
-                    "NLP",
-                    "Machine Learning"
+                    "Next.js 16",
+                    "Express.js",
+                    "Prisma",
+                    "PostgreSQL",
+                    "priority-scoring",
+                    "Docker Compose"
                 ],
-                "github": "https://github.com/Berkayozgun/RecommendedJobs",
+                "github": "https://github.com/berkayozgun/dropspot",
                 "demo": "",
-                "image": "/images/ai-career-recommender.png"
-            },
-            {
-                "id": 5,
-                "title": "Browser Video Crunch",
-                "description": "4K videoları tamamen tarayıcıda (istemci tarafı) WebAssembly kullanarak işleyen sunucusuz bir video sıkıştırma aracı. Gerçek zamanlı performans metrikleri ve çözünürlük ölçeklendirme özelliklerine sahiptir.",
-                "tags": [
-                    "Next.js 14",
-                    "FFmpeg.wasm",
-                    "WebAssembly",
-                    "Tailwind CSS",
-                    "Multi-threading"
-                ],
-                "github": "https://github.com/Berkayozgun/browser-video-crunch",
-                "demo": "https://video-crunch.vercel.app",
-                "image": "/images/video-crunch.png"
-            },
-            {
-                "id": 6,
-                "title": "Fast Apply Extension",
-                "description": "İş başvurularını %50 hızlandırmak için tasarlanmış bir verimlilik uzantısı. Özel metin snippet'lerini anında eklemek için dinamik bir sağ tık menü yöneticisi içerir.",
-                "tags": [
-                    "Chrome Extension V3",
-                    "JavaScript",
-                    "DOM Manipulation",
-                    "LocalStorage API"
-                ],
-                "github": "https://github.com/Berkayozgun/fast-apply-extension",
-                "demo": "https://chromewebstore.google.com/detail/fast-apply",
-                "image": "/images/fast-apply.png"
-            },
-            {
-                "id": 1,
-                "title": "YZ Tabanlı CV Analisti",
-                "description": "Özgeçmişleri analiz eden ve NLP teknikleri (TF-IDF) kullanarak gerçek zamanlı iş ilanlarıyla eşleştiren bir makine öğrenmesi sistemi.",
-                "tags": [
-                    "Python",
-                    "Machine Learning",
-                    "Django",
-                    "NLP"
-                ],
-                "github": "https://github.com/Berkayozgun/ai-resume-job-matcher",
-                "demo": "",
-                "image": "/images/resume-ai.png"
-            },
-            {
-                "id": 2,
-                "title": "Node.js Production Boilerplate",
-                "description": "Katmanlı mimari, gelişmiş güvenlik (Helmet, Rate Limiting) ve otomatik Swagger dokümantasyonu içeren kurumsal backend başlangıç kiti.",
-                "tags": [
-                    "Node.js",
-                    "Express",
-                    "Security",
-                    "Swagger"
-                ],
-                "github": "https://github.com/Berkayozgun/nodejs-boilerplate",
-                "demo": "",
-                "image": "/images/node-boilerplate.png"
-            },
-            {
-                "id": 3,
-                "title": "Campfire Social",
-                "description": "Flask ve MongoDB ile geliştirilmiş; iç içe yorumlar, JWT kimlik doğrulama ve oylama sistemi içeren ölçeklenebilir mikro-blog backend'i. MongoDB agregasyon boru hatları ile optimize edilmiş oylama mantığı ve doküman tabanlı yorum mimarisi sunar.",
-                "tags": [
-                    "Python",
-                    "Flask",
-                    "MongoDB",
-                    "Rest API"
-                ],
-                "github": "https://github.com/Berkayozgun/campfire_microblog-backend",
-                "demo": "",
-                "image": "/images/campfire.png"
-            },
-            {
-                "id": 4,
-                "title": "E-Ticaret Yönetim Paneli",
-                "description": "Ürünleri ve analizleri yönetmek için geliştirilmiş kapsamlı admin paneli. React, TypeScript ve modern UI prensipleri ile oluşturuldu.",
-                "tags": [
-                    "React",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "Recharts"
-                ],
-                "github": "https://github.com/Berkayozgun/ecommerce-dashboard-v2",
-                "demo": "",
-                "image": "/images/dashboard.png"
+                "image": "/images/dropspot.png"
             }
         ],
         "experience": [

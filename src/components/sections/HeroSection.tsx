@@ -24,7 +24,9 @@ export default function HeroSection({ data, labels, onScroll }: HeroSectionProps
             </span>
           </h1>
           <p className="mt-5 max-w-2xl text-xl text-zinc-600 dark:text-zinc-400">{data.hero.subtitle}</p>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-700 dark:text-zinc-300">{data.hero.description}</p>
+          {data.hero.description ? (
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-700 dark:text-zinc-300">{data.hero.description}</p>
+          ) : null}
           <div className="mt-9 flex flex-wrap gap-3">
             <button onClick={() => onScroll('projects')} className="button-primary">
               <Terminal size={18} /> {labels.work} <ArrowDown size={16} />
@@ -37,12 +39,12 @@ export default function HeroSection({ data, labels, onScroll }: HeroSectionProps
             <a aria-label="GitHub" href="https://github.com/Berkayozgun" target="_blank" rel="noreferrer"><Github /></a>
             <a aria-label="LinkedIn" href="https://linkedin.com/in/berkayozgun" target="_blank" rel="noreferrer"><Linkedin /></a>
             <span className="h-px w-12 bg-zinc-300 dark:bg-zinc-700" />
-            <span className="font-mono text-sm">TypeScript · React · ML</span>
+            <span className="font-mono text-sm">Next.js · React Native · Node</span>
           </div>
         </div>
         <div className="code-window">
           <div className="code-window-bar"><i /><i /><i /></div>
-          <pre className="p-7 font-mono text-sm leading-8 text-zinc-700 dark:text-zinc-300"><code><span className="text-zinc-500">const</span> engineer = {'{'}{'\n'}  focus: <span className="text-emerald-400">&apos;useful products&apos;</span>,{'\n'}  stack: [<span className="text-emerald-400">&apos;Next.js&apos;</span>, <span className="text-emerald-400">&apos;Supabase&apos;</span>],{'\n'}  research: <span className="text-emerald-400">&apos;NLP + XAI&apos;</span>,{'\n'}  shipping: <span className="text-emerald-400">true</span>{'\n'}{'}'};</code></pre>
+          <pre className="p-7 font-mono text-sm leading-8 text-zinc-700 dark:text-zinc-300"><code><span className="text-zinc-500">const</span> engineer = {'{'}{'\n'}  building: <span className="text-emerald-400">&apos;ReHeal&apos;</span>,{'\n'}  stack: [<span className="text-emerald-400">&apos;Next.js&apos;</span>, <span className="text-emerald-400">&apos;Expo&apos;</span>, <span className="text-emerald-400">&apos;Node&apos;</span>],{'\n'}  openToWork: <span className="text-emerald-400">true</span>{'\n'}{'}'};</code></pre>
         </div>
       </div>
     </section>

@@ -13,8 +13,9 @@ interface BentoProjectsProps {
 
 function cardEyebrow(index: number) {
   if (index === 0) return 'featured / ReHeal';
-  if (index === 1) return 'healthcare / AI';
-  return 'project';
+  if (index === 1) return 'lab / Algoviz';
+  if (index === 2) return 'research / XAI';
+  return 'waitlist / DropSpot';
 }
 
 function CardMedia({ project }: { project: Project }) {
@@ -95,9 +96,7 @@ export default function BentoProjects({ projects, title, detailLabel, onSelect }
                 ? 'lg:col-span-8 p-6 md:p-8'
                 : index === 1
                   ? 'lg:col-span-4 p-6'
-                  : index === 2 || index === 3
-                    ? 'lg:col-span-6 p-6'
-                    : 'lg:col-span-4 p-5'
+                  : 'lg:col-span-6 p-6'
             }`}
             onClick={() => onSelect(project)}
             tabIndex={0}
