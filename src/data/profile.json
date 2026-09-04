@@ -88,7 +88,55 @@
                 "image": ""
             },
             {
+                "id": 12,
+                "title": "Pharmaguard AI — SUT & Prescription Compliance",
+                "description": "AI-powered healthcare compliance web app analyzing Healthcare Implementation Directive (SUT) regulations and medical reports using Gemini LLM models with batch PDF processing.",
+                "tags": [
+                    "Next.js",
+                    "TypeScript",
+                    "Gemini LLM",
+                    "Tailwind CSS",
+                    "PDF Processing",
+                    "Healthcare AI"
+                ],
+                "github": "https://github.com/berkayozgun/pharmaguard-ai",
+                "demo": "",
+                "image": "/images/pharmaguard.png"
+            },
+            {
+                "id": 8,
+                "title": "Algoviz — Interactive CS & AI Playground",
+                "description": "An interactive educational platform simulating 23 core concepts across computer science, distributed systems (Raft, LRU Cache), and modern AI/ML (Self-Attention, CNN, Decision Trees). Features 3D WebGL loss landscapes powered by Three.js.",
+                "tags": [
+                    "Next.js 16",
+                    "React 19",
+                    "Three.js",
+                    "Zustand",
+                    "Machine Learning",
+                    "Distributed Systems"
+                ],
+                "github": "https://github.com/berkayozgun/algoviz",
+                "demo": "https://algoviz-rho.vercel.app",
+                "image": "/images/algoviz.png"
+            },
+            {
                 "id": 9,
+                "title": "DropSpot — Smart Locker & Delivery Network",
+                "description": "End-to-end delivery and smart locker management system built with Next.js 16, Express microservices, Prisma ORM, PostgreSQL, dynamic priority scoring engine, and full-stack Docker containerization.",
+                "tags": [
+                    "Next.js 16",
+                    "Express.js",
+                    "Prisma",
+                    "PostgreSQL",
+                    "Docker",
+                    "TypeScript"
+                ],
+                "github": "https://github.com/berkayozgun/dropspot",
+                "demo": "",
+                "image": "/images/dropspot.png"
+            },
+            {
+                "id": 11,
                 "title": "Turkish Crisis XAI Verification",
                 "description": "A BERTurk-based binary classifier for Turkish crisis tweets with hybrid NER/Regex location extraction and explainability analysis. Evaluated on 11,268 samples with 5-fold cross-validation, reaching 92.26% ± 0.81 F1.",
                 "tags": [
@@ -115,20 +163,6 @@
                 "github": "https://github.com/Berkayozgun/RecommendedJobs",
                 "demo": "",
                 "image": "/images/ai-career-recommender.png"
-            },
-            {
-                "id": 8,
-                "title": "CS-Playground",
-                "description": "Interactive algorithm and data structure visualization platform. Built with Next.js and modern React architecture to help developers understand complex CS concepts visually.",
-                "tags": [
-                    "Next.js",
-                    "React",
-                    "TypeScript",
-                    "Vercel"
-                ],
-                "github": "https://github.com/Berkayozgun/algoviz",
-                "demo": "https://algoviz-rho.vercel.app",
-                "image": "/images/cs-playground.png"
             },
             {
                 "id": 5,
@@ -385,7 +419,55 @@
                 "image": ""
             },
             {
+                "id": 12,
+                "title": "Pharmaguard AI — SUT & Prescription Compliance",
+                "description": "Sağlık Uygulama Tebliği (SUT) mevzuat kurallarını ve 24 aya kadar geçerli tıbbi ilaç raporlarını Gemini LLM ile analiz eden, reçete uygunluğunu denetleyen ve PDF raporlarını toplu işleyen yapay zeka destekli sağlık platformu.",
+                "tags": [
+                    "Next.js",
+                    "TypeScript",
+                    "Gemini LLM",
+                    "Tailwind CSS",
+                    "PDF Processing",
+                    "Healthcare AI"
+                ],
+                "github": "https://github.com/berkayozgun/pharmaguard-ai",
+                "demo": "",
+                "image": "/images/pharmaguard.png"
+            },
+            {
+                "id": 8,
+                "title": "Algoviz — Interactive CS & AI Playground",
+                "description": "Bilgisayar bilimleri, dağıtık sistemler (Raft Konsensüsü, LRU Cache) ve yapay zeka (Transformer Self-Attention, CNN, CART) konularını 23 interaktif modülle simüle eden açık kaynaklı platform. Three.js ile 3D Loss Landscapes optimizasyonu içerir.",
+                "tags": [
+                    "Next.js 16",
+                    "React 19",
+                    "Three.js",
+                    "Zustand",
+                    "Machine Learning",
+                    "Distributed Systems"
+                ],
+                "github": "https://github.com/berkayozgun/algoviz",
+                "demo": "https://algoviz-rho.vercel.app",
+                "image": "/images/algoviz.png"
+            },
+            {
                 "id": 9,
+                "title": "DropSpot — Smart Locker & Delivery Network",
+                "description": "Akıllı kargo teslimat dolapları için geliştirilmiş uçtan uca teslimat ve kilit yönetim platformu. Next.js 16, Node/Express mikroservis mimarisi, Prisma ORM, dinamik öncelik puanlama motoru ve tam yığın Docker konteynerizasyonu ile inşa edildi.",
+                "tags": [
+                    "Next.js 16",
+                    "Express.js",
+                    "Prisma",
+                    "PostgreSQL",
+                    "Docker",
+                    "TypeScript"
+                ],
+                "github": "https://github.com/berkayozgun/dropspot",
+                "demo": "",
+                "image": "/images/dropspot.png"
+            },
+            {
+                "id": 11,
                 "title": "Turkish Crisis XAI Verification",
                 "description": "Türkçe kriz tweetleri için BERTurk tabanlı ikili sınıflandırıcı; hibrit NER/Regex konum çıkarımı ve açıklanabilirlik analizi içerir. 11.268 örnek üzerinde 5 katlı çapraz doğrulamada %92,26 ± %0,81 F1 elde etti.",
                 "tags": [
@@ -412,20 +494,6 @@
                 "github": "https://github.com/Berkayozgun/RecommendedJobs",
                 "demo": "",
                 "image": "/images/ai-career-recommender.png"
-            },
-            {
-                "id": 8,
-                "title": "CS-Playground",
-                "description": "Etkileşimli algoritma ve veri yapısı görselleştirme platformu. Geliştiricilerin karmaşık CS konseptlerini görsel olarak anlamalarına yardımcı olmak için Next.js ve modern React mimarisi ile oluşturuldu.",
-                "tags": [
-                    "Next.js",
-                    "React",
-                    "TypeScript",
-                    "Vercel"
-                ],
-                "github": "https://github.com/Berkayozgun/algoviz",
-                "demo": "https://algoviz-rho.vercel.app",
-                "image": "/images/cs-playground.png"
             },
             {
                 "id": 5,
