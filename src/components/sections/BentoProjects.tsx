@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Code2, Terminal } from 'lucide-react';
 import type { Project } from '@/types/profile';
+import TelemetryTerminal from '@/components/TelemetryTerminal';
 
 interface BentoProjectsProps {
   projects: Project[];
@@ -11,7 +12,8 @@ interface BentoProjectsProps {
   onSelect: (project: Project) => void;
 }
 
-function cardEyebrow(index: number) {
+function cardEyebrow(project: Project, index: number) {
+  if (project.category) return project.category;
   return index === 0 ? 'Featured Flagship' : 'Flagship';
 }
 
@@ -21,6 +23,10 @@ function CardMedia({ project }: { project: Project }) {
   useEffect(() => {
     setFailed(false);
   }, [project.id, project.image]);
+
+  if (project.id === 'ultimarket' || project.privacyNotice) {
+    return <TelemetryTerminal project={project} />;
+  }
 
   const showImage = Boolean(project.image) && !failed;
 
@@ -57,12 +63,13 @@ function CardMedia({ project }: { project: Project }) {
 }
 
 function Preview({ project }: { project: Project }) {
+  const stack = (project.techStack || project.tags || []).slice(0, 2).join(' · ');
   return (
     <div className="code-preview border-0 bg-transparent dark:bg-transparent" aria-label={`${project.title} architecture preview`}>
       <span className="text-zinc-500">module</span> <span className="text-zinc-300">{'{'}</span>
       <br />
       <span className="pl-4 text-zinc-500">
-        stack: <b className="text-emerald-400">{project.tags.slice(0, 2).join(' · ')}</b>
+        stack: <b className="text-emerald-400">{stack}</b>
       </span>
       <br />
       <span className="pl-4 text-zinc-500">
@@ -84,41 +91,81 @@ export default function BentoProjects({ projects, title, detailLabel, onSelect }
         </div>
         <span className="hidden font-mono text-sm text-zinc-500 md:block">local content / no CMS</span>
       </div>
-      <div className="grid auto-rows-fr grid-cols-1 gap-4 lg:grid-cols-12">
-        {projects.map((project, index) => (
-          <article
-            key={project.id}
-            className={`group glass-card flex h-full cursor-pointer flex-col justify-between ${
-              index === 0 ? 'lg:col-span-8 p-6 md:p-8' : 'lg:col-span-4 p-6'
-            }`}
-            onClick={() => onSelect(project)}
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && onSelect(project)}
-          >
-            <div>
-              <CardMedia project={project} />
-              <p className="mb-2 font-mono text-xs uppercase tracking-widest text-zinc-500">
-                {cardEyebrow(index)}
-              </p>
-              <h3 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
-                {project.title}
-              </h3>
-              <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-                {project.description}
-              </p>
-            </div>
-            <div className="mt-6">
-              <div className="flex flex-wrap gap-2">
-                {project.tags.slice(0, 4).map((tag) => (
-                  <span key={tag} className="tag">
-                    {tag}
-                  </span>
-                ))}
+      <div className="grid auto-rows-fr grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, index) => {
+          const isFeatured = Boolean(project.isFeatured || index === 0);
+          const tags = project.techStack || project.tags || [];
+
+          return (
+            <article
+              key={project.id}
+              className={`group glass-card flex h-full cursor-pointer flex-col justify-between ${
+                isFeatured ? 'col-span-1 md:col-span-2 p-6 md:p-8' : 'col-span-1 p-6'
+              }`}
+              onClick={() => onSelect(project)}
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && onSelect(project)}
+            >
+              <div>
+                <CardMedia project={project} />
+                <div className="mb-2 flex items-center justify-between gap-2">
+                  <p className="font-mono text-xs uppercase tracking-widest text-zinc-500">
+                    {cardEyebrow(project, index)}
+                  </p>
+                  {project.year && (
+                    <span className="font-mono text-xs text-zinc-500">
+                      {project.year}
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <h3 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+                    {project.title}
+                  </h3>
+                  {project.subtitle && (
+                    <span className="font-mono text-xs text-zinc-500 dark:text-zinc-400">
+                      — {project.subtitle}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  {project.summary || project.description}
+                </p>
+
+                {project.metrics && project.metrics.length > 0 && (
+                  <div className="mt-4 grid grid-cols-3 gap-2 rounded-xl border border-zinc-200/80 bg-zinc-100/60 p-3 dark:border-zinc-800/80 dark:bg-zinc-950/60">
+                    {project.metrics.map((m) => (
+                      <div key={m.label} className="text-center">
+                        <div className="font-mono text-xs sm:text-sm font-semibold text-emerald-500 dark:text-emerald-400">
+                          {m.value}
+                        </div>
+                        <div className="font-mono text-[10px] sm:text-xs text-zinc-500 dark:text-zinc-400">
+                          {m.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-              <span className="mt-5 inline-block text-sm font-medium text-emerald-400">{detailLabel} →</span>
-            </div>
-          </article>
-        ))}
+
+              <div className="mt-6">
+                <div className="flex flex-wrap gap-2">
+                  {(isFeatured ? tags : tags.slice(0, 4)).map((tag) => (
+                    <span
+                      key={tag}
+                      className="border border-neutral-800 bg-neutral-900/50 text-neutral-400 text-xs rounded-md px-2.5 py-0.5 font-mono"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <span className="mt-5 inline-block text-sm font-medium text-emerald-400">
+                  {detailLabel} →
+                </span>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

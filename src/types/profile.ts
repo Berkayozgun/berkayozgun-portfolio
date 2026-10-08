@@ -1,13 +1,34 @@
 export type Locale = 'en' | 'tr';
 
+export interface ProjectMetric {
+    label: string;
+    value: string;
+}
+
+export interface ProjectLinks {
+    github?: string | null;
+    live?: string | null;
+    status?: string;
+}
+
 export interface Project {
-    id: number;
+    id: number | string;
     title: string;
+    subtitle?: string;
+    category?: string;
+    year?: string;
+    isFeatured?: boolean;
+    summary?: string;
     description: string;
-    tags: string[];
-    github: string;
-    demo?: string;
-    image: string;
+    metrics?: ProjectMetric[];
+    techStack?: string[];
+    tags?: string[];
+    highlights?: string[];
+    privacyNotice?: string;
+    github?: string | null;
+    demo?: string | null;
+    image?: string;
+    links?: ProjectLinks;
 }
 
 export interface Experience {
