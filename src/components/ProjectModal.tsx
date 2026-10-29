@@ -58,14 +58,14 @@ export default function ProjectModal({
   return (
     <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-50 bg-zinc-950/50 backdrop-blur-sm dark:bg-zinc-950/80" />
+        <Dialog.Overlay className="fixed inset-0 z-50 bg-zinc-950/40 backdrop-blur-md dark:bg-zinc-950/75 transition-opacity" />
         <Dialog.Content
           aria-describedby="project-description"
-          className="fixed left-1/2 top-1/2 z-50 max-h-[90vh] w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-2xl border border-zinc-200 bg-white shadow-2xl backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-900/90"
+          className="fixed left-1/2 top-1/2 z-50 max-h-[90vh] w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-3xl border border-zinc-200/90 bg-white/95 shadow-[0_25px_60px_rgba(0,0,0,0.2)] backdrop-blur-2xl dark:border-white/10 dark:bg-zinc-900/95"
         >
-          <div className="flex items-center justify-between border-b border-zinc-200 p-6 dark:border-zinc-800">
+          <div className="flex items-center justify-between border-b border-zinc-200/80 p-6 sm:p-7 dark:border-white/10">
             <div>
-              <Dialog.Title className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
+              <Dialog.Title className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
                 {project.title}
               </Dialog.Title>
               {project.subtitle && (
@@ -77,18 +77,18 @@ export default function ProjectModal({
             <Dialog.Close asChild>
               <button
                 aria-label={language === 'tr' ? 'Kapat' : 'Close'}
-                className="rounded-lg p-2 text-zinc-500 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-zinc-500 transition-all hover:bg-zinc-200 hover:text-zinc-900 active:scale-95 dark:bg-zinc-800/80 dark:text-zinc-400 dark:hover:bg-zinc-700 dark:hover:text-white"
               >
-                <X />
+                <X size={16} />
               </button>
             </Dialog.Close>
           </div>
-          <div className="space-y-6 p-6">
+          <div className="space-y-6 p-6 sm:p-7">
             <ProjectCover project={project} />
 
             {/* Metrics */}
             {project.metrics && project.metrics.length > 0 && (
-              <div className="grid grid-cols-3 gap-3 rounded-xl border border-zinc-200 bg-zinc-50/70 p-4 dark:border-zinc-800 dark:bg-zinc-950/60">
+              <div className="grid grid-cols-3 gap-3 rounded-2xl border border-zinc-200/80 bg-zinc-100/50 p-4 dark:border-white/10 dark:bg-zinc-950/40">
                 {project.metrics.map((m) => (
                   <div key={m.label} className="text-center">
                     <div className="font-mono text-base font-semibold text-emerald-500 dark:text-emerald-400">
@@ -103,11 +103,11 @@ export default function ProjectModal({
             )}
 
             <div>
-              <h3 className="mb-2 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+              <h3 className="mb-2 text-base font-semibold text-zinc-900 dark:text-zinc-100">
                 {language === 'tr' ? 'Açıklama' : 'Description'}
               </h3>
               <Dialog.Description asChild>
-                <p className="leading-7 text-zinc-700 dark:text-zinc-300">
+                <p className="leading-relaxed text-sm sm:text-base text-zinc-600 dark:text-zinc-300">
                   {project.description}
                 </p>
               </Dialog.Description>
@@ -116,13 +116,13 @@ export default function ProjectModal({
             {/* Highlights */}
             {project.highlights && project.highlights.length > 0 && (
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                <h3 className="mb-3 text-base font-semibold text-zinc-900 dark:text-zinc-100">
                   {language === 'tr' ? 'Öne Çıkan Özellikler' : 'Key Highlights'}
                 </h3>
                 <ul className="space-y-2.5">
                   {project.highlights.map((h, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
-                      <CheckCircle2 size={16} className="mt-0.5 text-emerald-400 shrink-0" />
+                    <li key={i} className="flex items-start gap-2.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+                      <CheckCircle2 size={16} className="mt-0.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                       <span>{h}</span>
                     </li>
                   ))}
@@ -131,13 +131,13 @@ export default function ProjectModal({
             )}
 
             <div>
-              <h3 className="mb-3 flex items-center gap-2 text-lg font-semibold text-zinc-900 dark:text-white">
-                <Code size={18} /> {language === 'tr' ? 'Teknolojiler' : 'Technologies'}
+              <h3 className="mb-3 flex items-center gap-2 text-base font-semibold text-zinc-900 dark:text-white">
+                <Code size={17} /> {language === 'tr' ? 'Teknolojiler' : 'Technologies'}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
                   <span
-                    className="border border-neutral-800 bg-neutral-900/50 text-neutral-400 text-xs rounded-md px-2.5 py-0.5 font-mono"
+                    className="tag"
                     key={tag}
                   >
                     {tag}
@@ -148,28 +148,28 @@ export default function ProjectModal({
 
             {/* Privacy Notice Banner */}
             {project.privacyNotice && (
-              <div className="flex items-start gap-3 rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4 text-xs leading-relaxed text-zinc-300">
-                <Lock size={16} className="text-emerald-400 mt-0.5 shrink-0" />
+              <div className="flex items-start gap-3 rounded-2xl border border-emerald-500/25 bg-emerald-500/10 p-4 text-xs leading-relaxed text-zinc-700 dark:text-zinc-300">
+                <Lock size={15} className="text-emerald-500 dark:text-emerald-400 mt-0.5 shrink-0" />
                 <div>
-                  <div className="font-mono font-medium text-emerald-400 mb-1">
+                  <div className="font-mono font-medium text-emerald-600 dark:text-emerald-400 mb-1">
                     {project.links?.status || 'In Production (Private Network)'}
                   </div>
-                  <p className="text-zinc-400">{project.privacyNotice}</p>
+                  <p className="text-zinc-600 dark:text-zinc-400">{project.privacyNotice}</p>
                 </div>
               </div>
             )}
 
             {/* Action buttons (only when external links are provided) */}
             {(project.github || project.demo) && (
-              <div className="flex flex-wrap gap-3 border-t border-zinc-200 pt-5 dark:border-zinc-800">
+              <div className="flex flex-wrap gap-3 border-t border-zinc-200/80 pt-5 dark:border-white/10">
                 {project.github && (
                   <a className="button-secondary" href={project.github} target="_blank" rel="noreferrer">
-                    <Github size={17} /> GitHub
+                    <Github size={16} /> GitHub
                   </a>
                 )}
                 {project.demo && (
                   <a className="button-primary" href={project.demo} target="_blank" rel="noreferrer">
-                    <Globe size={17} /> {language === 'tr' ? 'Canlı Demo' : 'Live Demo'}
+                    <Globe size={16} /> {language === 'tr' ? 'Canlı Demo' : 'Live Demo'}
                   </a>
                 )}
               </div>

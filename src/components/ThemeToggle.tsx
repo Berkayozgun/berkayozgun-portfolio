@@ -21,10 +21,10 @@ export default function ThemeToggle() {
       type="button"
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="nav-link"
+      className="flex h-8 w-8 items-center justify-center rounded-full text-zinc-600 transition-all hover:bg-zinc-200/60 hover:text-zinc-900 active:scale-90 dark:text-zinc-300 dark:hover:bg-white/10 dark:hover:text-white"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
-      {isDark ? <Sun size={17} /> : <Moon size={17} />}
+      {isDark ? <Sun size={16} /> : <Moon size={16} />}
     </button>
   );
 }

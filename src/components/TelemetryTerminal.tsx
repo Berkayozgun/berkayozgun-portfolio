@@ -67,14 +67,14 @@ export function ProductionBadge({ privacyNotice }: { privacyNotice?: string }) {
 
 export default function TelemetryTerminal({ project }: { project: Project }) {
   return (
-    <div className="mb-6 overflow-hidden rounded-xl border border-zinc-200/80 bg-zinc-950 font-mono shadow-md dark:border-zinc-800/80">
+    <div className="mb-6 overflow-hidden rounded-2xl border border-zinc-200/80 bg-zinc-950/95 font-mono shadow-md backdrop-blur-xl dark:border-white/10">
       {/* Terminal Title Bar */}
-      <div className="flex items-center justify-between border-b border-zinc-800 bg-zinc-900/90 px-3.5 sm:px-4 py-2.5 sm:py-3">
+      <div className="flex items-center justify-between border-b border-zinc-800 bg-zinc-900/90 px-3.5 sm:px-4 py-2.5 sm:py-3 dark:border-white/10">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F56] border border-[#E0443E]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E] border border-[#DEA123]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
           </div>
           <span className="ml-2 font-mono text-xs text-zinc-400">telemetry-stream</span>
         </div>

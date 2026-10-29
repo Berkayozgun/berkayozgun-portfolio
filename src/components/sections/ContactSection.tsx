@@ -29,39 +29,51 @@ export default function ContactSection({ labels }: { labels: ContactLabels }) {
   };
 
   return (
-    <section id="contact" className="section-container border-t border-zinc-200/80 dark:border-zinc-800/80">
+    <section id="contact" className="section-container border-t border-zinc-200/80 dark:border-white/10">
       <div className="mx-auto max-w-4xl">
         <p className="eyebrow">05 / contact</p>
         <h2 className="section-title mb-8">{labels.title}</h2>
-        <div className="rounded-2xl border border-zinc-200 bg-white/80 p-6 text-zinc-900 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-100 md:p-8">
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+
+        <div className="glass-panel p-8 sm:p-12 relative overflow-hidden">
+          {/* Subtle ambient accent glow inside the card */}
+          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
+
+          <div className="relative flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
-              <div className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-emerald-400">
-                <Mail size={15} />
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                <Mail size={13} />
                 <span>open_channel</span>
               </div>
-              <p className="text-lg leading-8 text-zinc-700 dark:text-zinc-300">{labels.description}</p>
-              <p className="font-mono text-sm text-zinc-500">{emailAddress}</p>
+
+              <p className="text-lg md:text-xl leading-relaxed text-zinc-700 dark:text-zinc-200">
+                {labels.description}
+              </p>
+              
+              <p className="mt-2 font-mono text-sm text-zinc-500 dark:text-zinc-400">
+                {emailAddress}
+              </p>
+
               <button
                 type="button"
                 onClick={copyEmail}
-                className="mt-6 inline-flex items-center gap-3 rounded-xl border border-zinc-300 bg-zinc-50 px-4 py-3 font-mono text-sm text-zinc-900 transition-colors hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-950/70 dark:text-zinc-100 dark:hover:border-zinc-500"
+                className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-zinc-200/90 bg-white/90 px-4 py-2.5 font-mono text-xs font-medium text-zinc-800 shadow-sm transition-all hover:bg-zinc-100 active:scale-95 dark:border-white/10 dark:bg-zinc-800/80 dark:text-zinc-200 dark:hover:bg-zinc-700"
               >
-                {copied ? <Check size={17} className="text-emerald-400" /> : <Copy size={17} className="text-zinc-400" />}
+                {copied ? <Check size={15} className="text-emerald-500 dark:text-emerald-400" /> : <Copy size={15} className="text-zinc-400" />}
                 <span>{copied ? labels.copied : labels.copyEmail}</span>
               </button>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <a className="button-secondary" href={`mailto:${emailAddress}`}>
-                <Mail size={17} />
+
+            <div className="flex flex-wrap gap-2.5">
+              <a className="button-primary" href={`mailto:${emailAddress}`}>
+                <Mail size={16} />
                 {labels.sendEmail}
               </a>
               <a className="button-secondary" href="https://linkedin.com/in/berkayozgun" target="_blank" rel="noreferrer">
-                <Linkedin size={17} />
+                <Linkedin size={16} />
                 {labels.linkedin}
               </a>
               <a className="button-secondary" href="https://github.com/Berkayozgun" target="_blank" rel="noreferrer">
-                <Github size={17} />
+                <Github size={16} />
                 {labels.github}
               </a>
             </div>

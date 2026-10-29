@@ -32,13 +32,13 @@ function CardMedia({ project }: { project: Project }) {
 
   if (!showImage) {
     return (
-      <div className="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-gradient-to-br from-zinc-100 via-white to-emerald-50 dark:border-zinc-800/80 dark:from-zinc-950 dark:via-zinc-900 dark:to-emerald-950/30">
-        <div className="flex items-center justify-between px-4 py-3 text-emerald-400">
+      <div className="mb-6 overflow-hidden rounded-2xl border border-zinc-200/80 bg-gradient-to-br from-zinc-100 via-white to-emerald-50/30 dark:border-white/10 dark:from-zinc-950 dark:via-zinc-900 dark:to-emerald-950/20">
+        <div className="flex items-center justify-between px-4 py-3 text-emerald-500 dark:text-emerald-400">
           <div className="flex items-center gap-2">
-            <Terminal size={20} />
-            <Code2 size={16} className="text-zinc-500" />
+            <Terminal size={18} />
+            <Code2 size={16} className="text-zinc-400 dark:text-zinc-500" />
           </div>
-          <ArrowUpRight className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" size={18} />
+          <ArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" size={18} />
         </div>
         <Preview project={project} />
       </div>
@@ -46,18 +46,17 @@ function CardMedia({ project }: { project: Project }) {
   }
 
   return (
-    <div className="relative mb-6 overflow-hidden rounded-xl border border-zinc-200/80 dark:border-zinc-700/50">
+    <div className="relative mb-6 overflow-hidden rounded-2xl border border-zinc-200/80 dark:border-white/10">
       <img
         src={project.image}
         alt={project.title}
-        className="aspect-video w-full object-cover opacity-90 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+        className="aspect-video w-full object-cover opacity-95 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
         onError={() => setFailed(true)}
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-zinc-950/10 to-transparent" />
-      <ArrowUpRight
-        className="absolute right-3 top-3 text-emerald-400 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-        size={20}
-      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent" />
+      <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-transform group-hover:scale-110">
+        <ArrowUpRight size={16} />
+      </div>
     </div>
   );
 }
@@ -133,7 +132,7 @@ export default function BentoProjects({ projects, title, detailLabel, onSelect }
                 </p>
 
                 {project.metrics && project.metrics.length > 0 && (
-                  <div className="mt-4 grid grid-cols-3 gap-2 rounded-xl border border-zinc-200/80 bg-zinc-100/60 p-3 dark:border-zinc-800/80 dark:bg-zinc-950/60">
+                  <div className="mt-4 grid grid-cols-3 gap-2 rounded-2xl border border-zinc-200/80 bg-zinc-100/50 p-3 dark:border-white/10 dark:bg-zinc-950/40">
                     {project.metrics.map((m) => (
                       <div key={m.label} className="text-center">
                         <div className="font-mono text-xs sm:text-sm font-semibold text-emerald-500 dark:text-emerald-400">
@@ -153,13 +152,13 @@ export default function BentoProjects({ projects, title, detailLabel, onSelect }
                   {(isFeatured ? tags : tags.slice(0, 4)).map((tag) => (
                     <span
                       key={tag}
-                      className="border border-neutral-800 bg-neutral-900/50 text-neutral-400 text-xs rounded-md px-2.5 py-0.5 font-mono"
+                      className="tag"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <span className="mt-5 inline-block text-sm font-medium text-emerald-400">
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-500 transition-all group-hover:gap-2.5 dark:text-emerald-400">
                   {detailLabel} →
                 </span>
               </div>
