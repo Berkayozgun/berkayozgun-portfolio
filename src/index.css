@@ -13,10 +13,16 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
   }
   
   body {
     @apply bg-zinc-50 text-zinc-900 antialiased selection:bg-emerald-500/25 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.emerald.600');
+    outline-offset: 4px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -109,6 +115,24 @@
   }
   .field small {
     @apply mt-1.5 block text-xs text-red-400;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hover\:-translate-y-1:hover,
+  .glass-card:hover {
+    translate: none;
+    transform: none;
   }
 }
 

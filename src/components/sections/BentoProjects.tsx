@@ -1,31 +1,41 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ArrowUpRight, Code2, Terminal } from 'lucide-react';
-import type { Project } from '@/types/profile';
+import type { Locale, Project } from '@/types/profile';
 import TelemetryTerminal from '@/components/TelemetryTerminal';
 
 interface BentoProjectsProps {
   projects: Project[];
+  language: Locale;
   title: string;
   detailLabel: string;
   onSelect: (project: Project) => void;
 }
 
-function cardEyebrow(project: Project, index: number) {
-  if (project.category) return project.category;
-  return index === 0 ? 'Featured Flagship' : 'Flagship';
-}
+const copy = {
+  tr: {
+    selectedWork: '02 / seçili çalışmalar',
+    localContent: 'yerel içerik / CMS yok',
+    featured: 'Öne çıkan proje',
+    flagship: 'Vitrin projesi',
+    preview: 'mimari önizlemesi',
+  },
+  en: {
+    selectedWork: '02 / selected work',
+    localContent: 'local content / no CMS',
+    featured: 'Featured Flagship',
+    flagship: 'Flagship',
+    preview: 'architecture preview',
+  },
+} satisfies Record<Locale, Record<'selectedWork' | 'localContent' | 'featured' | 'flagship' | 'preview', string>>;
 
-function CardMedia({ project }: { project: Project }) {
+function CardMedia({ project, language }: { project: Project; language: Locale }) {
   const [failed, setFailed] = useState(false);
 
-  useEffect(() => {
-    setFailed(false);
-  }, [project.id, project.image]);
 
   if (project.id === 'ultimarket' || project.privacyNotice) {
-    return <TelemetryTerminal project={project} />;
+    return <TelemetryTerminal project={project} language={language} />;
   }
 
   const showImage = Boolean(project.image) && !failed;
@@ -40,7 +50,7 @@ function CardMedia({ project }: { project: Project }) {
           </div>
           <ArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" size={18} />
         </div>
-        <Preview project={project} />
+        <Preview project={project} language={language} />
       </div>
     );
   }
@@ -50,6 +60,7 @@ function CardMedia({ project }: { project: Project }) {
       <img
         src={project.image}
         alt={project.title}
+        loading="lazy"
         className="aspect-video w-full object-cover opacity-95 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
         onError={() => setFailed(true)}
       />
@@ -61,34 +72,39 @@ function CardMedia({ project }: { project: Project }) {
   );
 }
 
-function Preview({ project }: { project: Project }) {
+function Preview({ project, language }: { project: Project; language: Locale }) {
   const stack = (project.techStack || project.tags || []).slice(0, 2).join(' · ');
   return (
-    <div className="code-preview border-0 bg-transparent dark:bg-transparent" aria-label={`${project.title} architecture preview`}>
+    <div className="code-preview border-0 bg-transparent dark:bg-transparent" aria-label={`${project.title} ${copy[language].preview}`}>
       <span className="text-zinc-500">module</span> <span className="text-zinc-300">{'{'}</span>
       <br />
       <span className="pl-4 text-zinc-500">
         stack: <b className="text-emerald-400">{stack}</b>
       </span>
       <br />
-      <span className="pl-4 text-zinc-500">
-        status: <b className="text-emerald-400">shipped</b>
-      </span>
-      <br />
+      {project.links?.status && (
+        <>
+          <span className="pl-4 text-zinc-500">
+            status: <b className="text-emerald-400">{project.links.status}</b>
+          </span>
+          <br />
+        </>
+      )}
       <span className="text-zinc-300">{'}'}</span>
     </div>
   );
 }
 
-export default function BentoProjects({ projects, title, detailLabel, onSelect }: BentoProjectsProps) {
+export default function BentoProjects({ projects, title, detailLabel, onSelect, language }: BentoProjectsProps) {
+  const text = copy[language];
   return (
     <section id="projects" className="section-container">
       <div className="mb-10 flex items-end justify-between gap-4">
         <div>
-          <p className="eyebrow">02 / selected work</p>
+          <p className="eyebrow">{text.selectedWork}</p>
           <h2 className="section-title">{title}</h2>
         </div>
-        <span className="hidden font-mono text-sm text-zinc-500 md:block">local content / no CMS</span>
+        <span className="hidden font-mono text-sm text-zinc-500 md:block">{text.localContent}</span>
       </div>
       <div className="grid auto-rows-fr grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => {
@@ -98,18 +114,15 @@ export default function BentoProjects({ projects, title, detailLabel, onSelect }
           return (
             <article
               key={project.id}
-              className={`group glass-card flex h-full cursor-pointer flex-col justify-between ${
+              className={`group glass-card relative flex h-full flex-col justify-between ${
                 isFeatured ? 'col-span-1 md:col-span-2 p-6 md:p-8' : 'col-span-1 p-6'
               }`}
-              onClick={() => onSelect(project)}
-              tabIndex={0}
-              onKeyDown={(e) => e.key === 'Enter' && onSelect(project)}
             >
               <div>
-                <CardMedia project={project} />
+                <CardMedia key={project.image ?? ''} project={project} language={language} />
                 <div className="mb-2 flex items-center justify-between gap-2">
                   <p className="font-mono text-xs uppercase tracking-widest text-zinc-500">
-                    {cardEyebrow(project, index)}
+                    {project.category || (index === 0 ? text.featured : text.flagship)}
                   </p>
                   {project.year && (
                     <span className="font-mono text-xs text-zinc-500">
@@ -158,9 +171,16 @@ export default function BentoProjects({ projects, title, detailLabel, onSelect }
                     </span>
                   ))}
                 </div>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-500 transition-all group-hover:gap-2.5 dark:text-emerald-400">
-                  {detailLabel} →
-                </span>
+                <button
+                  type="button"
+                  data-project-id={String(project.id)}
+                  aria-label={`${project.title}: ${detailLabel}`}
+                  aria-haspopup="dialog"
+                  onClick={() => onSelect(project)}
+                  className="mt-5 inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium text-emerald-500 transition-all after:absolute after:inset-0 after:rounded-[inherit] focus-visible:outline-none focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-4 focus-visible:after:outline-emerald-500 group-hover:gap-2.5 dark:text-emerald-400"
+                >
+                  {detailLabel} <span aria-hidden="true">→</span>
+                </button>
               </div>
             </article>
           );

@@ -1,11 +1,11 @@
 import { Briefcase } from 'lucide-react';
 import type { Experience } from '@/types/profile';
 
-export default function ExperienceSection({ items, title }: { items: Experience[]; title: string }) {
+export default function ExperienceSection({ items, title, eyebrow }: { items: Experience[]; title: string; eyebrow: string }) {
   return (
     <section id="experience" className="section-container border-t border-zinc-200/80 dark:border-white/10">
       <div className="mb-12">
-        <p className="eyebrow">03 / timeline</p>
+        <p className="eyebrow">03 / {eyebrow}</p>
         <h2 className="section-title">{title}</h2>
       </div>
 

@@ -1,16 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
-export default function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export default function ThemeToggle({ labels }: { labels: { light: string; dark: string } }) {
+  const { resolvedTheme, setTheme } = useTheme();
+  const mounted = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
 
   if (!mounted) return null;
 
@@ -19,8 +19,8 @@ export default function ThemeToggle() {
   return (
     <button
       type="button"
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-label={isDark ? labels.light : labels.dark}
+      title={isDark ? labels.light : labels.dark}
       className="flex h-8 w-8 items-center justify-center rounded-full text-zinc-600 transition-all hover:bg-zinc-200/60 hover:text-zinc-900 active:scale-90 dark:text-zinc-300 dark:hover:bg-white/10 dark:hover:text-white"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     >

@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowDown, Github, Linkedin, Mail, Terminal } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import type { ProfileData } from '@/types/profile';
 
 interface HeroSectionProps {
@@ -11,13 +11,15 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ data, labels, onScroll }: HeroSectionProps) {
+  const reducedMotion = useReducedMotion();
+
   return (
     <section className="relative flex min-h-[min(900px,100vh)] items-center overflow-hidden pt-28 pb-16">
       <div className="section-container relative grid items-center gap-14 lg:grid-cols-[1.1fr_.9fr]">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: reducedMotion ? 0 : 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* Apple HIG: Dynamic Status Indicator Capsule */}
           <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3.5 py-1 text-xs font-medium text-emerald-600 backdrop-blur-md shadow-sm dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-400">
@@ -48,9 +50,9 @@ export default function HeroSection({ data, labels, onScroll }: HeroSectionProps
           {/* Tactile Spring Action Buttons */}
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <motion.button 
-              whileHover={{ scale: 1.02 }} 
-              whileTap={{ scale: 0.98 }} 
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              whileHover={reducedMotion ? undefined : { scale: 1.02 }}
+              whileTap={reducedMotion ? undefined : { scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 25 }}
               onClick={() => onScroll('projects')} 
               className="button-primary"
             >
@@ -58,9 +60,9 @@ export default function HeroSection({ data, labels, onScroll }: HeroSectionProps
             </motion.button>
 
             <motion.button 
-              whileHover={{ scale: 1.02 }} 
-              whileTap={{ scale: 0.98 }} 
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              whileHover={reducedMotion ? undefined : { scale: 1.02 }}
+              whileTap={reducedMotion ? undefined : { scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 25 }}
               onClick={() => onScroll('contact')} 
               className="button-secondary"
             >
@@ -94,9 +96,9 @@ export default function HeroSection({ data, labels, onScroll }: HeroSectionProps
 
         {/* macOS Sequoia Style Code Window */}
         <motion.div 
-          initial={{ opacity: 0, y: 24 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: reducedMotion ? 0 : 0.7, delay: reducedMotion ? 0 : 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="code-window group relative transition-transform duration-500 hover:-translate-y-1"
         >
           <div className="code-window-bar justify-between">

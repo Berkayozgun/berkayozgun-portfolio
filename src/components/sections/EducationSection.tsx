@@ -1,11 +1,11 @@
 import { GraduationCap } from 'lucide-react';
 import type { Education } from '@/types/profile';
 
-export default function EducationSection({ items, title }: { items: Education[]; title: string }) {
+export default function EducationSection({ items, title, eyebrow }: { items: Education[]; title: string; eyebrow: string }) {
   return (
     <section id="education" className="section-container border-t border-zinc-200/80 dark:border-white/10">
       <div className="mb-12">
-        <p className="eyebrow">04 / learning</p>
+        <p className="eyebrow">04 / {eyebrow}</p>
         <h2 className="section-title">{title}</h2>
       </div>
 

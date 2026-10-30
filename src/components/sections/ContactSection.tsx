@@ -13,6 +13,8 @@ type ContactLabels = {
   sendEmail: string;
   linkedin: string;
   github: string;
+  eyebrow: string;
+  channel: string;
 };
 
 export default function ContactSection({ labels }: { labels: ContactLabels }) {
@@ -31,7 +33,7 @@ export default function ContactSection({ labels }: { labels: ContactLabels }) {
   return (
     <section id="contact" className="section-container border-t border-zinc-200/80 dark:border-white/10">
       <div className="mx-auto max-w-4xl">
-        <p className="eyebrow">05 / contact</p>
+        <p className="eyebrow">05 / {labels.eyebrow}</p>
         <h2 className="section-title mb-8">{labels.title}</h2>
 
         <div className="glass-panel p-8 sm:p-12 relative overflow-hidden">
@@ -42,7 +44,7 @@ export default function ContactSection({ labels }: { labels: ContactLabels }) {
             <div className="max-w-xl">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-medium text-emerald-600 dark:text-emerald-400">
                 <Mail size={13} />
-                <span>open_channel</span>
+                <span>{labels.channel}</span>
               </div>
 
               <p className="text-lg md:text-xl leading-relaxed text-zinc-700 dark:text-zinc-200">

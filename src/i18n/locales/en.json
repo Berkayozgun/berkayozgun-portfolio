@@ -54,11 +54,28 @@
   "contact": {
     "title": "Get In Touch",
     "description": "For new opportunities, mobile/web architectures, and projects, feel free to get in touch.",
+    "eyebrow": "contact",
+    "channel": "open_channel",
     "copyEmail": "Copy email",
     "copied": "Copied!",
     "sendEmail": "Send email",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "ui": {
+    "switchLanguage": "Switch to Turkish",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "background": "Background & Focus",
+    "location": "Location: Istanbul, TR",
+    "available": "Available",
+    "timeline": "timeline",
+    "learning": "learning",
+    "builtWith": "Built with Next.js & React · Inspired by Apple HIG",
+    "theme": {
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode"
+    }
   },
   "footer": {
     "rights": "All rights reserved."

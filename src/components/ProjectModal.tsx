@@ -1,20 +1,36 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { CheckCircle2, Code, Github, Globe, Lock, Terminal, X } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
-import type { Project } from '@/types/profile';
+import type { Locale, Project } from '@/types/profile';
 import TelemetryTerminal from './TelemetryTerminal';
 
-function ProjectCover({ project }: { project: Project }) {
+const copy = {
+  tr: {
+    close: 'Kapat',
+    description: 'Açıklama',
+    highlights: 'Öne Çıkan Özellikler',
+    technologies: 'Teknolojiler',
+    privacy: 'Gizlilik bilgisi',
+    demo: 'Canlı Demo',
+  },
+  en: {
+    close: 'Close',
+    description: 'Description',
+    highlights: 'Key Highlights',
+    technologies: 'Technologies',
+    privacy: 'Privacy information',
+    demo: 'Live Demo',
+  },
+} satisfies Record<Locale, Record<'close' | 'description' | 'highlights' | 'technologies' | 'privacy' | 'demo', string>>;
+
+function ProjectCover({ project, language }: { project: Project; language: Locale }) {
   const [failed, setFailed] = useState(false);
 
-  useEffect(() => {
-    setFailed(false);
-  }, [project.id, project.image]);
 
   if (project.id === 'ultimarket' || project.privacyNotice) {
-    return <TelemetryTerminal project={project} />;
+    return <TelemetryTerminal project={project} language={language} />;
   }
 
   const showImage = Boolean(project.image) && !failed;
@@ -34,6 +50,7 @@ function ProjectCover({ project }: { project: Project }) {
     <img
       src={project.image}
       alt={project.title}
+      loading="lazy"
       className="w-full aspect-video object-cover rounded-xl border border-zinc-700/50 shadow-lg"
       onError={() => setFailed(true)}
     />
@@ -49,8 +66,11 @@ export default function ProjectModal({
   project: Project | null;
   isOpen: boolean;
   onClose: () => void;
-  language: 'tr' | 'en';
+  language: Locale;
 }) {
+  const openerRef = useRef<HTMLElement | null>(null);
+  const text = copy[language];
+
   if (!project) return null;
 
   const tags = project.techStack || project.tags || [];
@@ -60,7 +80,26 @@ export default function ProjectModal({
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-50 bg-zinc-950/40 backdrop-blur-md dark:bg-zinc-950/75 transition-opacity" />
         <Dialog.Content
-          aria-describedby="project-description"
+          onEscapeKeyDown={(event) => {
+            const descriptionId = document.activeElement?.getAttribute('aria-describedby');
+            // Radix handles Escape in capture phase, before the tooltip button can dismiss it.
+            if (descriptionId && document.getElementById(descriptionId)?.getAttribute('role') === 'tooltip') {
+              event.preventDefault();
+            }
+          }}
+          onOpenAutoFocus={() => {
+            openerRef.current = document.activeElement instanceof HTMLElement
+              ? document.activeElement
+              : null;
+          }}
+          onCloseAutoFocus={(event) => {
+            // There is no Dialog.Trigger; locate the current localized card by stable project ID.
+            event.preventDefault();
+            const cardButton = Array.from(document.querySelectorAll<HTMLButtonElement>('button[data-project-id]'))
+              .find((button) => button.dataset.projectId === String(project.id));
+            const target = cardButton || openerRef.current;
+            if (target?.isConnected) target.focus();
+          }}
           className="fixed left-1/2 top-1/2 z-50 max-h-[90vh] w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-3xl border border-zinc-200/90 bg-white/95 shadow-[0_25px_60px_rgba(0,0,0,0.2)] backdrop-blur-2xl dark:border-white/10 dark:bg-zinc-900/95"
         >
           <div className="flex items-center justify-between border-b border-zinc-200/80 p-6 sm:p-7 dark:border-white/10">
@@ -76,15 +115,16 @@ export default function ProjectModal({
             </div>
             <Dialog.Close asChild>
               <button
-                aria-label={language === 'tr' ? 'Kapat' : 'Close'}
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-zinc-500 transition-all hover:bg-zinc-200 hover:text-zinc-900 active:scale-95 dark:bg-zinc-800/80 dark:text-zinc-400 dark:hover:bg-zinc-700 dark:hover:text-white"
+                type="button"
+                aria-label={text.close}
+                className="flex h-8 w-8 items-center justify-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 bg-zinc-100 text-zinc-500 transition-all hover:bg-zinc-200 hover:text-zinc-900 active:scale-95 dark:bg-zinc-800/80 dark:text-zinc-400 dark:hover:bg-zinc-700 dark:hover:text-white"
               >
                 <X size={16} />
               </button>
             </Dialog.Close>
           </div>
           <div className="space-y-6 p-6 sm:p-7">
-            <ProjectCover project={project} />
+            <ProjectCover key={`${project.id}:${project.image ?? ''}`} project={project} language={language} />
 
             {/* Metrics */}
             {project.metrics && project.metrics.length > 0 && (
@@ -104,7 +144,7 @@ export default function ProjectModal({
 
             <div>
               <h3 className="mb-2 text-base font-semibold text-zinc-900 dark:text-zinc-100">
-                {language === 'tr' ? 'Açıklama' : 'Description'}
+                {text.description}
               </h3>
               <Dialog.Description asChild>
                 <p className="leading-relaxed text-sm sm:text-base text-zinc-600 dark:text-zinc-300">
@@ -117,7 +157,7 @@ export default function ProjectModal({
             {project.highlights && project.highlights.length > 0 && (
               <div>
                 <h3 className="mb-3 text-base font-semibold text-zinc-900 dark:text-zinc-100">
-                  {language === 'tr' ? 'Öne Çıkan Özellikler' : 'Key Highlights'}
+                  {text.highlights}
                 </h3>
                 <ul className="space-y-2.5">
                   {project.highlights.map((h, i) => (
@@ -132,7 +172,7 @@ export default function ProjectModal({
 
             <div>
               <h3 className="mb-3 flex items-center gap-2 text-base font-semibold text-zinc-900 dark:text-white">
-                <Code size={17} /> {language === 'tr' ? 'Teknolojiler' : 'Technologies'}
+                <Code size={17} /> {text.technologies}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
@@ -152,7 +192,7 @@ export default function ProjectModal({
                 <Lock size={15} className="text-emerald-500 dark:text-emerald-400 mt-0.5 shrink-0" />
                 <div>
                   <div className="font-mono font-medium text-emerald-600 dark:text-emerald-400 mb-1">
-                    {project.links?.status || 'In Production (Private Network)'}
+                    {project.links?.status || text.privacy}
                   </div>
                   <p className="text-zinc-600 dark:text-zinc-400">{project.privacyNotice}</p>
                 </div>
@@ -169,7 +209,7 @@ export default function ProjectModal({
                 )}
                 {project.demo && (
                   <a className="button-primary" href={project.demo} target="_blank" rel="noreferrer">
-                    <Globe size={16} /> {language === 'tr' ? 'Canlı Demo' : 'Live Demo'}
+                    <Globe size={16} /> {text.demo}
                   </a>
                 )}
               </div>

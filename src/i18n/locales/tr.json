@@ -54,11 +54,28 @@
   "contact": {
     "title": "İletişime Geç",
     "description": "Yeni fırsatlar, mobil/web mimarileri ve projeler için iletişime geçebilirsiniz.",
+    "eyebrow": "iletişim",
+    "channel": "iletişim_kanalı",
     "copyEmail": "E-postayı kopyala",
     "copied": "Kopyalandı!",
     "sendEmail": "Mail Gönder",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "ui": {
+    "switchLanguage": "İngilizceye geç",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "background": "Geçmişim ve Odak Alanlarım",
+    "location": "Konum: İstanbul, TR",
+    "available": "Yeni fırsatlara açık",
+    "timeline": "kariyer yolculuğu",
+    "learning": "öğrenim",
+    "builtWith": "Next.js ve React ile geliştirildi · Apple HIG'den ilham alındı",
+    "theme": {
+      "light": "Açık temaya geç",
+      "dark": "Koyu temaya geç"
+    }
   },
   "footer": {
     "rights": "Tüm hakları saklıdır."
