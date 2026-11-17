@@ -18,6 +18,7 @@ export interface Project {
     category?: string;
     year?: string;
     isFeatured?: boolean;
+    featured?: boolean;
     summary?: string;
     description: string;
     metrics?: ProjectMetric[];

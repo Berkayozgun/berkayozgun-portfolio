@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-  title: 'Berkay Özgün — Full-stack engineer | Building ReHeal',
-  description: 'Full-stack engineer building ReHeal. Next.js, React Native, Node. Open to work.',
+  title: 'Berkay Özgün — Full-Stack & Mobile Software Engineer',
+  description: 'Full-Stack & Mobile Software Engineer specializing in TypeScript, Next.js 16, React Native, Kotlin, and Supabase. Open to work.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

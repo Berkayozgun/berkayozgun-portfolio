@@ -1,38 +1,56 @@
 import type { Project } from '@/types/profile';
 
 export const ultimarketProject: Project = {
-  id: "ultimarket",
-  title: "Ultimarket",
-  subtitle: "Edge POS Telemetry & Real-Time Analytics",
-  category: "IoT / Edge & Full-Stack",
-  year: "2026",
+  id: 'ultimarket',
+  title: 'Ultimarket',
+  subtitle: 'Edge POS, Telemetri & Gerçek Zamanlı Analitik Motoru',
+  category: 'IoT / Edge & Full-Stack',
+  year: '2026',
   isFeatured: true,
-  summary: "Fiziksel market kasasındaki masaüstü POS sistemini dışarıya açan donanım seviyesinde telemetri ajanı, gerçek zamanlı sepet segmentasyonu ve analitik konsolu.",
-  description: "Geleneksel masaüstü POS yazılımlarının dışa kapalı mimarisini aşmak ve kasa operasyonundaki kör noktaları yok etmek için geliştirilmiş uçtan uca perakende platformu. Kasadaki barkod tarayıcı girdilerini OS seviyesinde yakalayan hafif bir Python ajanı, hızlı seri okutmalarda veri kaybını sıfırlayan in-memory kuyruk mimarisi ve sepetleri otomatik segmente eden zaman aşımı durum motoru içerir. Supabase ve Next.js altyapısıyla 2.000+ ürünlük katalogda sub-second canlı veri akışı sağlar.",
+  featured: true,
+  summary:
+    'Çok iş parçacıklı Python USB HID barkod servisi, 90 sn zaman aşımlı sepet durum makinesi (<50ms gecikme), 2.000+ ürünlü PostgreSQL/Prisma kataloğu, NVIDIA NIM Vision fatura OCR ve klavye odaklı veresiye defteri.',
+  description:
+    'Dışa kapalı fiziksel perakende kasalarını bulut tabanlı operasyon konsoluna bağlayan uçtan uca Edge POS, Telemetri ve Gerçek Zamanlı Analitik Motoru. Sıfır girdi kaybı sunan çok iş parçacıklı Python USB HID barkod servisi, 90 saniyelik idle-timeout sepet durum makinesi (<50ms senkronizasyon gecikmesi), 2.000+ ürünlü PostgreSQL/Prisma kataloğu, NVIDIA NIM Vision fatura OCR ve klavye odaklı veresiye defterini tek platformda birleştirir.',
   metrics: [
-    { label: "Katalog", value: "2.000+ Ürün" },
-    { label: "Gecikme (Sync)", value: "<50ms" },
-    { label: "Veri Kaybı", value: "%0" }
+    { label: 'Katalog', value: '2.000+ Ürün' },
+    { label: 'Gecikme', value: '<50ms Gecikme' },
+    { label: 'Veri Kaybı', value: '%0 Veri Kaybı' },
   ],
   techStack: [
-    "Next.js 16 (App Router)",
-    "TypeScript",
-    "Python",
-    "Supabase (PostgreSQL)",
-    "Prisma",
-    "Zustand",
-    "Tailwind CSS"
+    'Next.js 16 (App Router)',
+    'TypeScript',
+    'Python',
+    'PostgreSQL',
+    'Prisma',
+    'Supabase',
+    'NVIDIA NIM Vision',
+    'Zustand',
+  ],
+  tags: [
+    'Next.js 16 (App Router)',
+    'TypeScript',
+    'Python',
+    'PostgreSQL',
+    'Prisma',
+    'Supabase',
+    'NVIDIA NIM Vision',
+    'Zustand',
   ],
   highlights: [
-    "Donanım Düzeyi Müdahale: Barkod okuyucu klavye/HID sinyallerini işletim sistemi arka planında dinleyen çok iş parçacıklı (multithreaded) edge ajan.",
-    "Kuyruk & Eşzamanlılık (Queue & Concurrency): Hızlı ürün okutmalarında ağ kilitlenmelerini önleyen yerel iş parçacığı kuyruğu.",
-    "Dinamik Sepet Segmentasyonu: Kasa başı müşteri ritmine göre optimize edilmiş 90s IDLE_TIMEOUT ve donanımsal kısayol (ESC) ile otomatik fiş kapatma kurgusu.",
-    "Canlı Terminal & Analitik: Günlük ciro, sepet dağılımı ve saatlik kasa yoğunluğunu gerçek zamanlı sunan endüstriyel koyu tema operasyon paneli."
+    'İşletim sistemi seviyesinde barkod okuyucu sinyallerini sıfır kayıpla yakalayan çok iş parçacıklı Python USB HID servisi.',
+    '90 sn idle-timeout sepet durum makinesi ve ESC kısayolu ile <50ms canlı telemetri senkronizasyonu.',
+    'NVIDIA NIM Vision tabanlı fatura OCR otomasyonuyla beslenen 2.000+ ürünlü PostgreSQL/Prisma kataloğu.',
+    'Klavye odaklı veresiye defteri ve gerçek zamanlı koyu tema perakende analitik paneli.',
   ],
-  privacyNotice: "Bu sistem aktif bir perakende işletmesinde çalıştığından ticari veri gizliliği nedeniyle halka açık canlı bağlantı kapatılmıştır.",
+  privacyNotice:
+    'Bu sistem aktif bir perakende işletmesinde çalıştığından ticari veri gizliliği nedeniyle halka açık canlı bağlantı kapatılmıştır.',
   links: {
-    github: null,
+    github: 'https://github.com/Berkayozgun/ultimarket',
     live: null,
-    status: "In Production (Private Network)"
-  }
+    status: 'Canlı Kullanımda',
+  },
+  github: 'https://github.com/Berkayozgun/ultimarket',
+  demo: '',
+  image: '',
 };

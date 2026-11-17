@@ -80,4 +80,59 @@ describe('BentoProjects', () => {
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
     expect(onSelect).not.toHaveBeenCalled();
   });
+
+  it('renders POS telemetry only for ultimarket, not other projects with privacyNotice', () => {
+    const { rerender } = render(
+      <BentoProjects
+        projects={[{ ...project, id: 'private-app', title: 'Private App', privacyNotice: 'Private network.' }]}
+        language="en"
+        title="Projects"
+        detailLabel="Details"
+        onSelect={vi.fn()}
+      />,
+    );
+    expect(screen.getByRole('button', { name: 'Privacy information' })).toBeInTheDocument();
+    expect(screen.queryByText('Sample telemetry')).not.toBeInTheDocument();
+
+    rerender(
+      <BentoProjects
+        projects={[{ ...project, id: 'ultimarket', title: 'Ultimarket', privacyNotice: 'Private network.' }]}
+        language="en"
+        title="Projects"
+        detailLabel="Details"
+        onSelect={vi.fn()}
+      />,
+    );
+    expect(screen.getByText('Sample telemetry')).toBeInTheDocument();
+  });
+
+  it('renders custom preview cards for numbrias, wakelarm, myrrh, and amerikano', () => {
+    const customProjects: Project[] = [
+      { id: 'numbrias', title: 'Numbrias', description: '3D Marketplace' },
+      { id: 'wakelarm', title: 'Wakelarm', description: 'Android Alarm' },
+      { id: 'myrrh', title: 'Myrrh', description: 'IoT Fragrance' },
+      { id: 'amerikano', title: 'Amerikano', description: 'Card Game' },
+    ];
+    render(
+      <BentoProjects
+        projects={customProjects}
+        language="en"
+        title="Projects"
+        detailLabel="Details"
+        onSelect={vi.fn()}
+      />,
+    );
+    expect(screen.getByText('313 Unit · 14 E2E Tests Passing')).toBeInTheDocument();
+    expect(screen.getByText('pending')).toBeInTheDocument();
+    expect(screen.getByText('shipped')).toBeInTheDocument();
+    expect(screen.getByText('Kotlin Native Bridge')).toBeInTheDocument();
+    expect(screen.getByText('Cold-Start Bypass: 0ms JS Wait')).toBeInTheDocument();
+    expect(screen.getByText('AlarmRingingActivity / USAGE_ALARM')).toBeInTheDocument();
+    expect(screen.getByText('ESP32 MQTT Telemetry')).toBeInTheDocument();
+    expect(screen.getByText('TÜBİTAK BiGG Finalist')).toBeInTheDocument();
+    expect(screen.getByText('IFRA Rule Engine')).toBeInTheDocument();
+    expect(screen.getByText('Headless TS Engine (108 Cards)')).toBeInTheDocument();
+    expect(screen.getByText('11-Round State Machine')).toBeInTheDocument();
+    expect(screen.getByText('Capacitor Offline-First')).toBeInTheDocument();
+  });
 });

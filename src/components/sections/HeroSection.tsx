@@ -111,8 +111,8 @@ export default function HeroSection({ data, labels, onScroll }: HeroSectionProps
           <pre className="p-5 sm:p-7 overflow-x-auto font-mono text-xs sm:text-sm leading-relaxed sm:leading-8 text-zinc-700 dark:text-zinc-300">
             <code>
               <span className="text-zinc-500">const</span> engineer = {'{'}{'\n'}
-              {'  '}building: <span className="text-emerald-500 dark:text-emerald-400">&apos;ReHeal&apos;</span>,{'\n'}
-              {'  '}stack: [<span className="text-emerald-500 dark:text-emerald-400">&apos;Next.js&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Expo&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Node&apos;</span>],{'\n'}
+              {'  '}focus: [<span className="text-emerald-500 dark:text-emerald-400">&apos;Full-Stack Web&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Native Mobile&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Edge &amp; IoT&apos;</span>],{'\n'}
+              {'  '}stack: [<span className="text-emerald-500 dark:text-emerald-400">&apos;TypeScript&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Next.js 16&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;React Native&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Kotlin&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Supabase&apos;</span>],{'\n'}
               {'  '}openToWork: <span className="text-emerald-500 dark:text-emerald-400">true</span>{'\n'}
               {'}'};
             </code>

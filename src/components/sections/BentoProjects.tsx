@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import { ArrowUpRight, Code2, Terminal } from 'lucide-react';
 import type { Locale, Project } from '@/types/profile';
-import TelemetryTerminal from '@/components/TelemetryTerminal';
+import TelemetryTerminal, { ProductionBadge } from '@/components/TelemetryTerminal';
+import ProjectPreview from '@/components/ProjectPreview';
+import { hasCustomPreview } from '@/lib/utils';
 
 interface BentoProjectsProps {
   projects: Project[];
@@ -34,21 +36,34 @@ function CardMedia({ project, language }: { project: Project; language: Locale }
   const [failed, setFailed] = useState(false);
 
 
-  if (project.id === 'ultimarket' || project.privacyNotice) {
+  if (project.id === 'ultimarket') {
     return <TelemetryTerminal project={project} language={language} />;
+  }
+
+  if (hasCustomPreview(project.id)) {
+    return <ProjectPreview project={project} language={language} />;
   }
 
   const showImage = Boolean(project.image) && !failed;
 
   if (!showImage) {
     return (
-      <div className="mb-6 overflow-hidden rounded-2xl border border-zinc-200/80 bg-gradient-to-br from-zinc-100 via-white to-emerald-50/30 dark:border-white/10 dark:from-zinc-950 dark:via-zinc-900 dark:to-emerald-950/20">
-        <div className="flex items-center justify-between px-4 py-3 text-emerald-500 dark:text-emerald-400">
+      <div className="mb-6 rounded-2xl border border-zinc-200/80 bg-gradient-to-br from-zinc-100 via-white to-emerald-50/30 dark:border-white/10 dark:from-zinc-950 dark:via-zinc-900 dark:to-emerald-950/20">
+        <div className="flex items-center justify-between gap-2 rounded-t-2xl px-4 py-3 text-emerald-500 dark:text-emerald-400">
           <div className="flex items-center gap-2">
             <Terminal size={18} />
             <Code2 size={16} className="text-zinc-400 dark:text-zinc-500" />
           </div>
-          <ArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" size={18} />
+          <div className="flex items-center gap-2">
+            {project.privacyNotice && (
+              <ProductionBadge
+                privacyNotice={project.privacyNotice}
+                status={project.links?.status}
+                language={language}
+              />
+            )}
+            <ArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" size={18} />
+          </div>
         </div>
         <Preview project={project} language={language} />
       </div>
@@ -56,15 +71,26 @@ function CardMedia({ project, language }: { project: Project; language: Locale }
   }
 
   return (
-    <div className="relative mb-6 overflow-hidden rounded-2xl border border-zinc-200/80 dark:border-white/10">
-      <img
-        src={project.image}
-        alt={project.title}
-        loading="lazy"
-        className="aspect-video w-full object-cover opacity-95 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-        onError={() => setFailed(true)}
-      />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent" />
+    <div className="relative mb-6 rounded-2xl border border-zinc-200/80 dark:border-white/10">
+      <div className="overflow-hidden rounded-2xl">
+        <img
+          src={project.image}
+          alt={project.title}
+          loading="lazy"
+          className="aspect-video w-full object-cover opacity-95 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+          onError={() => setFailed(true)}
+        />
+        <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent" />
+      </div>
+      {project.privacyNotice && (
+        <div className="absolute left-3 top-3 z-10">
+          <ProductionBadge
+            privacyNotice={project.privacyNotice}
+            status={project.links?.status}
+            language={language}
+          />
+        </div>
+      )}
       <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-transform group-hover:scale-110">
         <ArrowUpRight size={16} />
       </div>
@@ -106,9 +132,9 @@ export default function BentoProjects({ projects, title, detailLabel, onSelect, 
         </div>
         <span className="hidden font-mono text-sm text-zinc-500 md:block">{text.localContent}</span>
       </div>
-      <div className="grid auto-rows-fr grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-flow-row-dense auto-rows-fr grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => {
-          const isFeatured = Boolean(project.isFeatured || index === 0);
+          const isFeatured = Boolean(project.isFeatured ?? project.featured ?? index === 0);
           const tags = project.techStack || project.tags || [];
 
           return (

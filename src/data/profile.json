@@ -1,536 +1,1040 @@
 {
-    "en": {
-        "hero": {
-            "title": "Full-stack engineer | Building ReHeal",
-            "subtitle": "Next.js · React Native · Node · Open to work",
-            "description": "",
-            "cta": "View My Work"
-        },
-        "about": {
-            "title": "About Me",
-            "description": "I'm a full-stack engineer (B.Sc. Trakya, 2024; M.Sc. ongoing) building ReHeal, an early-stage digital health product: a React Native patient app, a Next.js clinic dashboard, and a SUT/SGK rule engine for pharmacies. Before that I interned at Jotform, Sixfab, and Parentwiser, and spent a short stretch at Elmali Tech shipping Next.js apps. I also work with ML when the problem needs it (BERTurk, XAI, ADS-B), but the day-to-day is TypeScript, Next.js, Expo, Supabase, Node. Open to full-stack roles."
-        },
-        "skills": [
-            {
-                "category": "Frontend",
-                "technologies": [
-                    "React.js",
-                    "Next.js",
-                    "Vue.js",
-                    "Redux",
-                    "React Query",
-                    "Tailwind CSS",
-                    "React Native",
-                    "Expo",
-                    "Zustand"
-                ]
-            },
-            {
-                "category": "Backend",
-                "technologies": [
-                    "Node.js",
-                    "Express.js",
-                    "Django",
-                    "RESTful API",
-                    "JWT",
-                    "MongoDB",
-                    "PostgreSQL",
-                    "Supabase",
-                    "Firebase",
-                    "FastAPI"
-                ]
-            },
-            {
-                "category": "AI & Data Science",
-                "technologies": [
-                    "Machine Learning",
-                    "Natural Language Processing (NLP)",
-                    "TF-IDF",
-                    "KNN",
-                    "Web Scraping (BeautifulSoup)",
-                    "BERTurk",
-                    "Transformers",
-                    "SHAP",
-                    "Isolation Forest",
-                    "XAI"
-                ]
-            },
-            {
-                "category": "DevOps & Tools",
-                "technologies": [
-                    "Docker",
-                    "AWS",
-                    "CI/CD Pipelines",
-                    "Git",
-                    "GitHub",
-                    "Postman",
-                    "Figma",
-                    "Agile & Scrum",
-                    "Playwright"
-                ]
-            }
-        ],
-        "projects": [
-            {
-                "id": "ultimarket",
-                "title": "Ultimarket",
-                "subtitle": "Edge POS Telemetry & Real-Time Analytics",
-                "category": "IoT / Edge & Full-Stack",
-                "year": "2026",
-                "isFeatured": true,
-                "summary": "Hardware-level telemetry agent bridging physical desktop POS systems to the cloud, featuring real-time basket segmentation and an industrial analytics console.",
-                "description": "An end-to-end retail telemetry platform designed to overcome closed desktop POS architectures and eliminate blind spots in checkout operations. Features a lightweight Python agent capturing barcode scanner inputs at the OS level, an in-memory queue architecture preventing data loss during rapid sequential scans, and a timeout state machine automatically segmenting customer baskets. Powered by Supabase and Next.js, delivering sub-second live data streaming across a catalog of 2,000+ items.",
-                "metrics": [
-                    { "label": "Catalog", "value": "2,000+ Items" },
-                    { "label": "Latency (Sync)", "value": "<50ms" },
-                    { "label": "Data Loss", "value": "0%" }
-                ],
-                "techStack": [
-                    "Next.js 16 (App Router)",
-                    "TypeScript",
-                    "Python",
-                    "Supabase (PostgreSQL)",
-                    "Prisma",
-                    "Zustand",
-                    "Tailwind CSS"
-                ],
-                "tags": [
-                    "Next.js 16 (App Router)",
-                    "TypeScript",
-                    "Python",
-                    "Supabase (PostgreSQL)",
-                    "Prisma",
-                    "Zustand",
-                    "Tailwind CSS"
-                ],
-                "highlights": [
-                    "Hardware-Level Interception: Multithreaded edge agent listening to barcode scanner keyboard/HID signals in OS background.",
-                    "Queue & Concurrency: Local worker queue eliminating network stalls during high-velocity checkout scans.",
-                    "Dynamic Basket Segmentation: State engine with 90s IDLE_TIMEOUT and hardware shortcut (ESC) for automated checkout receipt delimitation.",
-                    "Live Terminal & Analytics: Industrial dark-mode operations console providing real-time revenue, basket distribution, and hourly traffic."
-                ],
-                "privacyNotice": "Live public links are restricted due to commercial data privacy policies as this system operates in active retail production.",
-                "links": {
-                    "github": null,
-                    "live": null,
-                    "status": "In Production (Private Network)"
-                },
-                "github": "",
-                "demo": "",
-                "image": ""
-            },
-            {
-                "id": 10,
-                "title": "ReHeal",
-                "description": "Early-stage digital health product: a React Native patient app, a Next.js clinic dashboard, and a SUT/SGK pharmacy rule engine (Pharmaguard AI) for prescription compliance, Gemini-assisted medical PDF processing, QR onboarding, lab-report OCR, medication adherence, and Supabase Auth, Realtime, and Storage.",
-                "tags": [
-                    "React Native",
-                    "Expo",
-                    "Next.js",
-                    "Supabase",
-                    "TypeScript",
-                    "Digital Health",
-                    "SUT/SGK"
-                ],
-                "github": "",
-                "demo": "",
-                "image": ""
-            },
-            {
-                "id": 8,
-                "title": "Algoviz",
-                "description": "Interactive CS and AI simulation lab with 23 modules covering distributed systems (Raft, LRU Cache) and modern ML (Self-Attention, CNN, Decision Trees), plus 3D Three.js / WebGL loss landscapes.",
-                "tags": [
-                    "Next.js 16",
-                    "React 19",
-                    "Three.js",
-                    "WebGL",
-                    "TypeScript",
-                    "Zustand",
-                    "Machine Learning"
-                ],
-                "github": "https://github.com/berkayozgun/algoviz",
-                "demo": "https://algoviz-rho.vercel.app",
-                "image": "/images/algoviz.png"
-            },
-            {
-                "id": 11,
-                "title": "Crisis XAI",
-                "description": "Crisis-time message classification with explainable AI (SHAP, LIME). BERTurk/PyTorch model, hybrid NER/Regex location extraction, evaluated on 11,268 samples with 5-fold CV (92.26% ± 0.81 F1). FastAPI backend and Next.js interface.",
-                "tags": [
-                    "Python",
-                    "PyTorch",
-                    "XAI",
-                    "BERTurk",
-                    "FastAPI",
-                    "Next.js"
-                ],
-                "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
-                "demo": "",
-                "image": ""
-            },
-            {
-                "id": 9,
-                "title": "DropSpot",
-                "description": "Limited stock product drops and waitlist platform; built with Next.js 16, Express, Prisma, PostgreSQL, dynamic priority scoring engine, and Docker Compose.",
-                "tags": [
-                    "Next.js 16",
-                    "Express.js",
-                    "Prisma",
-                    "PostgreSQL",
-                    "priority-scoring",
-                    "Docker Compose"
-                ],
-                "github": "https://github.com/berkayozgun/dropspot",
-                "demo": "",
-                "image": "/images/dropspot.png"
-            }
-        ],
-        "experience": [
-            {
-                "company": "ReHeal",
-                "role": "Founding Engineer",
-                "period": "Jun 2026 - Present",
-                "description": "Building a digital health startup across a React Native patient app, a Next.js clinic platform, and PharmaGuard AI. Working with Expo, Supabase, PostgreSQL RLS, Gemini Vision, and TypeScript rule engines."
-            },
-            {
-                "company": "BGO Team",
-                "role": "Volunteer Full-Stack Engineer / Mentor",
-                "period": "Oct 2025 - Present",
-                "description": "Volunteer contributor and mentor for university projects. Helped migrate cPanel/MySQL systems to Supabase PostgreSQL with RLS and supported the team with Git and Agile practices."
-            },
-            {
-                "company": "Elmali Tech",
-                "role": "JavaScript Developer",
-                "period": "Mar 2025 - May 2025",
-                "description": "Worked on production React and Next.js applications, including Digiroom. Contributed to SSR, dynamic routing, Supabase RLS, Firebase Cloud Functions, and e-commerce and booking synchronization."
-            },
-            {
-                "company": "Sixfab",
-                "role": "Software Engineer Intern",
-                "period": "Nov 2023 - Jan 2024",
-                "description": "Designed a micro-blogging platform using Vue.js and Flask. Managed CI/CD pipelines."
-            },
-            {
-                "company": "Jotform",
-                "role": "Frontend Developer Intern",
-                "period": "July 2023 - Aug 2023",
-                "description": "Built an internal notification center using React.js and Redux. Led a team of 3 interns."
-            },
-            {
-                "company": "Parentwiser",
-                "role": "Frontend Developer Intern",
-                "period": "Jan 2022 - Oct 2022",
-                "description": "Migrated the company’s website from WordPress to React.js. Contributed to a React Native mobile application for local kids' events."
-            }
-        ],
-        "education": [
-            {
-                "school": "Trakya University",
-                "degree": "M.Sc. in Computer Engineering",
-                "date": "February 2026 - Present",
-                "description": "Relevant coursework: Machine Learning, Text Mining, Cognitive Technologies, Scientific Ethics. Projects include a BERTurk crisis-tweet classifier with hybrid NER/Regex location extraction (11,268 samples; 95.75% accuracy), a CrowdStrike/Microsoft crisis analysis, and an ADS-B flight anomaly detector using Isolation Forest, SHAP, FastAPI and Next.js."
-            },
-            {
-                "school": "Trakya University",
-                "degree": "BS in Computer Engineering",
-                "date": "Graduation: Jan 2024",
-                "description": "Graduation Project: AI-Powered Career Recommendation System, built with Kariyer.net scraping, TF-IDF, KNN and Django in a 6-person team."
-            }
-        ],
-        "certifications": [
-            {
-                "name": "Cisco Certified Cyberops Associate",
-                "issuer": "Cisco",
-                "date": "May 2025"
-            },
-            {
-                "name": "Alibaba Cloud Certified Cloud Computing Engineer",
-                "issuer": "Alibaba Cloud",
-                "date": "October 2024"
-            },
-            {
-                "name": "Developing Front End Apps with React",
-                "issuer": "IBM & edX",
-                "date": "2024"
-            }
-        ],
-        "blog": [
-            {
-                "title": "Build Your First Next.js App in 10 Minutes: Intro to App Router",
-                "description": "A comprehensive guide to getting started with Next.js 13+ App Router features.",
-                "date": "2024",
-                "readTime": "5 min read",
-                "link": "https://medium.com/@berkayozgun001/next-js-ile-i%CC%87lk-uygulaman%C4%B1z%C4%B1-10-dakikada-kurun-app-router-d%C3%B6nemine-gi%CC%87ri%CC%87%C5%9F-61de5a561447",
-                "image": "/images/blog-nextjs.png"
-            }
-        ]
+  "en": {
+    "hero": {
+      "title": "Full-Stack & Mobile Software Engineer",
+      "subtitle": "TypeScript · Next.js 16 · React Native · Kotlin · Supabase",
+      "description": "",
+      "cta": "View My Work"
     },
-    "tr": {
-        "hero": {
-            "title": "Full-stack mühendis | ReHeal geliştiriyor",
-            "subtitle": "Next.js · React Native · Node · Open to work",
-            "description": "",
-            "cta": "Projelerimi İncele"
-        },
-        "about": {
-            "title": "Hakkımda",
-            "description": "Erken aşama bir dijital sağlık ürünü olan ReHeal'i (React Native hasta uygulaması, Next.js klinik paneli ve eczaneler için SUT/SGK kural motoru) geliştiren bir full-stack mühendisim (Trakya Üniv. Lisans, 2024; Yüksek Lisans devam ediyor). Öncesinde Jotform, Sixfab ve Parentwiser'da staj yaptım; Elmali Tech'te Next.js uygulamaları geliştirdim. Problem gerektirdiğinde makine öğrenimiyle de çalışıyorum (BERTurk, XAI, ADS-B), ancak günlük odağım TypeScript, Next.js, Expo, Supabase ve Node.js. Full-stack rollerine açığım."
-        },
-        "skills": [
-            {
-                "category": "Frontend",
-                "technologies": [
-                    "React.js",
-                    "Next.js",
-                    "Vue.js",
-                    "Redux",
-                    "React Query",
-                    "Tailwind CSS",
-                    "React Native",
-                    "Expo",
-                    "Zustand"
-                ]
-            },
-            {
-                "category": "Backend",
-                "technologies": [
-                    "Node.js",
-                    "Express.js",
-                    "Django",
-                    "RESTful API",
-                    "JWT",
-                    "MongoDB",
-                    "PostgreSQL",
-                    "Supabase",
-                    "Firebase",
-                    "FastAPI"
-                ]
-            },
-            {
-                "category": "Yapay Zeka & Veri Bilimi",
-                "technologies": [
-                    "Machine Learning",
-                    "Natural Language Processing (NLP)",
-                    "TF-IDF",
-                    "KNN",
-                    "Web Scraping (BeautifulSoup)",
-                    "BERTurk",
-                    "Transformers",
-                    "SHAP",
-                    "Isolation Forest",
-                    "XAI"
-                ]
-            },
-            {
-                "category": "DevOps & Araçlar",
-                "technologies": [
-                    "Docker",
-                    "AWS",
-                    "CI/CD Pipelines",
-                    "Git",
-                    "GitHub",
-                    "Postman",
-                    "Figma",
-                    "Agile & Scrum",
-                    "Playwright"
-                ]
-            }
-        ],
-        "projects": [
-            {
-                "id": "ultimarket",
-                "title": "Ultimarket",
-                "subtitle": "Edge POS Telemetry & Real-Time Analytics",
-                "category": "IoT / Edge & Full-Stack",
-                "year": "2026",
-                "isFeatured": true,
-                "summary": "Fiziksel market kasasındaki masaüstü POS sistemini dışarıya açan donanım seviyesinde telemetri ajanı, gerçek zamanlı sepet segmentasyonu ve analitik konsolu.",
-                "description": "Geleneksel masaüstü POS yazılımlarının dışa kapalı mimarisini aşmak ve kasa operasyonundaki kör noktaları yok etmek için geliştirilmiş uçtan uca perakende platformu. Kasadaki barkod tarayıcı girdilerini OS seviyesinde yakalayan hafif bir Python ajanı, hızlı seri okutmalarda veri kaybını sıfırlayan in-memory kuyruk mimarisi ve sepetleri otomatik segmente eden zaman aşımı durum motoru içerir. Supabase ve Next.js altyapısıyla 2.000+ ürünlük katalogda sub-second canlı veri akışı sağlar.",
-                "metrics": [
-                    { "label": "Katalog", "value": "2.000+ Ürün" },
-                    { "label": "Gecikme (Sync)", "value": "<50ms" },
-                    { "label": "Veri Kaybı", "value": "%0" }
-                ],
-                "techStack": [
-                    "Next.js 16 (App Router)",
-                    "TypeScript",
-                    "Python",
-                    "Supabase (PostgreSQL)",
-                    "Prisma",
-                    "Zustand",
-                    "Tailwind CSS"
-                ],
-                "tags": [
-                    "Next.js 16 (App Router)",
-                    "TypeScript",
-                    "Python",
-                    "Supabase (PostgreSQL)",
-                    "Prisma",
-                    "Zustand",
-                    "Tailwind CSS"
-                ],
-                "highlights": [
-                    "Donanım Düzeyi Müdahale: Barkod okuyucu klavye/HID sinyallerini işletim sistemi arka planında dinleyen çok iş parçacıklı (multithreaded) edge ajan.",
-                    "Kuyruk & Eşzamanlılık (Queue & Concurrency): Hızlı ürün okutmalarında ağ kilitlenmelerini önleyen yerel iş parçacığı kuyruğu.",
-                    "Dinamik Sepet Segmentasyonu: Kasa başı müşteri ritmine göre optimize edilmiş 90s IDLE_TIMEOUT ve donanımsal kısayol (ESC) ile otomatik fiş kapatma kurgusu.",
-                    "Canlı Terminal & Analitik: Günlük ciro, sepet dağılımı ve saatlik kasa yoğunluğunu gerçek zamanlı sunan endüstriyel koyu tema operasyon paneli."
-                ],
-                "privacyNotice": "Bu sistem aktif bir perakende işletmesinde çalıştığından ticari veri gizliliği nedeniyle halka açık canlı bağlantı kapatılmıştır.",
-                "links": {
-                    "github": null,
-                    "live": null,
-                    "status": "In Production (Private Network)"
-                },
-                "github": "",
-                "demo": "",
-                "image": ""
-            },
-            {
-                "id": 10,
-                "title": "ReHeal",
-                "description": "Erken aşama dijital sağlık ürünü: React Native hasta uygulaması, Next.js klinik paneli ve eczaneler için SUT/SGK kural motoru (Pharmaguard AI). Reçete uygunluğu, Gemini ile tıbbi PDF işleme, QR onboarding, laboratuvar raporu OCR, ilaç uyumu ve Supabase Auth, Realtime, Storage.",
-                "tags": [
-                    "React Native",
-                    "Expo",
-                    "Next.js",
-                    "Supabase",
-                    "TypeScript",
-                    "Digital Health",
-                    "SUT/SGK"
-                ],
-                "github": "",
-                "demo": "",
-                "image": ""
-            },
-            {
-                "id": 8,
-                "title": "Algoviz",
-                "description": "23 interaktif modüllü CS ve AI simülasyon laboratuvarı: dağıtık sistemler (Raft, LRU Cache), modern ML (Self-Attention, CNN, CART) ve Three.js ile 3D Loss Landscapes.",
-                "tags": [
-                    "Next.js 16",
-                    "React 19",
-                    "Three.js",
-                    "WebGL",
-                    "TypeScript",
-                    "Zustand",
-                    "Machine Learning"
-                ],
-                "github": "https://github.com/berkayozgun/algoviz",
-                "demo": "https://algoviz-rho.vercel.app",
-                "image": "/images/algoviz.png"
-            },
-            {
-                "id": 11,
-                "title": "Crisis XAI",
-                "description": "Kriz anı mesaj sınıflandırma ve açıklanabilir yapay zeka (XAI / SHAP / LIME). BERTurk/PyTorch modeli, hibrit NER/Regex konum çıkarımı; 11.268 örnek, 5 katlı CV, %92,26 ± %0,81 F1. FastAPI ve Next.js.",
-                "tags": [
-                    "Python",
-                    "PyTorch",
-                    "XAI",
-                    "BERTurk",
-                    "FastAPI",
-                    "Next.js"
-                ],
-                "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
-                "demo": "",
-                "image": ""
-            },
-            {
-                "id": 9,
-                "title": "DropSpot",
-                "description": "Sınırlı stoklu ürün lansmanları ve bekleme listesi (waitlist) platformu; Next.js 16, Express, Prisma, PostgreSQL, dinamik öncelik puanlama motoru ve Docker Compose ile geliştirildi.",
-                "tags": [
-                    "Next.js 16",
-                    "Express.js",
-                    "Prisma",
-                    "PostgreSQL",
-                    "priority-scoring",
-                    "Docker Compose"
-                ],
-                "github": "https://github.com/berkayozgun/dropspot",
-                "demo": "",
-                "image": "/images/dropspot.png"
-            }
-        ],
-        "experience": [
-            {
-                "company": "ReHeal",
-                "role": "Kurucu Mühendis",
-                "period": "Haziran 2026 - Günümüz",
-                "description": "React Native hasta uygulaması, Next.js klinik paneli ve PharmaGuard AI üzerinde çalıştığım dijital sağlık girişimi. Expo, Supabase, PostgreSQL RLS, Gemini Vision ve TypeScript kural motorları kullanıyorum."
-            },
-            {
-                "company": "BGO Team",
-                "role": "Gönüllü Full-Stack Mühendis / Mentor",
-                "period": "Ekim 2025 - Günümüz",
-                "description": "Üniversite projelerine gönüllü katkı ve mentorluk. cPanel/MySQL sistemlerinin Supabase PostgreSQL ve RLS'e taşınmasına, Git ve Agile süreçlerine destek."
-            },
-            {
-                "company": "Elmali Tech",
-                "role": "JavaScript Geliştirici",
-                "period": "Mart 2025 - Mayıs 2025",
-                "description": "Digiroom dahil production React ve Next.js uygulamalarında çalıştım. SSR, dynamic routing, Supabase RLS, Firebase Cloud Functions ve e-ticaret/booking senkronizasyonuna katkı sundum."
-            },
-            {
-                "company": "Sixfab",
-                "role": "Yazılım Mühendisi Stajyeri",
-                "period": "Kas 2023 - Oca 2024",
-                "description": "Vue.js ve Flask kullanarak mikro-blog platformu tasarlandı. CI/CD süreçleri yönetildi."
-            },
-            {
-                "company": "Jotform",
-                "role": "Frontend Geliştirici Stajyeri",
-                "period": "Tem 2023 - Ağu 2023",
-                "description": "React.js ve Redux kullanılarak dahili bildirim merkezi geliştirildi. 3 kişilik ekip yönetildi."
-            },
-            {
-                "company": "Parentwiser",
-                "role": "Frontend Geliştirici Stajyeri",
-                "period": "Oca 2022 - Eki 2022",
-                "description": "Şirketin web sitesini WordPress'ten React.js'e taşıdım. Yerel çocuk etkinlikleri için bir React Native mobil uygulamasına katkıda bulundum."
-            }
-        ],
-        "education": [
-            {
-                "school": "Trakya Üniversitesi",
-                "degree": "Bilgisayar Mühendisliği Yüksek Lisans (M.Sc.)",
-                "date": "Şubat 2026 - Günümüz",
-                "description": "İlgili dersler: Makine Öğrenmesi, Metin Madenciliği, Bilişsel Teknolojiler, Bilimsel Etik. Projeler: hibrit NER/Regex konum çıkarımlı BERTurk kriz tweeti sınıflandırıcısı (11.268 örnek; %95,75 doğruluk), CrowdStrike/Microsoft kriz analizi ve Isolation Forest, SHAP, FastAPI ve Next.js kullanan ADS-B uçuş anomalisi tespit sistemi."
-            },
-            {
-                "school": "Trakya Üniversitesi",
-                "degree": "Bilgisayar Mühendisliği Lisans",
-                "date": "Mezuniyet: Ocak 2024",
-                "description": "Bitirme Projesi: Kariyer.net veri kazıma, TF-IDF, KNN ve Django ile 6 kişilik ekipte geliştirilen YZ Tabanlı Kariyer Öneri Sistemi."
-            }
-        ],
-        "certifications": [
-            {
-                "name": "Cisco Certified Cyberops Associate",
-                "issuer": "Cisco",
-                "date": "Mayıs 2025"
-            },
-            {
-                "name": "Alibaba Cloud Certified Cloud Computing Engineer",
-                "issuer": "Alibaba Cloud",
-                "date": "Ekim 2024"
-            },
-            {
-                "name": "Developing Front End Apps with React",
-                "issuer": "IBM & edX",
-                "date": "2024"
-            }
-        ],
-        "blog": [
-            {
-                "title": "Next.js ile İlk Uygulamanızı 10 Dakikada Kurun: App Router Dönemine Giriş",
-                "description": "Next.js 13+ App Router özellikleri ile projenize hızlı bir başlangıç yapın.",
-                "date": "2024",
-                "readTime": "5 dk okuma",
-                "link": "https://medium.com/@berkayozgun001/next-js-ile-i%CC%87lk-uygulaman%C4%B1z%C4%B1-10-dakikada-kurun-app-router-d%C3%B6nemine-gi%CC%87ri%CC%87%C5%9F-61de5a561447",
-                "image": "/images/blog-nextjs.png"
-            }
+    "about": {
+      "title": "About Me",
+      "description": "Full-Stack & Mobile Software Engineer (B.Sc. Trakya, 2024; M.Sc. ongoing) specializing in high-performance web, cross-platform mobile, and edge/IoT systems. Core stack spans TypeScript, Next.js (16), React Native, Kotlin, Node.js, and PostgreSQL/Supabase. Proven track record architecting resilient systems end-to-end—from low-level OS hardware concurrency and native Android bridges to zero-trust financial state machines and privacy-preserving AI compliance pipelines."
+    },
+    "skills": [
+      {
+        "category": "Languages",
+        "technologies": [
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Kotlin",
+          "SQL"
         ]
-    }
+      },
+      {
+        "category": "Frontend & Mobile",
+        "technologies": [
+          "React",
+          "Next.js (App Router, RSC, PPR)",
+          "React Native / Expo (Native Modules, MMKV, Notifee)",
+          "Capacitor",
+          "Vue.js",
+          "Tailwind CSS / NativeWind",
+          "Framer Motion",
+          "Three.js / R3F",
+          "Redux Toolkit",
+          "Zustand"
+        ]
+      },
+      {
+        "category": "Backend & Storage",
+        "technologies": [
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "Supabase (RLS, Private Storage)",
+          "Prisma ORM",
+          "MongoDB",
+          "Firebase",
+          "REST",
+          "JWT",
+          "MQTT"
+        ]
+      },
+      {
+        "category": "ML & AI",
+        "technologies": [
+          "NVIDIA NIM Vision",
+          "Google Gemini API",
+          "BERTurk",
+          "XAI / SHAP",
+          "FastAPI",
+          "scikit-learn"
+        ]
+      },
+      {
+        "category": "Testing & DevOps",
+        "technologies": [
+          "Playwright (E2E)",
+          "Vitest",
+          "Node.js Test Runner",
+          "Docker",
+          "Vercel",
+          "Git",
+          "GitHub Actions",
+          "CI/CD"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "ultimarket",
+        "title": "Ultimarket",
+        "subtitle": "Edge POS, Telemetry & Real-Time Analytics Engine",
+        "category": "IoT / Edge & Full-Stack",
+        "year": "2026",
+        "isFeatured": true,
+        "featured": true,
+        "summary": "Multithreaded Python USB HID barcode daemon, 90s idle-timeout basket state machine (<50ms latency), 2,000+ item PostgreSQL/Prisma catalog, NVIDIA NIM Vision invoice OCR & keyboard-first credit (veresiye) ledger.",
+        "description": "End-to-end Edge POS, Telemetry & Real-Time Analytics Engine designed to bridge closed physical retail checkouts to a cloud operations console. Built around a multithreaded Python USB HID barcode daemon with zero dropped inputs, a 90s idle-timeout basket state machine (<50ms sync latency), a 2,000+ item PostgreSQL/Prisma catalog, NVIDIA NIM Vision invoice OCR, and a keyboard-first credit (veresiye) ledger.",
+        "metrics": [
+          { "label": "Catalog", "value": "2,000+ Items" },
+          { "label": "Latency", "value": "<50ms Latency" },
+          { "label": "Data Loss", "value": "0% Data Loss" }
+        ],
+        "techStack": [
+          "Next.js 16 (App Router)",
+          "TypeScript",
+          "Python",
+          "PostgreSQL",
+          "Prisma",
+          "Supabase",
+          "NVIDIA NIM Vision",
+          "Zustand"
+        ],
+        "tags": [
+          "Next.js 16 (App Router)",
+          "TypeScript",
+          "Python",
+          "PostgreSQL",
+          "Prisma",
+          "Supabase",
+          "NVIDIA NIM Vision",
+          "Zustand"
+        ],
+        "highlights": [
+          "Multithreaded Python USB HID barcode daemon capturing OS-level scanner inputs with zero dropped scans.",
+          "90s idle-timeout basket state machine and ESC hardware shortcut delivering <50ms sub-second telemetry sync.",
+          "2,000+ item PostgreSQL/Prisma catalog paired with NVIDIA NIM Vision invoice OCR automation.",
+          "Keyboard-first credit (veresiye) ledger and dark-mode real-time retail analytics console."
+        ],
+        "privacyNotice": "Live public links are restricted due to commercial data privacy policies as this system operates in active retail production.",
+        "links": {
+          "github": "https://github.com/Berkayozgun/ultimarket",
+          "live": null,
+          "status": "In Production"
+        },
+        "github": "https://github.com/Berkayozgun/ultimarket",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "numbrias",
+        "title": "Numbrias",
+        "subtitle": "Multi-Sided 3D Printing & Digital Model Marketplace",
+        "category": "Full-Stack & Marketplace",
+        "year": "2026",
+        "isFeatured": true,
+        "featured": true,
+        "summary": "Strict order lifecycle state machine (pending -> delivered) with idempotent payment webhooks, STL/3MF private storage IP protection, zero-trust app_metadata RBAC, and 327 automated tests across a 118-route build.",
+        "description": "Multi-sided 3D printing and digital model marketplace architected with Next.js 16 (App Router, RSC, PPR), React 19, TypeScript, Tailwind CSS, Supabase (PostgreSQL, RLS, Private Storage), Zod, Three.js, and Playwright. Features a strict order lifecycle state machine (pending -> delivered) with idempotent payment webhooks and atomic refund compensation chains, STL/3MF IP protection via private storage signed URLs and zero-trust app_metadata RBAC with PII masking, verified by 313 unit/integration tests (node:test) and 14 Playwright E2E suites securing a 118-route build.",
+        "metrics": [
+          { "label": "Test Coverage", "value": "327 Automated Tests" },
+          { "label": "App Surface", "value": "118 Routes" },
+          { "label": "Security", "value": "Zero-Trust IP" }
+        ],
+        "techStack": [
+          "Next.js 16 (App Router, RSC, PPR)",
+          "React 19",
+          "TypeScript",
+          "Supabase (RLS, Private Storage)",
+          "Three.js",
+          "Zod",
+          "Playwright",
+          "Tailwind CSS"
+        ],
+        "tags": [
+          "Next.js 16 (App Router, RSC, PPR)",
+          "React 19",
+          "TypeScript",
+          "Supabase (RLS, Private Storage)",
+          "Three.js",
+          "Zod",
+          "Playwright",
+          "Tailwind CSS"
+        ],
+        "highlights": [
+          "Strict order lifecycle state machine (pending -> paid -> slicing -> printing -> shipped -> delivered) with idempotent payment webhooks and atomic refund compensation chains.",
+          "STL/3MF intellectual property protection using Supabase Private Storage signed URLs, zero-trust app_metadata RBAC, and PII masking.",
+          "313 unit/integration tests (node:test) and 14 Playwright E2E suites securing a 118-route production build."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "Co-Founder & Lead Full-Stack Engineer"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "reheal",
+        "title": "ReHeal",
+        "subtitle": "Digital Health Ecosystem & SUT/SGK Compliance Engine",
+        "category": "Digital Health & AI",
+        "year": "2026",
+        "isFeatured": true,
+        "featured": true,
+        "summary": "Multi-tenant digital health ecosystem uniting an Expo/React Native patient app, Next.js clinic dashboard, and PharmaGuard AI SUT/SGK pharmacy rule engine with pre-inference PII redaction.",
+        "description": "End-to-end multi-tenant digital health ecosystem comprising a React Native / Expo patient application, a Next.js clinic and admin dashboard, and PharmaGuard AI—an automated Turkish SUT/SGK pharmacy regulation compliance engine using Google Gemini OCR with automated pre-inference PII redaction (TCKN and patient identifiers sanitized prior to model calls), QR patient onboarding, lab-report visualizers, medication adherence, and Supabase RLS & RBAC.",
+        "metrics": [
+          { "label": "Architecture", "value": "3-Tier Ecosystem" },
+          { "label": "Privacy", "value": "PII Redaction" },
+          { "label": "Compliance", "value": "SUT / SGK AI" }
+        ],
+        "techStack": [
+          "React Native",
+          "Expo",
+          "Next.js",
+          "TypeScript",
+          "Supabase (RLS & RBAC)",
+          "Google Gemini API"
+        ],
+        "tags": [
+          "React Native",
+          "Expo",
+          "Next.js",
+          "TypeScript",
+          "Supabase (RLS & RBAC)",
+          "Google Gemini API"
+        ],
+        "highlights": [
+          "Multi-tenant patient app (Expo / React Native) and Next.js clinic/admin portal backed by Supabase RLS & RBAC.",
+          "PharmaGuard AI engine checking Turkish SUT/SGK prescription rules via Gemini OCR with automated pre-inference PII sanitization.",
+          "QR-code patient onboarding, real-time lab result visualizers, medication reminders, and duty-pharmacy tracking."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "In Production"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "wakelarm",
+        "title": "Wakelarm",
+        "subtitle": "Native-Hybrid Android Alarm & Cognitive Wake-Up App",
+        "category": "Native Mobile (Kotlin + RN)",
+        "year": "2026",
+        "isFeatured": true,
+        "featured": true,
+        "summary": "Custom native Kotlin modules (AlarmRingingActivity, AlarmAudioModule) with AlarmManager & Full-Screen Intent bypassing JS cold-start delay, USAGE_ALARM audio isolation, and on-device vision/motion dismissal tasks.",
+        "description": "Native-hybrid Android alarm and cognitive wake-up application built with React Native (0.88), Expo (SDK 58), TypeScript, Kotlin, NativeWind, Zustand, MMKV, Notifee, and AdMob. Eliminates JS bridge cold-start latency via custom native Kotlin modules (AlarmRingingActivity, AlarmAudioModule) using AlarmManager and Full-Screen Intent (FLAG_SHOW_WHEN_LOCKED), enforces system-level USAGE_ALARM audio isolation, and requires on-device barcode/QR scanning, accelerometer push-up/shake detection, or math tasks to dismiss.",
+        "metrics": [
+          { "label": "Wake Latency", "value": "0ms JS Cold-Start" },
+          { "label": "Bridge", "value": "Native Kotlin" },
+          { "label": "Dismissal", "value": "On-Device Vision" }
+        ],
+        "techStack": [
+          "React Native (0.88)",
+          "Expo (SDK 58)",
+          "Kotlin",
+          "TypeScript",
+          "NativeWind",
+          "Zustand",
+          "MMKV",
+          "Notifee",
+          "AdMob"
+        ],
+        "tags": [
+          "React Native (0.88)",
+          "Expo (SDK 58)",
+          "Kotlin",
+          "TypeScript",
+          "NativeWind",
+          "Zustand",
+          "MMKV",
+          "Notifee",
+          "AdMob"
+        ],
+        "highlights": [
+          "Custom native Kotlin modules (AlarmRingingActivity, AlarmAudioModule) backed by AlarmManager & Full-Screen Intent (FLAG_SHOW_WHEN_LOCKED) for 0ms JS cold-start wait.",
+          "System-level USAGE_ALARM audio stream isolation ensuring reliable wake playback over media/silent states.",
+          "Cognitive wake-up missions: on-device barcode/QR verification, accelerometer push-up/shake detection, and math challenges."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "Production-Ready"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "myrrh",
+        "title": "Myrrh",
+        "subtitle": "AI-Driven Personalized Fragrance & Cold-Air Diffusion IoT Platform",
+        "category": "IoT & Embedded AI",
+        "year": "2026",
+        "isFeatured": false,
+        "featured": false,
+        "summary": "Bi-directional ESP32 MQTT telemetry & OTA firmware backend, automated IFRA safety compliance formulation engine, and touch-first kiosk UI. TÜBİTAK BiGG Top 2 finalist out of 25 ventures.",
+        "description": "AI-driven personalized fragrance and cold-air diffusion IoT platform built with Node.js, TypeScript, PostgreSQL, ESP32, MQTT, OTA, and an AI Rule Engine. Combines a bi-directional ESP32 MQTT telemetry and Over-The-Air (OTA) firmware update backend, an automated IFRA safety compliance formulation engine, and a touch-first kiosk UI. Selected as a Top 2 finalist out of 25 ventures under Boğaziçi University implementing organization for the TÜBİTAK BiGG R&D grant panel.",
+        "techStack": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "ESP32",
+          "MQTT",
+          "OTA",
+          "AI Rule Engine"
+        ],
+        "tags": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "ESP32",
+          "MQTT",
+          "OTA",
+          "AI Rule Engine"
+        ],
+        "highlights": [
+          "Bi-directional ESP32 MQTT telemetry and Over-The-Air (OTA) firmware update backend.",
+          "Automated IFRA safety compliance formulation engine and touch-first kiosk UI.",
+          "Top 2 finalist out of 25 ventures under Boğaziçi University implementing organization for TÜBİTAK BiGG R&D grant panel."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "TÜBİTAK BiGG Finalist"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "amerikano",
+        "title": "Amerikano",
+        "subtitle": "Cross-Platform Card Game & Deterministic Rule Engine",
+        "category": "Game Engine & Mobile",
+        "year": "2026",
+        "isFeatured": false,
+        "featured": false,
+        "summary": "UI-agnostic pure TS rule engine (108-card dual-deck, 11-round progressive contracts, INTERRUPT_WINDOW mechanics), Vitest edge-case suites, 60 FPS gesture card fan UI, AI bots, and offline-first Capacitor mobile build.",
+        "description": "Cross-platform card game and deterministic rule engine powered by TypeScript, React, Vite, Tailwind CSS, Framer Motion, Zustand, Vitest, and Capacitor. Built around a UI-agnostic pure TypeScript rule engine handling a 108-card dual-deck, 11-round progressive contracts, and INTERRUPT_WINDOW mechanics, validated by Vitest edge-case suites and paired with a 60 FPS gesture card fan UI, rule-based AI bots, and an offline-first Capacitor mobile build with native haptics.",
+        "techStack": [
+          "TypeScript",
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Zustand",
+          "Vitest",
+          "Capacitor"
+        ],
+        "tags": [
+          "TypeScript",
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Zustand",
+          "Vitest",
+          "Capacitor"
+        ],
+        "highlights": [
+          "UI-agnostic pure TypeScript rule engine supporting a 108-card dual-deck, 11-round progressive contracts, and INTERRUPT_WINDOW mechanics.",
+          "Comprehensive Vitest edge-case suites verifying deterministic state transitions and scoring rules.",
+          "60 FPS gesture card fan UI, rule-based AI bots, and offline-first Capacitor mobile build with native haptics."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "Shipped"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "algoviz",
+        "title": "Algoviz",
+        "subtitle": "Interactive CS & ML Algorithm Visualizer",
+        "category": "WebGL & Simulation",
+        "year": "2026",
+        "isFeatured": false,
+        "featured": false,
+        "summary": "Interactive CS & ML algorithm visualizer with 23 modules including 3D Three.js/R3F gradient descent, self-attention QKV, CNN, and Raft consensus running at 60 FPS.",
+        "description": "Interactive CS and ML simulation laboratory featuring 23 interactive modules covering distributed systems (Raft consensus, LRU Cache) and modern machine learning (3D Three.js/R3F gradient descent loss landscapes, self-attention QKV, CNN, Decision Trees) rendered smoothly at 60 FPS.",
+        "techStack": [
+          "Next.js 16",
+          "React 19",
+          "Three.js / R3F",
+          "WebGL",
+          "TypeScript",
+          "Zustand"
+        ],
+        "tags": [
+          "Next.js 16",
+          "React 19",
+          "Three.js / R3F",
+          "WebGL",
+          "TypeScript",
+          "Zustand"
+        ],
+        "highlights": [
+          "23 interactive CS and ML modules spanning distributed consensus (Raft) and transformer Self-Attention QKV.",
+          "Real-time 60 FPS Three.js / React Three Fiber 3D gradient descent and loss landscape visualizations."
+        ],
+        "links": {
+          "github": "https://github.com/Berkayozgun/algoviz",
+          "live": "https://algoviz-rho.vercel.app",
+          "status": "Live: algoviz-rho.vercel.app"
+        },
+        "github": "https://github.com/Berkayozgun/algoviz",
+        "demo": "https://algoviz-rho.vercel.app",
+        "image": ""
+      },
+      {
+        "id": "crisis-xai",
+        "title": "Crisis XAI",
+        "subtitle": "Explainable Crisis Message Classification",
+        "category": "NLP & Explainable AI",
+        "year": "2026",
+        "isFeatured": false,
+        "featured": false,
+        "summary": "Crisis-time message classification with explainable AI (SHAP, LIME), BERTurk/PyTorch, hybrid NER/Regex location extraction (92.26% F1 across 11,268 samples), FastAPI & Next.js.",
+        "description": "Crisis-time message classification system with explainable AI (SHAP, LIME). Built on a BERTurk/PyTorch model with hybrid NER/Regex location extraction, achieving 92.26% F1 across 11,268 samples under 5-fold cross-validation, served via a FastAPI backend and Next.js verification interface.",
+        "techStack": [
+          "Python",
+          "PyTorch",
+          "BERTurk",
+          "XAI (SHAP / LIME)",
+          "FastAPI",
+          "Next.js"
+        ],
+        "tags": [
+          "Python",
+          "PyTorch",
+          "BERTurk",
+          "XAI (SHAP / LIME)",
+          "FastAPI",
+          "Next.js"
+        ],
+        "highlights": [
+          "BERTurk/PyTorch classifier with hybrid NER/Regex location extraction achieving 92.26% F1 across 11,268 samples.",
+          "Token-level SHAP and LIME explainability surfaced through a FastAPI + Next.js verification dashboard."
+        ],
+        "links": {
+          "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
+          "live": null,
+          "status": "92.26% F1 · 11,268 Samples"
+        },
+        "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
+        "demo": "",
+        "image": ""
+      }
+    ],
+    "experience": [
+      {
+        "company": "ReHeal Healthcare",
+        "role": "Founding Engineer",
+        "period": "Jun 2026 - Present · Remote",
+        "description": "Architected a multi-tenant digital health ecosystem (Expo patient app, Next.js clinic/admin dashboard, serverless backend) with Supabase RLS & RBAC. Built the PharmaGuard AI Turkish SUT/SGK pharmacy regulation engine using Gemini OCR with automated pre-inference PII sanitization (TCKN and patient identifiers redacted), alongside QR onboarding, real-time lab result visualizers, medication reminders, and duty-pharmacy tracking."
+      },
+      {
+        "company": "BGO Team",
+        "role": "Full-Stack Engineer",
+        "period": "Oct 2025 - Present · Remote",
+        "description": "Led zero-downtime migration from legacy cPanel/MySQL to Supabase PostgreSQL with normalized schemas and granular RLS; mentored developers on scalable architecture and Git Agile workflows."
+      },
+      {
+        "company": "Elmali Tech",
+        "role": "JavaScript Developer",
+        "period": "Mar 2025 - May 2025 · Remote",
+        "description": "Delivered production React & Next.js apps (including Digiroom) with SSR/dynamic routing for Core Web Vitals; built event-driven real-time booking and e-commerce features using Supabase RLS and Firebase Cloud Functions."
+      },
+      {
+        "company": "Sixfab",
+        "role": "Software Engineer Intern",
+        "period": "Nov 2023 - Jan 2024 · Remote",
+        "description": "Engineered Campfire microblogging platform (auth, nested comments, voting, RBAC) using Flask, Vue.js, and MongoDB; configured GitHub Actions CI/CD and code review workflows."
+      },
+      {
+        "company": "Jotform",
+        "role": "Frontend Developer Intern",
+        "period": "Jul 2023 - Aug 2023 · Ankara, Turkey",
+        "description": "Developed internal real-time notification hub using React.js & Redux Toolkit; standardized shared UI components in a frontend monorepo; led a 3-person intern squad to a live demo."
+      },
+      {
+        "company": "Parentwiser",
+        "role": "Frontend Developer Intern",
+        "period": "Jan 2022 - Oct 2022 · Remote",
+        "description": "Re-architected legacy WordPress site into a modular React.js SPA and contributed location-based discovery modules to a React Native family events app."
+      }
+    ],
+    "education": [
+      {
+        "school": "Trakya University",
+        "degree": "M.Sc. in Computer Engineering",
+        "date": "February 2026 - Present",
+        "description": "Relevant coursework: Machine Learning, Text Mining, Cognitive Technologies, Scientific Ethics. Projects include a BERTurk crisis-tweet classifier with hybrid NER/Regex location extraction (11,268 samples; 95.75% accuracy), a CrowdStrike/Microsoft crisis analysis, and an ADS-B flight anomaly detector using Isolation Forest, SHAP, FastAPI and Next.js."
+      },
+      {
+        "school": "Trakya University",
+        "degree": "BS in Computer Engineering",
+        "date": "Graduation: Jan 2024",
+        "description": "Graduation Project: AI-Powered Career Recommendation System, built with Kariyer.net scraping, TF-IDF, KNN and Django in a 6-person team."
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Cisco Certified Cyberops Associate",
+        "issuer": "Cisco",
+        "date": "May 2025"
+      },
+      {
+        "name": "Alibaba Cloud Certified Cloud Computing Engineer",
+        "issuer": "Alibaba Cloud",
+        "date": "October 2024"
+      },
+      {
+        "name": "Developing Front End Apps with React",
+        "issuer": "IBM & edX",
+        "date": "2024"
+      }
+    ],
+    "blog": [
+      {
+        "title": "Build Your First Next.js App in 10 Minutes: Intro to App Router",
+        "description": "A comprehensive guide to getting started with Next.js 13+ App Router features.",
+        "date": "2024",
+        "readTime": "5 min read",
+        "link": "https://medium.com/@berkayozgun001/next-js-ile-i%CC%87lk-uygulaman%C4%B1z%C4%B1-10-dakikada-kurun-app-router-d%C3%B6nemine-gi%CC%87ri%CC%87%C5%9F-61de5a561447",
+        "image": "/images/blog-nextjs.png"
+      }
+    ]
+  },
+  "tr": {
+    "hero": {
+      "title": "Full-Stack & Mobil Yazılım Mühendisi",
+      "subtitle": "TypeScript · Next.js 16 · React Native · Kotlin · Supabase",
+      "description": "",
+      "cta": "Projelerimi İncele"
+    },
+    "about": {
+      "title": "Hakkımda",
+      "description": "Yüksek performanslı web, çapraz platform mobil ve edge/IoT sistemleri üzerine uzmanlaşan Full-Stack & Mobil Yazılım Mühendisiyim (Trakya Üniv. Lisans, 2024; Yüksek Lisans devam ediyor). Ana teknoloji yığınım TypeScript, Next.js (16), React Native, Kotlin, Node.js ve PostgreSQL/Supabase'ten oluşuyor. İşletim sistemi düzeyinde donanım eşzamanlılığı ve native Android köprülerinden zero-trust finansal durum makinelerine ve gizlilik odaklı yapay zeka uyumluluk hatlarına kadar uçtan uca dayanıklı sistemler tasarlıyorum."
+    },
+    "skills": [
+      {
+        "category": "Diller",
+        "technologies": [
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Kotlin",
+          "SQL"
+        ]
+      },
+      {
+        "category": "Frontend & Mobil",
+        "technologies": [
+          "React",
+          "Next.js (App Router, RSC, PPR)",
+          "React Native / Expo (Native Modules, MMKV, Notifee)",
+          "Capacitor",
+          "Vue.js",
+          "Tailwind CSS / NativeWind",
+          "Framer Motion",
+          "Three.js / R3F",
+          "Redux Toolkit",
+          "Zustand"
+        ]
+      },
+      {
+        "category": "Backend & Veri Depolama",
+        "technologies": [
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "Supabase (RLS, Private Storage)",
+          "Prisma ORM",
+          "MongoDB",
+          "Firebase",
+          "REST",
+          "JWT",
+          "MQTT"
+        ]
+      },
+      {
+        "category": "Yapay Zeka & ML",
+        "technologies": [
+          "NVIDIA NIM Vision",
+          "Google Gemini API",
+          "BERTurk",
+          "XAI / SHAP",
+          "FastAPI",
+          "scikit-learn"
+        ]
+      },
+      {
+        "category": "Test & DevOps",
+        "technologies": [
+          "Playwright (E2E)",
+          "Vitest",
+          "Node.js Test Runner",
+          "Docker",
+          "Vercel",
+          "Git",
+          "GitHub Actions",
+          "CI/CD"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "ultimarket",
+        "title": "Ultimarket",
+        "subtitle": "Edge POS, Telemetri & Gerçek Zamanlı Analitik Motoru",
+        "category": "IoT / Edge & Full-Stack",
+        "year": "2026",
+        "isFeatured": true,
+        "featured": true,
+        "summary": "Çok iş parçacıklı Python USB HID barkod servisi, 90 sn zaman aşımlı sepet durum makinesi (<50ms gecikme), 2.000+ ürünlü PostgreSQL/Prisma kataloğu, NVIDIA NIM Vision fatura OCR ve klavye odaklı veresiye defteri.",
+        "description": "Dışa kapalı fiziksel perakende kasalarını bulut tabanlı operasyon konsoluna bağlayan uçtan uca Edge POS, Telemetri ve Gerçek Zamanlı Analitik Motoru. Sıfır girdi kaybı sunan çok iş parçacıklı Python USB HID barkod servisi, 90 saniyelik idle-timeout sepet durum makinesi (<50ms senkronizasyon gecikmesi), 2.000+ ürünlü PostgreSQL/Prisma kataloğu, NVIDIA NIM Vision fatura OCR ve klavye odaklı veresiye defterini tek platformda birleştirir.",
+        "metrics": [
+          { "label": "Katalog", "value": "2.000+ Ürün" },
+          { "label": "Gecikme", "value": "<50ms Gecikme" },
+          { "label": "Veri Kaybı", "value": "%0 Veri Kaybı" }
+        ],
+        "techStack": [
+          "Next.js 16 (App Router)",
+          "TypeScript",
+          "Python",
+          "PostgreSQL",
+          "Prisma",
+          "Supabase",
+          "NVIDIA NIM Vision",
+          "Zustand"
+        ],
+        "tags": [
+          "Next.js 16 (App Router)",
+          "TypeScript",
+          "Python",
+          "PostgreSQL",
+          "Prisma",
+          "Supabase",
+          "NVIDIA NIM Vision",
+          "Zustand"
+        ],
+        "highlights": [
+          "İşletim sistemi seviyesinde barkod okuyucu sinyallerini sıfır kayıpla yakalayan çok iş parçacıklı Python USB HID servisi.",
+          "90 sn idle-timeout sepet durum makinesi ve ESC kısayolu ile <50ms canlı telemetri senkronizasyonu.",
+          "NVIDIA NIM Vision tabanlı fatura OCR otomasyonuyla beslenen 2.000+ ürünlü PostgreSQL/Prisma kataloğu.",
+          "Klavye odaklı veresiye defteri ve gerçek zamanlı koyu tema perakende analitik paneli."
+        ],
+        "privacyNotice": "Bu sistem aktif bir perakende işletmesinde çalıştığından ticari veri gizliliği nedeniyle halka açık canlı bağlantı kapatılmıştır.",
+        "links": {
+          "github": "https://github.com/Berkayozgun/ultimarket",
+          "live": null,
+          "status": "Canlı Kullanımda"
+        },
+        "github": "https://github.com/Berkayozgun/ultimarket",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "numbrias",
+        "title": "Numbrias",
+        "subtitle": "Çok Taraflı 3D Baskı ve Dijital Model Pazaryeri",
+        "category": "Full-Stack & Pazaryeri",
+        "year": "2026",
+        "isFeatured": true,
+        "featured": true,
+        "summary": "İdempotent ödeme webhook'ları ile katı sipariş yaşam döngüsü durum makinesi (pending -> delivered), Private Storage ile STL/3MF fikri mülkiyet koruması, zero-trust app_metadata RBAC ve 118 rotalı derlemede 327 otomatik test.",
+        "description": "Next.js 16 (App Router, RSC, PPR), React 19, TypeScript, Tailwind CSS, Supabase (PostgreSQL, RLS, Private Storage), Zod, Three.js ve Playwright ile geliştirilen çok taraflı 3D baskı ve dijital model pazaryeri. İdempotent ödeme webhook'ları ve atomik iade telafi zincirleriyle çalışan katı sipariş durum makinesi (pending -> delivered), imzalı Private Storage URL'leri ve PII maskelemeli zero-trust app_metadata RBAC ile STL/3MF fikri mülkiyet koruması, ayrıca 118 rotalı production derlemesini güvence altına alan 313 birim/entegrasyon testi (node:test) ve 14 Playwright E2E paketi içerir.",
+        "metrics": [
+          { "label": "Test Kapsamı", "value": "327 Otomatik Test" },
+          { "label": "Uygulama Yüzeyi", "value": "118 Rota" },
+          { "label": "Güvenlik", "value": "Zero-Trust IP" }
+        ],
+        "techStack": [
+          "Next.js 16 (App Router, RSC, PPR)",
+          "React 19",
+          "TypeScript",
+          "Supabase (RLS, Private Storage)",
+          "Three.js",
+          "Zod",
+          "Playwright",
+          "Tailwind CSS"
+        ],
+        "tags": [
+          "Next.js 16 (App Router, RSC, PPR)",
+          "React 19",
+          "TypeScript",
+          "Supabase (RLS, Private Storage)",
+          "Three.js",
+          "Zod",
+          "Playwright",
+          "Tailwind CSS"
+        ],
+        "highlights": [
+          "İdempotent ödeme webhook'ları ve atomik iade telafi zincirleriyle yönetilen katı sipariş durum makinesi (pending -> paid -> slicing -> printing -> shipped -> delivered).",
+          "Supabase Private Storage imzalı URL'leri, zero-trust app_metadata RBAC ve PII maskeleme ile STL/3MF fikri mülkiyet koruması.",
+          "118 rotalı production derlemesini doğrulayan 313 birim/entegrasyon testi (node:test) ve 14 Playwright E2E test paketi."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "Kurucu Ortak & Lead Full-Stack Mühendis"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "reheal",
+        "title": "ReHeal",
+        "subtitle": "Dijital Sağlık Ekosistemi & SUT/SGK Uyumluluk Motoru",
+        "category": "Dijital Sağlık & Yapay Zeka",
+        "year": "2026",
+        "isFeatured": true,
+        "featured": true,
+        "summary": "Expo/React Native hasta uygulaması, Next.js klinik paneli ve çıkarım öncesi PII anonimleştirmeli PharmaGuard AI SUT/SGK eczane kural motorunu birleştiren çok kiracılı dijital sağlık ekosistemi.",
+        "description": "React Native / Expo hasta uygulaması, Next.js klinik ve yönetici paneli ile PharmaGuard AI'ı tek çatıda toplayan uçtan uca çok kiracılı dijital sağlık ekosistemi. PharmaGuard AI, model çıkarımı öncesinde otomatik PII temizleme (TCKN ve hasta kimlik bilgilerinin maskelenmesi) uygulayarak Google Gemini OCR üzerinden Türk SUT/SGK eczane mevzuatı uygunluk denetimi yapar; QR hasta kaydı, laboratuvar sonuç görselleştiricileri, ilaç hatırlatıcıları ve Supabase RLS & RBAC altyapısı sunar.",
+        "metrics": [
+          { "label": "Mimari", "value": "3 Katmanlı Ekosistem" },
+          { "label": "Gizlilik", "value": "PII Anonimleştirme" },
+          { "label": "Mevzuat", "value": "SUT / SGK AI" }
+        ],
+        "techStack": [
+          "React Native",
+          "Expo",
+          "Next.js",
+          "TypeScript",
+          "Supabase (RLS & RBAC)",
+          "Google Gemini API"
+        ],
+        "tags": [
+          "React Native",
+          "Expo",
+          "Next.js",
+          "TypeScript",
+          "Supabase (RLS & RBAC)",
+          "Google Gemini API"
+        ],
+        "highlights": [
+          "Supabase RLS & RBAC ile korunan çok kiracılı Expo / React Native hasta uygulaması ve Next.js klinik/yönetici portalı.",
+          "Çıkarım öncesi otomatik PII maskeleme ve Gemini OCR ile Türk SUT/SGK reçete denetimi yapan PharmaGuard AI motoru.",
+          "QR kod ile hasta kaydı, gerçek zamanlı tahlil grafikleri, ilaç uyum takibi ve nöbetçi eczane modülü."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "Canlı Kullanımda"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "wakelarm",
+        "title": "Wakelarm",
+        "subtitle": "Native-Hibrit Android Alarm & Bilişsel Uyanma Uygulaması",
+        "category": "Native Mobil (Kotlin + RN)",
+        "year": "2026",
+        "isFeatured": true,
+        "featured": true,
+        "summary": "JS cold-start gecikmesini sıfırlayan AlarmManager & Full-Screen Intent tabanlı özel Kotlin modülleri (AlarmRingingActivity, AlarmAudioModule), USAGE_ALARM ses izolasyonu ve cihaz içi görev doğrulamaları.",
+        "description": "React Native (0.88), Expo (SDK 58), TypeScript, Kotlin, NativeWind, Zustand, MMKV, Notifee ve AdMob ile geliştirilen native-hibrit Android alarm ve bilişsel uyanma uygulaması. AlarmManager ve Full-Screen Intent (FLAG_SHOW_WHEN_LOCKED) kullanan özel Kotlin modülleriyle (AlarmRingingActivity, AlarmAudioModule) JS köprüsü cold-start gecikmesini ortadan kaldırır, sistem düzeyinde USAGE_ALARM ses izolasyonu sağlar ve alarmı kapatmak için cihaz içi barkod/QR tarama, ivmeölçer tabanlı şınav/sallama algılama veya matematik görevleri sunar.",
+        "metrics": [
+          { "label": "Uyanma Gecikmesi", "value": "0ms JS Cold-Start" },
+          { "label": "Native Köprü", "value": "Native Kotlin" },
+          { "label": "Görev Motoru", "value": "Cihaz İçi Görü" }
+        ],
+        "techStack": [
+          "React Native (0.88)",
+          "Expo (SDK 58)",
+          "Kotlin",
+          "TypeScript",
+          "NativeWind",
+          "Zustand",
+          "MMKV",
+          "Notifee",
+          "AdMob"
+        ],
+        "tags": [
+          "React Native (0.88)",
+          "Expo (SDK 58)",
+          "Kotlin",
+          "TypeScript",
+          "NativeWind",
+          "Zustand",
+          "MMKV",
+          "Notifee",
+          "AdMob"
+        ],
+        "highlights": [
+          "AlarmManager ve Full-Screen Intent (FLAG_SHOW_WHEN_LOCKED) ile 0ms JS cold-start beklemesi sağlayan özel Kotlin modülleri (AlarmRingingActivity, AlarmAudioModule).",
+          "Medya ve sessiz mod durumlarından bağımsız güvenilir çalma için sistem düzeyinde USAGE_ALARM ses kanalı izolasyonu.",
+          "Cihaz içi barkod/QR okuma, ivmeölçer ile şınav/sallama algılama ve bilişsel matematik kapatma görevleri."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "Üretime Hazır"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "myrrh",
+        "title": "Myrrh",
+        "subtitle": "Yapay Zeka Destekli Kişiselleştirilmiş Koku & Soğuk Difüzyon IoT Platformu",
+        "category": "IoT & Gömülü Yapay Zeka",
+        "year": "2026",
+        "isFeatured": false,
+        "featured": false,
+        "summary": "Çift yönlü ESP32 MQTT telemetri ve OTA firmware arka ucu, otomatik IFRA güvenlik uyumluluğu formülasyon motoru ve dokunmatik kiosk arayüzü. Boğaziçi Üniversitesi uygulayıcı kuruluşu altında TÜBİTAK BiGG Top 2 finalisti.",
+        "description": "Node.js, TypeScript, PostgreSQL, ESP32, MQTT, OTA ve Yapay Zeka Kural Motoru ile geliştirilen kişiselleştirilmiş koku ve soğuk hava difüzyon IoT platformu. Çift yönlü ESP32 MQTT telemetri ve Over-The-Air (OTA) firmware güncelleme arka ucu, otomatik IFRA güvenlik uyumluluğu formülasyon motoru ve dokunmatik öncelikli kiosk arayüzünü birleştirir. TÜBİTAK BiGG Ar-Ge destek panelinde Boğaziçi Üniversitesi uygulayıcı kuruluşu bünyesindeki 25 girişim arasından ilk 2 finalist arasına seçildi.",
+        "techStack": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "ESP32",
+          "MQTT",
+          "OTA",
+          "AI Rule Engine"
+        ],
+        "tags": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "ESP32",
+          "MQTT",
+          "OTA",
+          "AI Rule Engine"
+        ],
+        "highlights": [
+          "Çift yönlü ESP32 MQTT telemetri ve Over-The-Air (OTA) firmware güncelleme altyapısı.",
+          "Otomatik IFRA güvenlik uyumluluğu formülasyon motoru ve dokunmatik öncelikli kiosk arayüzü.",
+          "Boğaziçi Üniversitesi uygulayıcı kuruluşu altında 25 girişim arasından TÜBİTAK BiGG Top 2 finalisti."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "TÜBİTAK BiGG Finalist"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "amerikano",
+        "title": "Amerikano",
+        "subtitle": "Çapraz Platform Kart Oyunu & Deterministik Kural Motoru",
+        "category": "Oyun Motoru & Mobil",
+        "year": "2026",
+        "isFeatured": false,
+        "featured": false,
+        "summary": "Arayüzden bağımsız saf TS kural motoru (108 kartlı çift deste, 11 turlu artan kontratlar, INTERRUPT_WINDOW mekaniği), Vitest uç durum testleri, 60 FPS jest kart yelpazesi, kural tabanlı botlar ve offline-first Capacitor mobil derlemesi.",
+        "description": "TypeScript, React, Vite, Tailwind CSS, Framer Motion, Zustand, Vitest ve Capacitor ile geliştirilen çapraz platform kart oyunu ve deterministik kural motoru. 108 kartlık çift deste, 11 turlu kademeli kontratlar ve INTERRUPT_WINDOW mekaniğini yöneten arayüzden bağımsız saf TypeScript motoru, kapsamlı Vitest uç durum testleri, 60 FPS jest destekli kart yelpazesi arayüzü, kural tabanlı yapay zeka botları ve native dokunsal geri bildirimli offline-first Capacitor mobil sürümünü içerir.",
+        "techStack": [
+          "TypeScript",
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Zustand",
+          "Vitest",
+          "Capacitor"
+        ],
+        "tags": [
+          "TypeScript",
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Zustand",
+          "Vitest",
+          "Capacitor"
+        ],
+        "highlights": [
+          "108 kartlık çift deste, 11 turlu artan kontratlar ve INTERRUPT_WINDOW mekaniği sunan arayüzden bağımsız saf TypeScript kural motoru.",
+          "Deterministik durum geçişlerini doğrulayan kapsamlı Vitest uç durum test paketleri.",
+          "60 FPS jest kart yelpazesi arayüzü, kural tabanlı AI botlar ve native haptikli offline-first Capacitor mobil derlemesi."
+        ],
+        "links": {
+          "github": null,
+          "live": null,
+          "status": "Yayında"
+        },
+        "github": "",
+        "demo": "",
+        "image": ""
+      },
+      {
+        "id": "algoviz",
+        "title": "Algoviz",
+        "subtitle": "İnteraktif Bilgisayar Bilimleri & ML Algoritma Görselleştiricisi",
+        "category": "WebGL & Simülasyon",
+        "year": "2026",
+        "isFeatured": false,
+        "featured": false,
+        "summary": "60 FPS akıcılıkta 3D Three.js/R3F gradient descent, self-attention QKV, CNN ve Raft konsensüsü dahil 23 modüllü interaktif CS ve ML algoritma laboratuvarı.",
+        "description": "Dağıtık sistemler (Raft konsensüsü, LRU Cache) ve modern makine öğrenmesini (60 FPS 3D Three.js/R3F gradient descent kayıp yüzeyleri, self-attention QKV, CNN, karar ağaçları) kapsayan 23 modüllü interaktif CS ve ML görselleştirme laboratuvarı.",
+        "techStack": [
+          "Next.js 16",
+          "React 19",
+          "Three.js / R3F",
+          "WebGL",
+          "TypeScript",
+          "Zustand"
+        ],
+        "tags": [
+          "Next.js 16",
+          "React 19",
+          "Three.js / R3F",
+          "WebGL",
+          "TypeScript",
+          "Zustand"
+        ],
+        "highlights": [
+          "Raft konsensüsünden transformer Self-Attention QKV mekanizmasına uzanan 23 interaktif CS ve ML modülü.",
+          "60 FPS performansında Three.js / React Three Fiber 3D gradient descent ve kayıp yüzeyi simülasyonları."
+        ],
+        "links": {
+          "github": "https://github.com/Berkayozgun/algoviz",
+          "live": "https://algoviz-rho.vercel.app",
+          "status": "Live: algoviz-rho.vercel.app"
+        },
+        "github": "https://github.com/Berkayozgun/algoviz",
+        "demo": "https://algoviz-rho.vercel.app",
+        "image": ""
+      },
+      {
+        "id": "crisis-xai",
+        "title": "Crisis XAI",
+        "subtitle": "Açıklanabilir Yapay Zeka ile Kriz Mesajı Sınıflandırma",
+        "category": "NLP & Açıklanabilir Yapay Zeka",
+        "year": "2026",
+        "isFeatured": false,
+        "featured": false,
+        "summary": "Açıklanabilir yapay zeka (SHAP, LIME), BERTurk/PyTorch, hibrit NER/Regex konum çıkarımı (11.268 örnekte %92,26 F1), FastAPI ve Next.js ile kriz anı mesaj sınıflandırma.",
+        "description": "Açıklanabilir yapay zeka (SHAP, LIME) destekli kriz anı mesaj sınıflandırma sistemi. BERTurk/PyTorch modeli ve hibrit NER/Regex konum çıkarımı ile 11.268 örnek ve 5 katlı çapraz doğrulamada %92,26 F1 skoru elde edilmiş; FastAPI arka ucu ve Next.js doğrulama arayüzü ile sunulmuştur.",
+        "techStack": [
+          "Python",
+          "PyTorch",
+          "BERTurk",
+          "XAI (SHAP / LIME)",
+          "FastAPI",
+          "Next.js"
+        ],
+        "tags": [
+          "Python",
+          "PyTorch",
+          "BERTurk",
+          "XAI (SHAP / LIME)",
+          "FastAPI",
+          "Next.js"
+        ],
+        "highlights": [
+          "Hibrit NER/Regex konum çıkarımlı BERTurk/PyTorch modeli ile 11.268 örnek üzerinde %92,26 F1 performansı.",
+          "FastAPI ve Next.js doğrulama arayüzü üzerinden sunulan token düzeyinde SHAP ve LIME açıklanabilirlik çıktıları."
+        ],
+        "links": {
+          "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
+          "live": null,
+          "status": "92.26% F1 · 11,268 Samples"
+        },
+        "github": "https://github.com/Berkayozgun/Turkish-Crisis-XAI-Verification",
+        "demo": "",
+        "image": ""
+      }
+    ],
+    "experience": [
+      {
+        "company": "ReHeal Healthcare",
+        "role": "Kurucu Mühendis",
+        "period": "Haziran 2026 - Günümüz · Uzaktan",
+        "description": "Supabase RLS & RBAC altyapısıyla çok kiracılı dijital sağlık ekosistemini (Expo hasta uygulaması, Next.js klinik/yönetici paneli, serverless arka uç) tasarlayıp geliştirdim. Çıkarım öncesi otomatik PII maskeleme (TCKN ve hasta kimlik bilgilerinin temizlenmesi) ile Gemini OCR üzerinden Türk SUT/SGK eczane mevzuatını denetleyen PharmaGuard AI motorunu, QR hasta kaydını, canlı tahlil grafiklerini, ilaç hatırlatıcılarını ve nöbetçi eczane takibini hayata geçirdim."
+      },
+      {
+        "company": "BGO Team",
+        "role": "Full-Stack Mühendis",
+        "period": "Ekim 2025 - Günümüz · Uzaktan",
+        "description": "Eski cPanel/MySQL sistemlerinden normalize edilmiş şemalara ve ayrıntılı RLS politikalarına sahip Supabase PostgreSQL'e sıfır kesintiyle geçişe liderlik ettim; geliştiricilere ölçeklenebilir mimari ve Git Agile iş akışları konusunda mentorluk yaptım."
+      },
+      {
+        "company": "Elmali Tech",
+        "role": "JavaScript Geliştirici",
+        "period": "Mart 2025 - Mayıs 2025 · Uzaktan",
+        "description": "Core Web Vitals odaklı SSR ve dinamik yönlendirmeyle production React ve Next.js uygulamalarını (Digiroom dahil) teslim ettim; Supabase RLS ve Firebase Cloud Functions kullanarak olay güdümlü gerçek zamanlı rezervasyon ve e-ticaret özellikleri geliştirdim."
+      },
+      {
+        "company": "Sixfab",
+        "role": "Yazılım Mühendisi Stajyeri",
+        "period": "Kasım 2023 - Ocak 2024 · Uzaktan",
+        "description": "Flask, Vue.js ve MongoDB kullanarak Campfire mikro-blog platformunu (kimlik doğrulama, iç içe yorumlar, oylama, RBAC) geliştirdim; GitHub Actions CI/CD hatlarını ve kod inceleme süreçlerini kurdum."
+      },
+      {
+        "company": "Jotform",
+        "role": "Frontend Geliştirici Stajyeri",
+        "period": "Temmuz 2023 - Ağustos 2023 · Ankara, Türkiye",
+        "description": "React.js ve Redux Toolkit kullanarak kurum içi gerçek zamanlı bildirim merkezini geliştirdim; frontend monorepo içinde ortak UI bileşenlerini standartlaştırdım ve 3 kişilik stajyer ekibini canlı demoya taşıdım."
+      },
+      {
+        "company": "Parentwiser",
+        "role": "Frontend Geliştirici Stajyeri",
+        "period": "Ocak 2022 - Ekim 2022 · Uzaktan",
+        "description": "Eski WordPress web sitesini modüler bir React.js SPA mimarisine yeniden kurguladım ve React Native tabanlı aile etkinlikleri mobil uygulamasına konum bazlı keşif modülleri ekledim."
+      }
+    ],
+    "education": [
+      {
+        "school": "Trakya Üniversitesi",
+        "degree": "Bilgisayar Mühendisliği Yüksek Lisans (M.Sc.)",
+        "date": "Şubat 2026 - Günümüz",
+        "description": "İlgili dersler: Makine Öğrenmesi, Metin Madenciliği, Bilişsel Teknolojiler, Bilimsel Etik. Projeler: hibrit NER/Regex konum çıkarımlı BERTurk kriz tweeti sınıflandırıcısı (11.268 örnek; %95,75 doğruluk), CrowdStrike/Microsoft kriz analizi ve Isolation Forest, SHAP, FastAPI ve Next.js kullanan ADS-B uçuş anomalisi tespit sistemi."
+      },
+      {
+        "school": "Trakya Üniversitesi",
+        "degree": "Bilgisayar Mühendisliği Lisans",
+        "date": "Mezuniyet: Ocak 2024",
+        "description": "Bitirme Projesi: Kariyer.net veri kazıma, TF-IDF, KNN ve Django ile 6 kişilik ekipte geliştirilen YZ Tabanlı Kariyer Öneri Sistemi."
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Cisco Certified Cyberops Associate",
+        "issuer": "Cisco",
+        "date": "Mayıs 2025"
+      },
+      {
+        "name": "Alibaba Cloud Certified Cloud Computing Engineer",
+        "issuer": "Alibaba Cloud",
+        "date": "Ekim 2024"
+      },
+      {
+        "name": "Developing Front End Apps with React",
+        "issuer": "IBM & edX",
+        "date": "2024"
+      }
+    ],
+    "blog": [
+      {
+        "title": "Next.js ile İlk Uygulamanızı 10 Dakikada Kurun: App Router Dönemine Giriş",
+        "description": "Next.js 13+ App Router özellikleri ile projenize hızlı bir başlangıç yapın.",
+        "date": "2024",
+        "readTime": "5 dk okuma",
+        "link": "https://medium.com/@berkayozgun001/next-js-ile-i%CC%87lk-uygulaman%C4%B1z%C4%B1-10-dakikada-kurun-app-router-d%C3%B6nemine-gi%CC%87ri%CC%87%C5%9F-61de5a561447",
+        "image": "/images/blog-nextjs.png"
+      }
+    ]
+  }
 }

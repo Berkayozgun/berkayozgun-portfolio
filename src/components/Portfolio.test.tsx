@@ -105,6 +105,31 @@ describe('Portfolio language selection', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Switch to Turkish', hidden: true }));
     expect(screen.getByRole('dialog')).toHaveAccessibleDescription(profileData.tr.projects[0].description);
   });
+
+  it('renders all 8 CV projects, metrics, and modals in both EN and TR', async () => {
+    const user = userEvent.setup();
+    render(<Portfolio />);
+    expect(profileData.en.projects).toHaveLength(8);
+    expect(profileData.tr.projects).toHaveLength(8);
+
+    for (const project of profileData.en.projects) {
+      expect(screen.getByRole('button', { name: `${project.title}: View Details` })).toBeInTheDocument();
+    }
+
+    await user.click(screen.getByRole('button', { name: 'Numbrias: View Details' }));
+    expect(screen.getByRole('dialog', { name: 'Numbrias' })).toBeInTheDocument();
+    expect(screen.getByRole('dialog')).toHaveTextContent('327 Automated Tests');
+    await user.keyboard('{Escape}');
+
+    await user.click(screen.getByRole('button', { name: 'Switch to Turkish' }));
+    for (const project of profileData.tr.projects) {
+      expect(screen.getByRole('button', { name: `${project.title}: Detayları Görüntüle` })).toBeInTheDocument();
+    }
+
+    await user.click(screen.getByRole('button', { name: 'Numbrias: Detayları Görüntüle' }));
+    expect(screen.getByRole('dialog', { name: 'Numbrias' })).toBeInTheDocument();
+    expect(screen.getByRole('dialog')).toHaveTextContent('327 Otomatik Test');
+  });
 });
 
 describe('Portfolio scrolling', () => {

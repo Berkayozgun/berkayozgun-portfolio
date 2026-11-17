@@ -4,7 +4,9 @@ import { useRef, useState } from 'react';
 import { CheckCircle2, Code, Github, Globe, Lock, Terminal, X } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import type { Locale, Project } from '@/types/profile';
-import TelemetryTerminal from './TelemetryTerminal';
+import TelemetryTerminal, { ProductionBadge } from './TelemetryTerminal';
+import ProjectPreview from './ProjectPreview';
+import { hasCustomPreview } from '@/lib/utils';
 
 const copy = {
   tr: {
@@ -29,15 +31,28 @@ function ProjectCover({ project, language }: { project: Project; language: Local
   const [failed, setFailed] = useState(false);
 
 
-  if (project.id === 'ultimarket' || project.privacyNotice) {
+  if (project.id === 'ultimarket') {
     return <TelemetryTerminal project={project} language={language} />;
+  }
+
+  if (hasCustomPreview(project.id)) {
+    return <ProjectPreview project={project} language={language} />;
   }
 
   const showImage = Boolean(project.image) && !failed;
 
   if (!showImage) {
     return (
-      <div className="flex aspect-video items-center justify-center rounded-xl border border-zinc-200 bg-gradient-to-br from-zinc-100 via-zinc-50 to-emerald-50 dark:border-zinc-700/50 dark:from-zinc-950 dark:via-zinc-900 dark:to-emerald-950/40">
+      <div className="relative flex aspect-video items-center justify-center rounded-xl border border-zinc-200 bg-gradient-to-br from-zinc-100 via-zinc-50 to-emerald-50 dark:border-zinc-700/50 dark:from-zinc-950 dark:via-zinc-900 dark:to-emerald-950/40">
+        {project.privacyNotice && (
+          <div className="absolute right-3 top-3">
+            <ProductionBadge
+              privacyNotice={project.privacyNotice}
+              status={project.links?.status}
+              language={language}
+            />
+          </div>
+        )}
         <div className="flex flex-col items-center gap-3 px-6 text-center">
           <Terminal className="text-emerald-400" size={28} />
           <p className="font-mono text-sm text-zinc-600 dark:text-zinc-400">{project.title}</p>
@@ -47,13 +62,24 @@ function ProjectCover({ project, language }: { project: Project; language: Local
   }
 
   return (
-    <img
-      src={project.image}
-      alt={project.title}
-      loading="lazy"
-      className="w-full aspect-video object-cover rounded-xl border border-zinc-700/50 shadow-lg"
-      onError={() => setFailed(true)}
-    />
+    <div className="relative">
+      <img
+        src={project.image}
+        alt={project.title}
+        loading="lazy"
+        className="w-full aspect-video object-cover rounded-xl border border-zinc-700/50 shadow-lg"
+        onError={() => setFailed(true)}
+      />
+      {project.privacyNotice && (
+        <div className="absolute right-3 top-3">
+          <ProductionBadge
+            privacyNotice={project.privacyNotice}
+            status={project.links?.status}
+            language={language}
+          />
+        </div>
+      )}
+    </div>
   );
 }
 
