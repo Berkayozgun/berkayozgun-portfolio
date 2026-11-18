@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { Menu, Terminal, X } from 'lucide-react';
 import profileData from '@/data/profile.json';
 import en from '@/i18n/locales/en.json';
@@ -41,11 +41,62 @@ export default function Portfolio() {
   const locale = sessionLocale ?? savedLocale;
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedId, setSelectedId] = useState<Project['id'] | null>(null);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement | null>(null);
 
 
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+      }
+    };
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === 'undefined') return;
+
+    const sectionIds = ['about', 'projects', 'experience', 'education', 'contact'];
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      { rootMargin: '-30% 0px -55% 0px', threshold: 0 },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   const toggleLocale = () => {
     const next = locale === 'en' ? 'tr' : 'en';
@@ -63,6 +114,7 @@ export default function Portfolio() {
   const scrollTo = (id: string) => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.getElementById(id)?.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth' });
+    setActiveSection(id === 'top' ? null : id);
     setMenuOpen(false);
   };
   const links = [['about', t.navigation.about], ['projects', t.navigation.projects], ['experience', t.navigation.experience], ['education', t.navigation.education], ['contact', t.navigation.contact]];
@@ -75,7 +127,7 @@ export default function Portfolio() {
 
         {/* Floating Liquid Glass Navigation Dock */}
         <header className="fixed inset-x-0 top-3.5 z-50 mx-auto w-[calc(100%-1.5rem)] max-w-5xl sm:top-6 sm:w-[calc(100%-2rem)]">
-          <nav className={`liquid-glass px-4 py-2.5 transition-all duration-300 sm:px-6 ${menuOpen ? 'rounded-3xl shadow-2xl' : 'rounded-full'}`}>
+          <nav ref={navRef} className={`liquid-glass px-4 py-2.5 transition-all duration-300 sm:px-6 ${menuOpen ? 'rounded-3xl shadow-2xl' : 'rounded-full'}`}>
             <div className="flex items-center justify-between">
               <button 
                 onClick={() => scrollTo('top')} 
@@ -89,7 +141,16 @@ export default function Portfolio() {
 
               <div className="hidden items-center gap-1 md:flex">
                 {links.map(([id, label]) => (
-                  <button className="nav-link" key={id} onClick={() => scrollTo(id)}>
+                  <button
+                    className={`nav-link ${
+                      activeSection === id
+                        ? 'bg-emerald-500/15 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300'
+                        : ''
+                    }`}
+                    key={id}
+                    onClick={() => scrollTo(id)}
+                    aria-current={activeSection === id ? 'location' : undefined}
+                  >
                     {label}
                   </button>
                 ))}
@@ -121,10 +182,15 @@ export default function Portfolio() {
             {menuOpen && (
               <div id="mobile-navigation" className="mt-3 space-y-1.5 border-t border-zinc-200/80 pt-3 md:hidden dark:border-white/10">
                 {links.map(([id, label]) => (
-                  <button 
-                    className="block w-full rounded-xl px-3 py-2 text-left text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-200/50 dark:text-zinc-300 dark:hover:bg-white/10" 
-                    key={id} 
+                  <button
+                    className={`block w-full rounded-xl px-3 py-2 text-left text-sm font-medium transition-colors ${
+                      activeSection === id
+                        ? 'bg-emerald-500/15 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300'
+                        : 'text-zinc-700 hover:bg-zinc-200/50 dark:text-zinc-300 dark:hover:bg-white/10'
+                    }`}
+                    key={id}
                     onClick={() => scrollTo(id)}
+                    aria-current={activeSection === id ? 'location' : undefined}
                   >
                     {label}
                   </button>

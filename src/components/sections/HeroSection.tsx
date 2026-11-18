@@ -1,6 +1,7 @@
 'use client';
 
-import { ArrowDown, Github, Linkedin, Mail, Terminal } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowDown, Check, Copy, Github, Linkedin, Mail, Terminal } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import type { ProfileData } from '@/types/profile';
 
@@ -10,8 +11,33 @@ interface HeroSectionProps {
   onScroll: (id: string) => void;
 }
 
+const engineerSnippet = `const engineer = {
+  focus: ['Full-Stack Web', 'Native Mobile', 'Edge & IoT'],
+  stack: ['TypeScript', 'Next.js 16', 'React Native', 'Kotlin', 'Supabase'],
+  openToWork: true
+};`;
+
+const stackSnippet = `{
+  "web": ["Next.js 16", "React 19", "TypeScript", "Tailwind"],
+  "mobile": ["React Native", "Kotlin", "Jetpack Compose"],
+  "backend": ["Node.js", "Supabase", "PostgreSQL"],
+  "edge_ai": ["IoT Telemetry", "Explainable AI", "NLP"]
+}`;
+
 export default function HeroSection({ data, labels, onScroll }: HeroSectionProps) {
   const reducedMotion = useReducedMotion();
+  const [activeTab, setActiveTab] = useState<'engineer' | 'stack'>('engineer');
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(activeTab === 'engineer' ? engineerSnippet : stackSnippet);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   return (
     <section className="relative flex min-h-[min(900px,100vh)] items-center overflow-hidden pt-28 pb-16">
@@ -105,17 +131,62 @@ export default function HeroSection({ data, labels, onScroll }: HeroSectionProps
             <div className="flex items-center gap-2">
               <i /><i /><i />
             </div>
-            <span className="font-mono text-xs text-zinc-500 dark:text-zinc-400">engineer.ts</span>
-            <div className="w-10" />
+            <div className="flex items-center gap-1 rounded-full border border-zinc-200/80 bg-zinc-100/70 p-0.5 dark:border-white/10 dark:bg-zinc-900/70" role="tablist" aria-label="Code preview tabs">
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeTab === 'engineer'}
+                onClick={() => setActiveTab('engineer')}
+                className={`rounded-full px-2.5 py-0.5 font-mono text-[11px] transition-colors ${
+                  activeTab === 'engineer'
+                    ? 'bg-white text-zinc-900 shadow-sm dark:bg-zinc-800 dark:text-zinc-100'
+                    : 'text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200'
+                }`}
+              >
+                engineer.ts
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeTab === 'stack'}
+                onClick={() => setActiveTab('stack')}
+                className={`rounded-full px-2.5 py-0.5 font-mono text-[11px] transition-colors ${
+                  activeTab === 'stack'
+                    ? 'bg-white text-zinc-900 shadow-sm dark:bg-zinc-800 dark:text-zinc-100'
+                    : 'text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200'
+                }`}
+              >
+                stack.json
+              </button>
+            </div>
+            <button
+              type="button"
+              onClick={handleCopy}
+              aria-label={copied ? 'Copied code' : 'Copy code'}
+              className="flex h-7 w-7 items-center justify-center rounded-full text-zinc-500 transition-colors hover:bg-zinc-200/70 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/10 dark:hover:text-white"
+            >
+              {copied ? <Check size={13} className="text-emerald-500 dark:text-emerald-400" /> : <Copy size={13} />}
+            </button>
           </div>
           <pre className="p-5 sm:p-7 overflow-x-auto font-mono text-xs sm:text-sm leading-relaxed sm:leading-8 text-zinc-700 dark:text-zinc-300">
-            <code>
-              <span className="text-zinc-500">const</span> engineer = {'{'}{'\n'}
-              {'  '}focus: [<span className="text-emerald-500 dark:text-emerald-400">&apos;Full-Stack Web&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Native Mobile&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Edge &amp; IoT&apos;</span>],{'\n'}
-              {'  '}stack: [<span className="text-emerald-500 dark:text-emerald-400">&apos;TypeScript&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Next.js 16&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;React Native&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Kotlin&apos;</span>, <span className="text-emerald-500 dark:text-emerald-400">&apos;Supabase&apos;</span>],{'\n'}
-              {'  '}openToWork: <span className="text-emerald-500 dark:text-emerald-400">true</span>{'\n'}
-              {'}'};
-            </code>
+            {activeTab === 'engineer' ? (
+              <code>
+                <span className="text-zinc-500">const</span> engineer = {'{'}{'\n'}
+                {'  '}focus: [<span className="text-emerald-600 dark:text-emerald-400">&apos;Full-Stack Web&apos;</span>, <span className="text-emerald-600 dark:text-emerald-400">&apos;Native Mobile&apos;</span>, <span className="text-emerald-600 dark:text-emerald-400">&apos;Edge &amp; IoT&apos;</span>],{'\n'}
+                {'  '}stack: [<span className="text-emerald-600 dark:text-emerald-400">&apos;TypeScript&apos;</span>, <span className="text-emerald-600 dark:text-emerald-400">&apos;Next.js 16&apos;</span>, <span className="text-emerald-600 dark:text-emerald-400">&apos;React Native&apos;</span>, <span className="text-emerald-600 dark:text-emerald-400">&apos;Kotlin&apos;</span>, <span className="text-emerald-600 dark:text-emerald-400">&apos;Supabase&apos;</span>],{'\n'}
+                {'  '}openToWork: <span className="text-emerald-600 dark:text-emerald-400">true</span>{'\n'}
+                {'}'};
+              </code>
+            ) : (
+              <code>
+                {'{'}{'\n'}
+                {'  '}<span className="text-zinc-500">&quot;web&quot;</span>: [<span className="text-emerald-600 dark:text-emerald-400">&quot;Next.js 16&quot;</span>, <span className="text-emerald-600 dark:text-emerald-400">&quot;React 19&quot;</span>, <span className="text-emerald-600 dark:text-emerald-400">&quot;TypeScript&quot;</span>],{'\n'}
+                {'  '}<span className="text-zinc-500">&quot;mobile&quot;</span>: [<span className="text-emerald-600 dark:text-emerald-400">&quot;React Native&quot;</span>, <span className="text-emerald-600 dark:text-emerald-400">&quot;Kotlin&quot;</span>, <span className="text-emerald-600 dark:text-emerald-400">&quot;Compose&quot;</span>],{'\n'}
+                {'  '}<span className="text-zinc-500">&quot;backend&quot;</span>: [<span className="text-emerald-600 dark:text-emerald-400">&quot;Node.js&quot;</span>, <span className="text-emerald-600 dark:text-emerald-400">&quot;Supabase&quot;</span>, <span className="text-emerald-600 dark:text-emerald-400">&quot;PostgreSQL&quot;</span>],{'\n'}
+                {'  '}<span className="text-zinc-500">&quot;edge_ai&quot;</span>: [<span className="text-emerald-600 dark:text-emerald-400">&quot;IoT Telemetry&quot;</span>, <span className="text-emerald-600 dark:text-emerald-400">&quot;Explainable AI&quot;</span>]{'\n'}
+                {'}'}
+              </code>
+            )}
           </pre>
         </motion.div>
       </div>

@@ -138,5 +138,22 @@ describe('Portfolio scrolling', () => {
     render(<Portfolio />);
     fireEvent.click(screen.getByRole('button', { name: 'Projects' }));
     expect(Element.prototype.scrollIntoView).toHaveBeenLastCalledWith({ behavior: reducedMotion ? 'instant' : 'smooth' });
+    expect(screen.getByRole('button', { name: 'Projects' })).toHaveAttribute('aria-current', 'location');
+  });
+
+  it('closes the mobile menu on Escape or outside pointerdown', async () => {
+    const user = userEvent.setup();
+    render(<Portfolio />);
+    const menuButton = screen.getByRole('button', { name: 'Open menu' });
+
+    await user.click(menuButton);
+    expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+    await user.keyboard('{Escape}');
+    expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+
+    await user.click(menuButton);
+    expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+    fireEvent.pointerDown(document.body);
+    expect(menuButton).toHaveAttribute('aria-expanded', 'false');
   });
 });

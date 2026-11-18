@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowUpRight, Code2, Terminal } from 'lucide-react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import type { Locale, Project } from '@/types/profile';
 import TelemetryTerminal, { ProductionBadge } from '@/components/TelemetryTerminal';
 import ProjectPreview from '@/components/ProjectPreview';
@@ -15,6 +16,24 @@ interface BentoProjectsProps {
   onSelect: (project: Project) => void;
 }
 
+type FilterKey = 'all' | 'web' | 'mobile' | 'ai-iot';
+
+function matchesFilter(project: Project, filter: FilterKey): boolean {
+  if (filter === 'all') return true;
+  const hay = [project.category, ...(project.techStack ?? []), ...(project.tags ?? [])]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+  if (filter === 'web') {
+    return /full-stack|webgl|next\.js|react\b(?! native)|pazaryeri|marketplace|simulation|simülasyon/.test(hay);
+  }
+  if (filter === 'mobile') {
+    return /mobile|mobil|react native|kotlin|expo|android|ios/.test(hay);
+  }
+  return /\bai\b|iot|nlp|yapay zeka|embedded|gömülü|ml|xai/.test(hay);
+}
+
 const copy = {
   tr: {
     selectedWork: '02 / seçili çalışmalar',
@@ -22,6 +41,12 @@ const copy = {
     featured: 'Öne çıkan proje',
     flagship: 'Vitrin projesi',
     preview: 'mimari önizlemesi',
+    filters: {
+      all: 'Tümü',
+      web: 'Web & Full-Stack',
+      mobile: 'Mobil',
+      'ai-iot': 'AI & IoT',
+    },
   },
   en: {
     selectedWork: '02 / selected work',
@@ -29,8 +54,24 @@ const copy = {
     featured: 'Featured Flagship',
     flagship: 'Flagship',
     preview: 'architecture preview',
+    filters: {
+      all: 'All',
+      web: 'Web & Full-Stack',
+      mobile: 'Mobile',
+      'ai-iot': 'AI & IoT',
+    },
   },
-} satisfies Record<Locale, Record<'selectedWork' | 'localContent' | 'featured' | 'flagship' | 'preview', string>>;
+} satisfies Record<
+  Locale,
+  {
+    selectedWork: string;
+    localContent: string;
+    featured: string;
+    flagship: string;
+    preview: string;
+    filters: Record<FilterKey, string>;
+  }
+>;
 
 function CardMedia({ project, language }: { project: Project; language: Locale }) {
   const [failed, setFailed] = useState(false);
@@ -101,45 +142,83 @@ function CardMedia({ project, language }: { project: Project; language: Locale }
 function Preview({ project, language }: { project: Project; language: Locale }) {
   const stack = (project.techStack || project.tags || []).slice(0, 2).join(' · ');
   return (
-    <div className="code-preview border-0 bg-transparent dark:bg-transparent" aria-label={`${project.title} ${copy[language].preview}`}>
-      <span className="text-zinc-500">module</span> <span className="text-zinc-300">{'{'}</span>
+    <div className="px-4 pb-4 font-mono text-xs leading-relaxed" aria-label={`${project.title} ${copy[language].preview}`}>
+      <span className="text-zinc-600 dark:text-zinc-400">module</span> <span className="text-zinc-700 dark:text-zinc-300">{'{'}</span>
       <br />
-      <span className="pl-4 text-zinc-500">
-        stack: <b className="text-emerald-400">{stack}</b>
+      <span className="pl-4 text-zinc-600 dark:text-zinc-400">
+        stack: <b className="text-emerald-600 dark:text-emerald-400">{stack}</b>
       </span>
       <br />
       {project.links?.status && (
         <>
-          <span className="pl-4 text-zinc-500">
-            status: <b className="text-emerald-400">{project.links.status}</b>
+          <span className="pl-4 text-zinc-600 dark:text-zinc-400">
+            status: <b className="text-emerald-600 dark:text-emerald-400">{project.links.status}</b>
           </span>
           <br />
         </>
       )}
-      <span className="text-zinc-300">{'}'}</span>
+      <span className="text-zinc-700 dark:text-zinc-300">{'}'}</span>
     </div>
   );
 }
 
 export default function BentoProjects({ projects, title, detailLabel, onSelect, language }: BentoProjectsProps) {
   const text = copy[language];
+  const reducedMotion = useReducedMotion();
+  const [activeFilter, setActiveFilter] = useState<FilterKey>('all');
+  const filterKeys: FilterKey[] = ['all', 'web', 'mobile', 'ai-iot'];
+  const filteredProjects = projects.filter((project) => matchesFilter(project, activeFilter));
+
   return (
     <section id="projects" className="section-container">
-      <div className="mb-10 flex items-end justify-between gap-4">
+      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="eyebrow">{text.selectedWork}</p>
           <h2 className="section-title">{title}</h2>
         </div>
         <span className="hidden font-mono text-sm text-zinc-500 md:block">{text.localContent}</span>
       </div>
+
+      {projects.length > 1 && (
+        <div className="mb-8 flex flex-wrap items-center gap-2" role="group" aria-label={title}>
+          {filterKeys.map((key) => {
+            const count = projects.filter((project) => matchesFilter(project, key)).length;
+            if (key !== 'all' && count === 0) return null;
+            const isActive = activeFilter === key;
+            return (
+              <button
+                key={key}
+                type="button"
+                aria-pressed={isActive}
+                onClick={() => setActiveFilter(key)}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 font-mono text-xs transition-all ${
+                  isActive
+                    ? 'border-emerald-500/40 bg-emerald-500/15 text-emerald-700 shadow-sm dark:border-emerald-400/30 dark:bg-emerald-400/15 dark:text-emerald-300'
+                    : 'border-zinc-200/80 bg-white/60 text-zinc-600 hover:border-zinc-300 hover:text-zinc-900 dark:border-white/10 dark:bg-zinc-900/40 dark:text-zinc-400 dark:hover:border-white/20 dark:hover:text-zinc-200'
+                }`}
+              >
+                <span>{text.filters[key]}</span>
+                <span className="opacity-65">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
       <div className="grid grid-flow-row-dense auto-rows-fr grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => {
+        <AnimatePresence mode="popLayout" initial={false}>
+        {filteredProjects.map((project, index) => {
           const isFeatured = Boolean(project.isFeatured ?? project.featured ?? index === 0);
           const tags = project.techStack || project.tags || [];
 
           return (
-            <article
+            <motion.article
               key={project.id}
+              layout={!reducedMotion}
+              initial={reducedMotion ? false : { opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={reducedMotion ? undefined : { opacity: 0, scale: 0.98 }}
+              transition={{ duration: reducedMotion ? 0 : 0.22, ease: [0.16, 1, 0.3, 1] }}
               className={`group glass-card relative flex h-full flex-col justify-between ${
                 isFeatured ? 'col-span-1 md:col-span-2 p-6 md:p-8' : 'col-span-1 p-6'
               }`}
@@ -208,9 +287,10 @@ export default function BentoProjects({ projects, title, detailLabel, onSelect, 
                   {detailLabel} <span aria-hidden="true">→</span>
                 </button>
               </div>
-            </article>
+            </motion.article>
           );
         })}
+        </AnimatePresence>
       </div>
     </section>
   );
